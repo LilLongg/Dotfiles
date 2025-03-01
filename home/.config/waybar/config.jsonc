@@ -1,0 +1,340 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 50,
+  "modules-left": [
+    "clock",
+    "custom/weather",
+    "temperature",
+    "cpu",
+    "memory",
+    // "disk"
+    "battery",
+    "network",
+    "bluetooth"
+  ],
+  "modules-center": [
+    // "hyprland/window"
+    "custom/launch_wofi",
+    "custom/updates",
+    "hyprland/workspaces",
+    "power-profiles-daemon",
+    "custom/lock_screen",
+    "custom/power_btn"
+  ],
+  "modules-right": [
+    "mpd",
+    "custom/cava_mviz",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "backlight",
+    "tray"
+  ],
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
+    }
+  },
+  "hyprland/window": {
+    "format": "{}"
+  },
+  "mpd": {
+    "format": "{stateIcon} {randomIcon}{singleIcon}{artist} - {title}",
+    "format-disconnected": "Disconnected 󰝛",
+    "format-stopped": "Stopped 󰝛",
+    "interval": 1,
+    "title-len": 50,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": " "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "Song: {title}\nFrom album: {album}\nBy: {artist}\nDuration: {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+    "tooltip-format-disconnected": "MPD disconnected",
+    "tooltip-format-stopped": "MPD stopped",
+    "smooth-scrolling-threshold": 1.5,
+    "on-click-right": "mpc toggle",
+    "on-click": "kitty --class ncmpcpp sh -c 'ncmpcpp'",
+    "on-scroll-down": "mpc next",
+    "on-scroll-up": "mpc prev"
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      // "4": [],
+      "special": []
+    },
+    "show-special": true,
+    "special-visible-only": true,
+    "smooth-scrolling-threshold": 1.5,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "special": "零"
+    }
+  },
+  "custom/weather": {
+    //shows the current weather and forecast
+    "tooltip": true,
+    "format": "{}",
+    "interval": 600,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "clock": {
+    // "interval": 1,
+    "locale": "ja_JP.UTF-8",
+    "format": " {:L%H:%M   %m月%d日、%a}",
+    // "format": " {:L%A %c}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip": true,
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}{percent}%",
+    "format-icons": [
+      "󰃞 ",
+      "󰃟 ",
+      "󰃠 "
+    ],
+    "on-scroll-up": "lightctl up",
+    "on-scroll-down": "lightctl down",
+    "min-length": 6
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " ",
+    "on-click": "volumectl toggle-mute",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "volumectl up",
+    "on-scroll-down": "volumectl down",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "on-click": "volumectl -m toggle-mute",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "volumectl -m up",
+    "on-scroll-down": "volumectl -m down",
+    "scroll-step": 5
+  },
+  "temperature": {
+    "interval": 1,
+    "hwmon-path": [
+      "/sys/class/hwmon/hwmon1/temp1_input",
+      "/sys/class/thermal/thermal_zone0/temp"
+    ],
+    "format": " {temperatureC}°C",
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C",
+    "on-click": "kitty --title btop sh -c 'btop'",
+    "tooltip": true,
+    "tooltip-format": "Cpu temperature"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "max-length": 10,
+    "on-click": "kitty --title btop sh -c 'btop'"
+  },
+  /**
+  "disk": {
+    "interval": 60,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/home",
+    "tooltip": true,
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
+    "on-click": "kitty --title btop sh -c 'btop'"
+  },
+  **/
+  "memory": {
+    "interval": 1,
+    // "format": " {percentage}%",
+    "format": " {percentage}%",
+    "max-length": 15,
+    "tooltip": true,
+    "tooltip-format": "Memory - {used:0.2f}GB / {total:0.2f}GB ({percentage}%)\nSwap - {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)",
+    "on-click": "kitty --title btop sh -c 'btop'"
+  },
+  "custom/launch_wofi": {
+    "format": " ",
+    "on-click": "wofi -n",
+    "tooltip": true,
+    "tooltip-format": "Open an app"
+  },
+  "custom/lock_screen": {
+    "format": " ",
+    "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
+    "tooltip": true,
+    "tooltip-format": "Lock screen"
+  },
+  "custom/power_btn": {
+    "format": " ",
+    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+    "tooltip": true,
+    "tooltip-format": "Turn off computer"
+  },
+  "custom/updates": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/update-sys",
+    "on-click": "~/.config/waybar/scripts/update-sys update",
+    "interval": 3600,
+    "tooltip": true
+  },
+  "network": {
+    "interface": "wlo1",
+    "interval": 1,
+    "tooltip-format-ethernet": "{ifname}  \n {bandwidthDownBits}  {bandwidthUpBits}",
+    "format": " {bandwidthDownBits}  {bandwidthUpBits}",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰊗 {ipaddr}/{cidr}",
+    "format-disconnected": "󰖪 off", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "Wifi: {essid}\n {bandwidthDownBits}  {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty --title nmtui sh -c 'nmtui'"
+  },
+  "bluetooth": {
+    "format-on": " on",
+    "format-off": "󰂲 off",
+    "format-disabled": "󰂲 off",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+  "custom/cava_mviz": {
+    "exec": "~/.config/waybar/scripts/WaybarCava.sh",
+    "format": "{}",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "cava": {
+    //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    "framerate": 30,
+    "autosens": 1,
+    "sensitivity": 100,
+    "bars": 14,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "input_delay": 2,
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "actions": {
+      "on-click-right": "mode"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+fastfetch --config ~/.config/fastfetch/smallfetch.jsonc

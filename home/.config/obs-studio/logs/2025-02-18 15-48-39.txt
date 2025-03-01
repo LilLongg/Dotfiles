@@ -1,0 +1,309 @@
+15:48:39.997: Platform: Wayland
+15:48:39.997: CPU Name: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz
+15:48:39.997: CPU Speed: 3599.978MHz
+15:48:39.997: Physical Cores: 4, Logical Cores: 8
+15:48:39.997: Physical Memory: 7791MB Total, 2497MB Free
+15:48:39.997: Kernel Version: Linux 6.13.2-arch1-1
+15:48:39.997: Distribution: "Arch Linux" Unknown
+15:48:39.997: Desktop Environment: Hyprland (Hyprland)
+15:48:39.997: Session Type: wayland
+15:48:40.000: Qt Version: 6.8.2 (runtime), 6.8.1 (compiled)
+15:48:40.000: Portable mode: false
+15:48:40.063: OBS 31.0.1 (linux)
+15:48:40.063: ---------------------------------
+15:48:40.066: ---------------------------------
+15:48:40.066: audio settings reset:
+15:48:40.066: 	samples per sec: 48000
+15:48:40.066: 	speakers:        2
+15:48:40.066: 	max buffering:   960 milliseconds
+15:48:40.066: 	buffering type:  dynamically increasing
+15:48:40.069: ---------------------------------
+15:48:40.069: Initializing OpenGL...
+15:48:40.069: Using EGL/Wayland
+15:48:40.113: Initialized EGL 1.5
+15:48:40.134: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics 620 (WHL GT2)
+15:48:40.134: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 24.3.4-arch1.1, shading language 4.60
+15:48:40.177: ---------------------------------
+15:48:40.177: video settings reset:
+15:48:40.177: 	base resolution:   1920x1080
+15:48:40.177: 	output resolution: 1920x1080
+15:48:40.177: 	downscale filter:  Bicubic
+15:48:40.177: 	fps:               60/1
+15:48:40.177: 	format:            NV12
+15:48:40.177: 	YUV mode:          Rec. 709/Partial
+15:48:40.177: NV12 texture support enabled
+15:48:40.177: P010 texture support not available
+15:48:40.185: Audio monitoring device:
+15:48:40.185: 	name: Default
+15:48:40.185: 	id: default
+15:48:40.186: ---------------------------------
+15:48:40.196: Failed to load 'en-US' text for module: 'decklink-captions.so'
+15:48:40.205: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+15:48:40.215: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+15:48:40.215: Failed to initialize module 'decklink.so'
+15:48:40.420: [pipewire] Available capture sources:
+15:48:40.420: [pipewire]     - Monitor source
+15:48:40.420: [pipewire]     - Window source
+15:48:40.474: v4l2loopback not installed, virtual camera not registered
+15:48:40.572: VAAPI: API version 1.22
+15:48:40.572: FFmpeg VAAPI H264 encoding supported
+15:48:40.573: FFmpeg VAAPI AV1 encoding not supported
+15:48:40.574: FFmpeg VAAPI HEVC encoding supported
+15:48:40.610: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+15:48:40.610: 
+15:48:40.610: NVENC not supported
+15:48:40.610: Failed to initialize module 'obs-nvenc.so'
+15:48:40.681: [obs-vaapi] version: 0.4.2, gst-runtime: 1.24.12
+15:48:40.937: [obs-vaapi] found vah264lpenc
+15:48:40.937: [obs-vaapi] found vah264enc
+15:48:40.937: [obs-vaapi] found vah265enc
+15:48:40.937: [obs-vaapi] found vaapih265enc
+15:48:40.937: [obs-vaapi] found vaapih264enc
+15:48:41.001: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: cannot open shared object file: No such file or directory
+15:48:41.001: 
+15:48:41.005: os_dlopen(/usr/lib/obs-plugins/obs-websocket.so->/usr/lib/obs-plugins/obs-websocket.so): libqrcodegencpp.so.1: cannot open shared object file: No such file or directory
+15:48:41.005: 
+15:48:41.005: Module '/usr/lib/obs-plugins/obs-websocket.so' not loaded
+15:48:41.046: ---------------------------------
+15:48:41.046:   Loaded Modules:
+15:48:41.046:     text-freetype2.so
+15:48:41.046:     rtmp-services.so
+15:48:41.046:     obs-x264.so
+15:48:41.046:     obs-webrtc.so
+15:48:41.046:     obs-vst.so
+15:48:41.046:     obs-vaapi.so
+15:48:41.046:     obs-transitions.so
+15:48:41.046:     obs-qsv11.so
+15:48:41.046:     obs-outputs.so
+15:48:41.046:     obs-libfdk.so
+15:48:41.046:     obs-filters.so
+15:48:41.046:     obs-ffmpeg.so
+15:48:41.046:     linux-v4l2.so
+15:48:41.046:     linux-pulseaudio.so
+15:48:41.046:     linux-pipewire.so
+15:48:41.046:     linux-jack.so
+15:48:41.046:     linux-capture.so
+15:48:41.046:     linux-alsa.so
+15:48:41.046:     image-source.so
+15:48:41.046:     frontend-tools.so
+15:48:41.046:     decklink-output-ui.so
+15:48:41.046:     decklink-captions.so
+15:48:41.046: ---------------------------------
+15:48:41.046: ---------------------------------
+15:48:41.046: Available Encoders:
+15:48:41.046:   Video Encoders:
+15:48:41.046: 	- ffmpeg_svt_av1 (SVT-AV1)
+15:48:41.046: 	- ffmpeg_aom_av1 (AOM AV1)
+15:48:41.046: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+15:48:41.046: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+15:48:41.046: 	- obs_qsv11_v2 (QuickSync H.264)
+15:48:41.046: 	- obs_qsv11_hevc (QuickSync HEVC)
+15:48:41.056: 	- obs-va-vah264lpenc (VAAPI H.264 on WhiskeyLake-U GT2 [UHD Graphics 620] (Low Power))
+15:48:41.065: 	- obs-va-vah264enc (VAAPI H.264 on WhiskeyLake-U GT2 [UHD Graphics 620])
+15:48:41.073: 	- obs-va-vah265enc (VAAPI H.265 on WhiskeyLake-U GT2 [UHD Graphics 620])
+15:48:41.073: 	- obs-vaapi-vaapih265enc (VAAPI H.265  (Legacy))
+15:48:41.073: 	- obs-vaapi-vaapih264enc (VAAPI H.264  (Legacy))
+15:48:41.073: 	- obs_x264 (x264)
+15:48:41.073:   Audio Encoders:
+15:48:41.073: 	- ffmpeg_aac (FFmpeg AAC)
+15:48:41.073: 	- ffmpeg_opus (FFmpeg Opus)
+15:48:41.073: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+15:48:41.073: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+15:48:41.074: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+15:48:41.074: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+15:48:41.074: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+15:48:41.074: 	- libfdk_aac (libfdk AAC)
+15:48:41.074: ==== Startup complete ===============================================
+15:48:41.113: All scene data cleared
+15:48:41.113: ------------------------------------------------
+15:48:41.118: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+15:48:41.118: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+15:48:41.118: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+15:48:41.119: [Loaded global audio device]: 'Desktop Audio'
+15:48:41.119: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+15:48:41.119: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+15:48:41.119: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo' (default)
+15:48:41.119: [Loaded global audio device]: 'Mic/Aux'
+15:48:41.121: Switched to scene 'Scene'
+15:48:41.121: ------------------------------------------------
+15:48:41.121: Loaded scenes:
+15:48:41.121: - scene 'Scene':
+15:48:41.121: ------------------------------------------------
+15:48:41.666: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+15:48:41.666: 
+15:48:53.056: PipeWire initialized
+15:48:53.067: User added source 'Screen Capture (PipeWire)' (pipewire-screen-capture-source) to scene 'Scene'
+15:48:53.148: [pipewire] Screencast session created
+15:48:54.147: [pipewire] Asking for monitor and window
+15:48:54.151: [pipewire] source selected, setting up screencast
+15:48:54.161: [pipewire] Server version: 1.2.7
+15:48:54.161: [pipewire] Library version: 1.2.7
+15:48:54.161: [pipewire] Header version: 1.2.7
+15:48:54.162: [pipewire] Created stream 0x5b2ad849def0
+15:48:54.162: [pipewire] Stream 0x5b2ad849def0 state: "connecting" (error: none)
+15:48:54.162: [pipewire] Playing stream 0x5b2ad849def0
+15:48:54.163: [pipewire] Stream 0x5b2ad849def0 state: "paused" (error: none)
+15:48:54.199: [pipewire] Negotiated format:
+15:48:54.199: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+15:48:54.199: [pipewire]     Modifier: 0x0
+15:48:54.199: [pipewire]     Size: 1920x1080
+15:48:54.199: [pipewire]     Framerate: 0/1
+15:48:54.202: [pipewire] Negotiated format:
+15:48:54.202: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+15:48:54.202: [pipewire]     Modifier: 0x100000000000004
+15:48:54.202: [pipewire]     Size: 1920x1080
+15:48:54.202: [pipewire]     Framerate: 0/1
+15:48:54.214: [pipewire] Stream 0x5b2ad849def0 state: "streaming" (error: none)
+15:48:54.223: Cannot create EGLImage: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+15:48:54.223: [pipewire] Renegotiating stream
+15:48:54.224: [pipewire] Stream 0x5b2ad849def0 state: "paused" (error: none)
+15:48:54.224: [pipewire] Negotiated format:
+15:48:54.224: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+15:48:54.224: [pipewire]     Modifier: 0x100000000000004
+15:48:54.224: [pipewire]     Size: 1920x1080
+15:48:54.224: [pipewire]     Framerate: 0/1
+15:48:54.227: [pipewire] Negotiated format:
+15:48:54.227: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+15:48:54.227: [pipewire]     Modifier: 0x100000000000002
+15:48:54.227: [pipewire]     Size: 1920x1080
+15:48:54.227: [pipewire]     Framerate: 0/1
+15:48:54.237: [pipewire] Stream 0x5b2ad849def0 state: "streaming" (error: none)
+15:48:54.607: QWidgetWindow(0x5b2ad8c286c0, name="previewWindow") must be a top level window.
+15:50:47.262: >>> new qsv encoder
+15:50:47.263: [qsv encoder: 'simple_video_recording'] settings:
+15:50:47.263: 	codec:          H.264
+15:50:47.263: 	rate_control:   ICQ
+15:50:47.263: 	ICQ Quality:    23
+15:50:47.263: 	target_usage:   TU4
+15:50:47.263: 	profile:        high
+15:50:47.263: 	keyint:         0
+15:50:47.263: 	latency:        normal
+15:50:47.263: 	b-frames:       3
+15:50:47.263: 	fps_num:        60
+15:50:47.263: 	fps_den:        1
+15:50:47.263: 	width:          1920
+15:50:47.263: 	height:         1080
+15:50:47.263: [qsv encoder: 'simple_video_recording'] debug info:
+15:50:47.291: Failed to initialize MFX
+15:50:47.291: [qsv encoder: 'msdk_impl'] Specified object/item/sync point not found. (MFX_ERR_NOT_FOUND)
+15:50:47.291: [qsv encoder: 'simple_video_recording'] qsv failed to load
+15:50:47.291: 	major:          1
+15:50:47.291: 	minor:          0
+15:50:50.440: QWidgetWindow(0x5b2ad5a5e9b0, name="previewWindow") must be a top level window.
+15:51:15.032: Switched to Preview/Program mode
+15:51:15.032: ------------------------------------------------
+15:51:16.116: Switched to scene 'Scene'
+15:51:16.122: Switched to regular Preview mode
+15:51:16.122: ------------------------------------------------
+15:51:16.884: Switched to Preview/Program mode
+15:51:16.884: ------------------------------------------------
+15:51:17.610: Switched to scene 'Scene'
+15:51:17.615: Switched to regular Preview mode
+15:51:17.615: ------------------------------------------------
+15:51:17.961: Switched to Preview/Program mode
+15:51:17.962: ------------------------------------------------
+15:51:20.206: Switched to scene 'Scene'
+15:51:20.210: Switched to regular Preview mode
+15:51:20.210: ------------------------------------------------
+15:55:20.375: >>> new qsv encoder
+15:55:20.375: [qsv encoder: 'simple_video_recording'] settings:
+15:55:20.375: 	codec:          H.264
+15:55:20.375: 	rate_control:   ICQ
+15:55:20.375: 	ICQ Quality:    23
+15:55:20.375: 	target_usage:   TU4
+15:55:20.375: 	profile:        high
+15:55:20.375: 	keyint:         0
+15:55:20.375: 	latency:        normal
+15:55:20.375: 	b-frames:       3
+15:55:20.375: 	fps_num:        60
+15:55:20.375: 	fps_den:        1
+15:55:20.375: 	width:          1920
+15:55:20.375: 	height:         1080
+15:55:20.375: [qsv encoder: 'simple_video_recording'] debug info:
+15:55:20.403: Failed to initialize MFX
+15:55:20.403: [qsv encoder: 'msdk_impl'] Specified object/item/sync point not found. (MFX_ERR_NOT_FOUND)
+15:55:20.403: [qsv encoder: 'simple_video_recording'] qsv failed to load
+15:55:20.403: 	major:          1
+15:55:20.403: 	minor:          0
+15:57:53.080: Switched to Preview/Program mode
+15:57:53.080: ------------------------------------------------
+15:57:53.657: Switched to scene 'Scene'
+15:57:53.662: Switched to regular Preview mode
+15:57:53.662: ------------------------------------------------
+15:59:16.398: signal_handler_connect: signal 'file_changed' not found
+15:59:16.399: Settings changed (outputs)
+15:59:16.399: ------------------------------------------------
+15:59:17.639: ==== Recording Start ===============================================
+15:59:39.527: Output 'adv_ffmpeg_output': stopping
+15:59:39.527: Output 'adv_ffmpeg_output': Total frames output: 1312
+15:59:39.527: Output 'adv_ffmpeg_output': Total drawn frames: 1314
+15:59:39.527: Video stopped, number of skipped frames due to encoding lag: 10/1312 (0.8%)
+15:59:39.528: ==== Recording Stop ================================================
+15:59:49.106: Settings changed (outputs)
+15:59:49.106: ------------------------------------------------
+15:59:50.764: ---------------------------------
+15:59:50.764: [x264 encoder: 'advanced_video_stream'] preset: veryfast
+15:59:50.764: [x264 encoder: 'advanced_video_stream'] settings:
+15:59:50.764: 	rate_control: CBR
+15:59:50.764: 	bitrate:      2500
+15:59:50.764: 	buffer size:  2500
+15:59:50.764: 	crf:          23
+15:59:50.764: 	fps_num:      60
+15:59:50.764: 	fps_den:      1
+15:59:50.764: 	width:        1920
+15:59:50.764: 	height:       1080
+15:59:50.764: 	keyint:       250
+15:59:50.764: 
+15:59:50.779: libfdk_aac encoder created
+15:59:50.779: libfdk_aac bitrate: 160, channels: 2
+15:59:50.781: ==== Recording Start ===============================================
+15:59:50.781: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/TNonggChann/2025-02-18 15-59-50.mkv'...
+16:00:11.789: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/TNonggChann/2025-02-18 15-59-50.mkv' stopped
+16:00:11.789: Output 'adv_file_output': stopping
+16:00:11.789: Output 'adv_file_output': Total frames output: 1229
+16:00:11.789: Output 'adv_file_output': Total drawn frames: 1258 (1261 attempted)
+16:00:11.789: Output 'adv_file_output': Number of lagged frames due to rendering lag/stalls: 3 (0.2%)
+16:00:11.790: ==== Recording Stop ================================================
+16:00:11.793: Video stopped, number of skipped frames due to encoding lag: 34/1260 (2.7%)
+16:00:11.831: libfdk_aac encoder destroyed
+16:00:29.403: signal_handler_connect: signal 'file_changed' not found
+16:00:29.403: Settings changed (outputs)
+16:00:29.404: ------------------------------------------------
+16:00:30.326: ==== Recording Start ===============================================
+16:00:49.844: Output 'adv_ffmpeg_output': stopping
+16:00:49.844: Output 'adv_ffmpeg_output': Total frames output: 1170
+16:00:49.844: Output 'adv_ffmpeg_output': Total drawn frames: 1172
+16:00:49.844: ==== Recording Stop ================================================
+16:03:13.808: Settings changed (outputs)
+16:03:13.808: ------------------------------------------------
+16:03:26.701: Settings changed (outputs)
+16:03:26.702: ------------------------------------------------
+16:03:32.521: ---------------------------------
+16:03:32.522: [FFmpeg VAAPI encoder: 'advanced_video_recording'] settings:
+16:03:32.522: 	device:       /dev/dri/by-path/pci-0000:00:02.0-render
+16:03:32.522: 	rate_control: CBR
+16:03:32.522: 	profile:      100
+16:03:32.522: 	level:        -99
+16:03:32.522: 	qp:           0
+16:03:32.522: 	bitrate:      2500
+16:03:32.522: 	maxrate:      2500
+16:03:32.522: 	keyint:       120
+16:03:32.522: 	width:        1920
+16:03:32.522: 	height:       1080
+16:03:32.522: 	b-frames:     0
+16:03:32.522: 	ffmpeg opts:  
+16:03:32.522: 
+16:03:32.543: libfdk_aac encoder created
+16:03:32.543: libfdk_aac bitrate: 160, channels: 2
+16:03:32.565: ==== Recording Start ===============================================
+16:03:32.565: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/TNonggChann/2025-02-18 16-03-32.mkv'...
+16:03:46.741: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/TNonggChann/2025-02-18 16-03-32.mkv' stopped
+16:03:46.741: Output 'adv_file_output': stopping
+16:03:46.741: Output 'adv_file_output': Total frames output: 844
+16:03:46.741: Output 'adv_file_output': Total drawn frames: 850 (851 attempted)
+16:03:46.742: Output 'adv_file_output': Number of lagged frames due to rendering lag/stalls: 1 (0.1%)
+16:03:46.742: Video stopped, number of skipped frames due to encoding lag: 1/849 (0.1%)
+16:03:46.743: ==== Recording Stop ================================================
+16:03:46.748: libfdk_aac encoder destroyed
+16:06:45.856: Settings changed (outputs)
+16:06:45.856: ------------------------------------------------

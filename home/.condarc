@@ -1,0 +1,18 @@
+auto_activate_base: false
+
+channels:
+  - conda-forge
+  - defaults
+channel_priority: strict
+
+create_default_packages:
+  - pip
+  - ipython
+  - ipykernel
+  - nbformat
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - nb_conda_kernels

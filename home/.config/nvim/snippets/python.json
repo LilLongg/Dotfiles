@@ -1,0 +1,26 @@
+{
+  "Codeforces": {
+    "prefix": "codeforces",
+    "body": [
+      "import sys",
+      "import numpy as np",
+      "",
+      "",
+      "try:",
+      "\tsys.stdin = open(\"input.txt\", \"r\")",
+      "\tsys.stdout = open(\"output.txt\", \"w\")",
+      "except:",
+      "\tpass",
+      "",
+      "",
+      "def solve():",
+      "\tn = int(input())",
+      "\tarr = np.array(map(int, input().split()))",
+      "\t$0",
+      "",
+      "",
+      "for _ in range(int(input())):",
+      "\tsolve()"
+    ]
+  }
+}

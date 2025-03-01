@@ -1,0 +1,186 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "ComicShanns Nerd Font";
+  font-weight: bold;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #cdd6f4;
+}
+
+tooltip {
+  background: #1e1e2e;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #313244;
+  margin-right: 5px;
+}
+
+#workspaces button.active,
+#workspaces button.visible {
+  color: #a6adc8;
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  border-radius: 10px;
+}
+
+#workspaces {
+  border-right: solid 1px #495557;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#temperature,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#disk,
+#custom-cava_mviz,
+#custom-launch_wofi,
+#custom-updates,
+#custom-lock_screen,
+#custom-power_btn,
+#network,
+#bluetooth,
+#backlight,
+#waybar,
+#power-profiles-daemon,
+#mpd {
+  background: #303643;
+  opacity: 0.8;
+  padding: 0px 7.5px;
+  margin-top: 10px;
+}
+
+#memory {
+  color: #e5c07b;
+}
+
+#temperature.critical,
+#battery.critical:not(.charging) {
+  color: #e92d4d;
+}
+
+#battery.warning:not(.charging),
+#power-profiles-daemon.performance {
+  color: #ffcc00;
+}
+
+#battery,
+#power-profiles-daemon.power-saver {
+  color: #34ec23;
+}
+
+#bluetooth {
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 7.5px;
+}
+
+#temperature {
+  color: #98c379;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 7.5px;
+}
+
+#power-profiles-daemon.balanced {
+  color: #98c379;
+}
+
+#mpd,
+#custom-launch_wofi {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 7.5px;
+}
+
+#network {
+  color: #c678dd;
+}
+
+
+#window {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#clock {
+  color: #fab387;
+  border-radius: 10px;
+  margin-left: 7.5px;
+  border-right: 0px;
+}
+
+#custom-cava_mviz,
+#cava,
+#pulseaudio {
+  color: #89b4fa;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#pulseaudio.microphone {
+  color: #cba6f7;
+}
+
+#backlight {
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 7.5px;
+}
+
+#custom-power_btn {
+  color: #e06c75;
+  border-radius: 0 10px 10px 0;
+  margin-right: 7.5px;
+  border-left: 0px;
+}
+
+#custom-weather {
+  border-radius: 10px;
+  margin-left: 7.5px;
+  border-right: 0px;
+}
+
+
+#cpu {
+  color: #61afef;
+}
+
+#custom-updates,
+#custom-launch_wofi,
+#bluetooth {
+  color: #1788e4;
+}

@@ -1,0 +1,34 @@
+{
+  "Codeforces": {
+    "prefix": "codeforces",
+    "body": [
+      "#include <cstdio>",
+      "",
+      "constexpr int N = 2e5 + 10;",
+      "constexpr int MOD = 1e9 + 7;",
+      "",
+      "int n;",
+      "int arr[N];",
+      "char str[N];",
+      "",
+      "void solve() { ",
+      "\tscanf(\"%d\\n\", &n); ",
+      "\t$0",
+      "}",
+      "",
+      "int main() {",
+      "\tif (fopen(\"input.txt\", \"r\")) {",
+      "\t\tfreopen(\"input.txt\", \"r\", stdin);",
+      "\t\tfreopen(\"output.txt\", \"w\", stdout);",
+      "\t}",
+      "",
+      "\tint testcase = 1;",
+      "\tscanf(\"%d\\n\", &testcase);",
+      "",
+      "\twhile (testcase--)",
+      "\t\tsolve();",
+      "}"
+    ],
+    "description": "My competitive programming template."
+  }
+}
