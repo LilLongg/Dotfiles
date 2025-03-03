@@ -15,23 +15,23 @@ current_time = dateparser.parse(
 
 
 system_age = current_time - start_time
-system_age_days = system_age.days
-system_age_minutes, system_age_seconds = divmod(round(system_age.total_seconds()), 60)
-system_age_hours, system_age_minutes = divmod(system_age_minutes, 60)
-system_age_months, system_age_days = divmod(system_age_days, 61)
+system_age_hours, system_age_minutes = divmod(
+    round(system_age.total_seconds() / 60), 60
+)
+system_age_hours %= 24
+system_age_months, system_age_days = divmod(system_age.days, 61)
 if system_age_days > 29:
     system_age_months += 1
     system_age_days -= 30
 system_age_years, system_age_months = divmod(system_age_months, 12)
 
-time_labels = ["year", "month", "day", "hour", "minute", "second"]
+time_labels = ["year", "month", "day", "hour", "minute"]
 time_value = [
     system_age_years,
     system_age_months,
     system_age_days,
     system_age_hours,
     system_age_minutes,
-    system_age_seconds,
 ]
 
 cnt = 0
