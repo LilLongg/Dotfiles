@@ -1,0 +1,15 @@
+[language-server.clangd.config]
+args = {"cpp" = ["-std=c++23"]}
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+language-servers = ["pyright", "ruff"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "standard"
+autoImportCompletions = true
+
+[[language]]
+name = "jsonc"
+comment-token = "//"
