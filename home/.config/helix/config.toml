@@ -7,6 +7,7 @@ end-of-line-diagnostics = "warning"
 color-modes = true
 bufferline = "always"
 auto-save = true
+auto-format = true
 
 [editor.cursor-shape]
 insert = "bar"

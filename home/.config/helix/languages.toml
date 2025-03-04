@@ -1,9 +1,9 @@
-[language-server.clangd.config]
-args = {"cpp" = ["-std=c++23"]}
-
 [[language]]
 name = "cpp"
 auto-format = true
+
+[language-server.clangd.config]
+args = {"cpp" = ["-std=c++23"]}
 
 [[language]]
 name = "python"
