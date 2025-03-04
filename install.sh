@@ -9,5 +9,6 @@ sudo cp -r custom /usr/share/sddm/themes
 sudo cp pixelon.regular.ttf /usr/share/fonts
 echo [Current]\nCurrent=custom | sudo tee /etc/sddm.conf
 sudo cp grub /etc/default/grub
+sudo grub-grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo systemctl enable --now bluetooth firewalld cronie sddm
