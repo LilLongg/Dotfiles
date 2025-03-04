@@ -2,9 +2,14 @@
 args = {"cpp" = ["-std=c++23"]}
 
 [[language]]
+name = "cpp"
+auto-format = true
+
+[[language]]
 name = "python"
 roots = ["pyproject.toml"]
 language-servers = ["pyright", "ruff"]
+auto-format = true
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "strict"
