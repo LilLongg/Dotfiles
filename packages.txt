@@ -71,13 +71,6 @@ libreoffice-fresh
 libva
 libva-intel-driver
 libva-utils
-linux
-linux-firmware
-linux-headers
-linux-lts
-linux-lts-headers
-linux-zen
-linux-zen-headers
 lsd
 mako
 man-db
@@ -208,6 +201,7 @@ ttf-ms-win11-auto
 ueberzugpp
 unzip
 uwsm
+valgrind
 vesktop-bin
 visual-studio-code-bin
 vscode-css-languageserver
@@ -222,8 +216,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
 xterm
-yay-bin
-yay-bin-debug
 yazi
 yt-dlp
 zellij
