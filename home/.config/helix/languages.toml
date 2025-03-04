@@ -7,7 +7,7 @@ roots = ["pyproject.toml"]
 language-servers = ["pyright", "ruff"]
 
 [language-server.pyright.config.python.analysis]
-typeCheckingMode = "standard"
+typeCheckingMode = "strict"
 autoImportCompletions = true
 
 [[language]]

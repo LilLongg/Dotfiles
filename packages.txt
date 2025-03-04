@@ -16,6 +16,7 @@ clang
 cmake
 cronie
 docker
+doxygen
 efibootmgr
 fastfetch
 fcitx5-bamboo
@@ -204,6 +205,7 @@ trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
 ttf-ms-win11-auto
+ueberzugpp
 unzip
 uwsm
 vesktop-bin
