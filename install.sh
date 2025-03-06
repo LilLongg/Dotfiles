@@ -6,9 +6,9 @@ sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo "[chaotic-aur]" "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+echo [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist >> /etc/pacman.conf
 
-if [ -f /usr/bin/yay ];
+if [ -e /usr/bin/yay ];
   git clone https://aur.archlinux.org/yay-bin.git
   cd yay-bin
   makepkg -si
@@ -18,7 +18,6 @@ end;
 
 yay -Syu $(cat packages.txt) --noconfirm
 
-systemctl enable --user --now mpd mpd-notification
 stow home --adopt
 
 sudo cp -r custom /usr/share/sddm/themes
@@ -28,4 +27,5 @@ sudo cp grub /etc/default/grub
 sudo grub-grub-mkconfig -o /boot/grub/grub.cfg
 for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
+systemctl enable --user --now mpd mpd-notification
 sudo systemctl enable --now bluetooth firewalld cronie sddm
