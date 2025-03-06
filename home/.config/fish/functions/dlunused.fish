@@ -1,4 +1,4 @@
-function dlunused --wraps='fucking pacman -Qdtq | fucking pacman -Rns -' --description 'alias dlunused=fucking pacman -Qdtq | fucking pacman -Rns -'
-  fucking pacman -Qdtq | fucking pacman -Rns - $argv
+function dlunused --wraps='yay -Yc' --description 'alias dlunused=yay -Yc'
+  yay -Yc $argv
         
 end

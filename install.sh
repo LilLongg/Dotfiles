@@ -1,5 +1,20 @@
 #!/usr/bin/fish
 
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+echo "[chaotic-aur]" "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+
+cd ..
+rm -rf yay-bin
+
 yay -Syu $(cat packages.txt) --noconfirm
 
 systemctl enable --user --now mpd mpd-notification
