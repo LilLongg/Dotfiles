@@ -141,12 +141,14 @@
     {
       "type": "cpu",
       "key": "│ ├",
-      "keyColor": "green"
+      "keyColor": "green",
+      "temp": true
     },
     {
       "type": "gpu",
       "key": "│ ├󰍛",
-      "keyColor": "green"
+      "keyColor": "green",
+      "temp": true
     },
     {
       "type": "disk",
