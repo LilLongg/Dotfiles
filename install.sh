@@ -8,12 +8,13 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 
 echo "[chaotic-aur]" "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-
-cd ..
-rm -rf yay-bin
+if [ -f /usr/bin/yay ];
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay-bin
+  makepkg -si
+  cd ..
+  rm -rf yay-bin
+end;
 
 yay -Syu $(cat packages.txt) --noconfirm
 
