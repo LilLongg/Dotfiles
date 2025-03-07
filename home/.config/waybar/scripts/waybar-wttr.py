@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from typing import Any
 import json
 import requests
 from datetime import datetime
@@ -58,18 +59,18 @@ WEATHER_CODES = {
 data = {}
 
 
-weather = requests.get("https://wttr.in/?format=j1").json()
+weather: dict[str, Any] = requests.get("https://wttr.in/?format=j1").json()
 
 
-def format_time(time):
+def format_time(time: str):
     return time.replace("00", "").zfill(2)
 
 
-def format_temp(temp):
-    return (hour["tempC"] + "°C").ljust(3)
+def format_temp(temp: str):
+    return (temp + "°C").ljust(3)
 
 
-def format_chances(hour):
+def format_chances(hour: dict[str, Any]):
     chances = {
         "chanceoffog": "Fog",
         "chanceoffrost": "Frost",
@@ -81,7 +82,7 @@ def format_chances(hour):
         "chanceofwindy": "Wind",
     }
 
-    conditions = []
+    conditions: list[str] = []
     for event in chances.keys():
         if int(hour[event]) > 0:
             conditions.append(chances[event] + " " + hour[event] + "%")
@@ -103,14 +104,19 @@ data["text"] = (
     + "°C"
 )
 
+LOCATION = weather["nearest_area"][0]
+
 data["tooltip"] = (
+    f"<b>Location: {LOCATION['areaName'][0]['value']}, {LOCATION['country'][0]['value']}</b>\n\n"
+)
+data["tooltip"] += (
     f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°C</b>\n"
 )
 data["tooltip"] += f"Feels like: {weather['current_condition'][0]['FeelsLikeC']}°C\n"
 data["tooltip"] += f"Wind: {weather['current_condition'][0]['windspeedKmph']}Km/h\n"
 data["tooltip"] += f"Humidity: {weather['current_condition'][0]['humidity']}%\n"
 for i, day in enumerate(weather["weather"]):
-    data["tooltip"] += f"\n<b>"
+    data["tooltip"] += "\n<b>"
     if i == 0:
         data["tooltip"] += "Today, "
     if i == 1:
