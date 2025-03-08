@@ -4,6 +4,7 @@ audacity
 avizo
 base
 base-devel
+bash-completion
 bash-language-server
 bc
 blueman
@@ -12,6 +13,8 @@ brightnessctl
 btop
 cava
 cbatticon
+chaotic-keyring
+chaotic-mirrorlist
 clang
 cmake
 cronie
@@ -31,6 +34,7 @@ file-roller
 firefox
 firewalld
 fish
+flameshot
 fzf
 gamemode
 git
@@ -51,6 +55,7 @@ gtk3
 gtk4
 hblock
 helix
+hypridle
 hyprland
 hyprlock
 hyprpolkitagent
@@ -90,6 +95,7 @@ networkmanager
 ninja
 noto-fonts
 noto-fonts-cjk
+noto-fonts-emoji
 npm
 nushell
 nwg-look
@@ -99,12 +105,12 @@ os-prober
 pacman-contrib
 pamixer
 papirus-icon-theme
-pavucontrol
 pipe-viewer-git
 pipewire
 pipewire-pulse
 power-profiles-daemon
 proton-vpn-gtk-app
+pwvucontrol
 pyright
 python-dateparser
 python-dateparser-docs
@@ -193,11 +199,11 @@ sweet-gtk-theme
 sweet-gtk-theme-dark
 swww
 taplo-cli
-tldr
+tealdeer
 trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
-ttf-ms-win11-auto
+ttf-ms-fonts
 ueberzugpp
 unzip
 uwsm
@@ -210,6 +216,7 @@ vscode-json-languageserver
 vulkan-intel
 waybar
 wl-clipboard
+wl-screenrec
 wofi
 xdg-desktop-portal
 xdg-desktop-portal-gtk
