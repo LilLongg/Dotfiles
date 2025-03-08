@@ -1,0 +1,9 @@
+#!/usr/bin/fish
+
+set -l PID (pidof wl-screenrec)
+
+if [ $PID ]
+    printf '{"text": "󰻂 ", "tooltip": "Current recording"}' $PID
+else
+    printf '{"text": " ", "tooltip": "Not recording"}' $PID
+end

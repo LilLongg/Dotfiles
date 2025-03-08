@@ -23,7 +23,7 @@ tooltip {
 #workspaces button {
   padding: 5px;
   color: #313244;
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 
 #workspaces button.active,
@@ -48,12 +48,16 @@ tooltip {
 }
 
 #workspaces {
-  border-right: solid 1px #495557;
   border-top: 0px;
   border-bottom: 0px;
 }
 
+#custom-record {
+  border-right: solid 1px #495557;
+}
+
 #custom-weather,
+#custom-record,
 #window,
 #clock,
 #battery,

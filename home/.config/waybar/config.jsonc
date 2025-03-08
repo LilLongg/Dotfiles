@@ -22,6 +22,7 @@
     "custom/launch_wofi",
     "custom/updates",
     "hyprland/workspaces",
+    "custom/record",
     "power-profiles-daemon",
     "custom/lock_screen",
     "custom/power_btn"
@@ -108,6 +109,15 @@
       "10": "十",
       "special": "零"
     }
+  },
+  "custom/record": {
+    "exec": "~/.config/waybar/scripts/record",
+    "tooltip": true,
+    "interval": 1,
+    "format": {},
+    "return-type": "json",
+    "on-click": "~/.config/hypr/scripts/record",
+    "on-click-right": "~/.config/hypr/scripts/record select"
   },
   "custom/weather": {
     //shows the current weather and forecast
