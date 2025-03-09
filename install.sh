@@ -20,6 +20,7 @@ yay -Syu $(cat packages.txt) --noconfirm
 
 stow home --adopt
 
+sudo cp sync-yay.service /etc/systemd/system/
 sudo cp -r custom /usr/share/sddm/themes
 sudo cp pixelon.regular.ttf /usr/share/fonts
 echo [Current]\nCurrent=custom | sudo tee /etc/sddm.conf
@@ -27,5 +28,5 @@ sudo cp grub /etc/default/grub
 sudo grub-grub-mkconfig -o /boot/grub/grub.cfg
 for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
-systemctl enable --user --now mpd mpd-notification
-sudo systemctl enable --now bluetooth firewalld cronie sddm
+systemctl enable --user --now mpd mpd-notification waybar
+sudo systemctl enable --now bluetooth firewalld cronie sddm sync-yay

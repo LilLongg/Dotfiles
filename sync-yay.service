@@ -1,0 +1,10 @@
+[Unit]
+Description=Update packages database on boot
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/yay -Sy
+
+[Install]
+WantedBy=network-online.target
