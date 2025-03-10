@@ -28,5 +28,5 @@ sudo cp grub /etc/default/grub
 sudo grub-grub-mkconfig -o /boot/grub/grub.cfg
 for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
-systemctl enable --user --now mpd mpd-notification waybar
+systemctl enable --user --now mpd mpd-notification pipewire-pulse wireplumber waybar
 sudo systemctl enable --now bluetooth firewalld cronie sddm sync-yay
