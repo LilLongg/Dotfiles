@@ -59,6 +59,7 @@ hypridle
 hyprland
 hyprlock
 hyprpolkitagent
+hyprsysteminfo
 imagemagick
 intel-gpu-tools
 intel-media-driver
