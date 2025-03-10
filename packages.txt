@@ -67,6 +67,7 @@ java-environment-common
 java-runtime-common
 jdk-openjdk
 jdk11-openjdk
+jdtls
 jupyterlab
 kitty
 kwindowsystem
@@ -93,6 +94,7 @@ neovim
 network-manager-applet
 networkmanager
 ninja
+noisetorch
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -189,6 +191,7 @@ reflector
 rsync
 ruff
 rust
+rust-analyzer
 sddm
 slurp
 steam
