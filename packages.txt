@@ -195,6 +195,7 @@ rust
 rust-analyzer
 sddm
 slurp
+spotdl
 steam
 stow
 sudo
