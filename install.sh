@@ -8,15 +8,8 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 
 echo [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist >> /etc/pacman.conf
 
-if [ -e /usr/bin/yay ];
-  git clone https://aur.archlinux.org/yay-bin.git
-  cd yay-bin
-  makepkg -si
-  cd ..
-  rm -rf yay-bin
-end;
-
-yay -Syu $(cat packages.txt) --noconfirm
+sudo pacman -Sy yay
+yay -S $(cat packages.txt) --noconfirm
 
 stow home --adopt
 
@@ -28,5 +21,7 @@ sudo cp grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
-systemctl enable --user --now mpd mpd-notification pipewire-pulse wireplumber waybar
-sudo systemctl enable --now bluetooth firewalld cronie sddm sync-yay
+systemctl enable --user mpd mpd-notification pipewire-pulse wireplumber waybar
+sudo systemctl enable bluetooth firewalld cronie sddm sync-yay
+
+reboot
