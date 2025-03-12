@@ -12,6 +12,7 @@ sudo pacman -Sy yay
 yay -S $(cat packages.txt) --noconfirm
 
 stow home --adopt
+cp .fcitx5-profile ~/.config/fcitx5/profile
 
 sudo cp sync-yay.service /etc/systemd/system/
 sudo cp -r custom /usr/share/sddm/themes
