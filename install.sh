@@ -11,7 +11,6 @@ echo [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist >> /etc/pacman.co
 sudo pacman -Sy yay
 yay -S $(cat packages.txt) --noconfirm
 
-stow home --adopt
 cp .fcitx5-profile ~/.config/fcitx5/profile
 
 sudo cp update-db.service /etc/systemd/system/
@@ -21,9 +20,11 @@ echo [Theme]\nCurrent=custom | sudo tee /etc/sddm.conf
 echo "#!/bin/bash"\n\npacman -Sy | sudo tee /etc/cron.hourly/update_db
 sudo cp grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
 systemctl enable --user mpd mpd-notification pipewire-pulse wireplumber waybar
 sudo systemctl enable bluetooth ufw cronie sddm update-db
+sudo ufw enable
+sudo ufw default deny
+sudo ufw-docker install
 
 reboot
