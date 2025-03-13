@@ -1,4 +1,5 @@
 ani-cli
+ufw
 aquamarine
 audacity
 avizo
@@ -13,14 +14,11 @@ brightnessctl
 btop
 cava
 cbatticon
-chaotic-keyring
-chaotic-mirrorlist
 clang
 cmake
 cronie
 docker
 doxygen
-efibootmgr
 fastfetch
 fcitx5-bamboo
 fcitx5-configtool
@@ -53,7 +51,6 @@ gstreamer-vaapi
 gtk2
 gtk3
 gtk4
-hblock
 helix
 hypridle
 hyprland
@@ -92,10 +89,7 @@ mpvpaper
 nautilus
 ncmpcpp
 neovim
-network-manager-applet
-networkmanager
 ninja
-noisetorch
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -188,7 +182,6 @@ qt6-webengine
 qt6-websockets
 qt6-webview
 rar
-reflector
 rsync
 ruff
 rust
@@ -198,7 +191,6 @@ slurp
 spotdl
 steam
 stow
-sudo
 swappy
 sweet-gtk-theme
 sweet-gtk-theme-dark

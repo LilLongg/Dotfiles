@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/yay -Sy
+ExecStart=/usr/bin/pacman -Sy
 
 [Install]
 WantedBy=network-online.target

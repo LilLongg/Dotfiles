@@ -14,15 +14,17 @@ yay -S $(cat packages.txt) --noconfirm
 stow home --adopt
 cp .fcitx5-profile ~/.config/fcitx5/profile
 
-sudo cp sync-yay.service /etc/systemd/system/
+sudo cp update-db.service /etc/systemd/system/
 sudo cp -r custom /usr/share/sddm/themes
 sudo cp pixelon.regular.ttf /usr/share/fonts
 echo [Current]\nCurrent=custom | sudo tee /etc/sddm.conf
+echo "#!/bin/bash"\n\npacman -Sy | sudo tee /etc/cron.hourly/update_db
+sudo chmod +x /etc/cron.hourly/update_db
 sudo cp grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 for profile in (find ~/.zen -mindepth 1 -maxdepth 1 -type d); cp -r chrome $profile; end
 
 systemctl enable --user mpd mpd-notification pipewire-pulse wireplumber waybar
-sudo systemctl enable bluetooth firewalld cronie sddm sync-yay
+sudo systemctl enable bluetooth ufw cronie sddm update-db
 
 reboot
