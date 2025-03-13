@@ -194,7 +194,7 @@
     "tooltip": false,
     "format-muted": " ",
     "on-click": "volumectl toggle-mute",
-    "on-click-right": "pwvucontrol",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "volumectl up",
     "on-scroll-down": "volumectl down",
     "scroll-step": 5,
@@ -217,7 +217,7 @@
     "format-source": " {volume}%",
     "format-source-muted": " ",
     "on-click": "volumectl -m toggle-mute",
-    "on-click-right": "pwvucontrol",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "volumectl -m up",
     "on-scroll-down": "volumectl -m down",
     "scroll-step": 5
