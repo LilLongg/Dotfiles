@@ -65,7 +65,6 @@ java-environment-common
 java-runtime-common
 jdk-openjdk
 jdtls
-jupyterlab
 kitty
 kwindowsystem
 layan-cursor-theme-git
@@ -223,6 +222,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
 xterm
+yay
 yazi
 yt-dlp
 zellij
