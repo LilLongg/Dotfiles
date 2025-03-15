@@ -6,9 +6,11 @@ channels:
 channel_priority: strict
 
 create_default_packages:
+  - ipykernel
   - nbformat
   - numpy
   - scipy
   - pandas
   - matplotlib
+  - seaborn
   - scikit-learn
