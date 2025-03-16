@@ -39,12 +39,11 @@ int main() {
     if (!value)
       continue;
 
-    if (++cnt == 2) {
-      printf(", %ld %s%s", value, key.data(), value > 1 ? "s" : "");
-      break;
-    }
+    printf("%s%ld %s%s", cnt++ ? ", " : "", value, key.data(),
+           value > 1 ? "s" : "");
 
-    printf("%ld %s%s", value, key.data(), value > 1 ? "s" : "");
+    if (cnt == 3)
+      break;
   }
 
   puts("");
