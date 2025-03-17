@@ -6,12 +6,10 @@ sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist >> /etc/pacman.conf
+echo [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Sy yay
 yay -S $(cat packages.txt) --noconfirm
-
-cp .fcitx5-profile ~/.config/fcitx5/profile
 
 sudo cp update-db.service /etc/systemd/system/
 sudo cp -r custom /usr/share/sddm/themes
@@ -26,5 +24,7 @@ sudo systemctl enable bluetooth ufw cronie sddm update-db
 sudo ufw enable
 sudo ufw default deny
 sudo ufw-docker install
+
+stow home --no-folding
 
 reboot
