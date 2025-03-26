@@ -1,3 +1,4 @@
+7zip
 ani-cli
 aquamarine
 audacity
@@ -193,7 +194,7 @@ spotdl
 steam
 stow
 swappy
-sweet-gtk-theme-dark
+sweet-gtk-theme
 swww
 taplo-cli
 tealdeer
@@ -214,6 +215,8 @@ vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
 waybar
+wine
+wine-gecko
 wl-clipboard
 wl-screenrec
 wofi
