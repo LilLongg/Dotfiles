@@ -123,7 +123,7 @@
     //shows the current weather and forecast
     "tooltip": true,
     "format": "{}",
-    "interval": 600,
+    "interval": 900,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
     "return-type": "json"
   },
