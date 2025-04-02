@@ -8,10 +8,13 @@ roots = ["pyproject.toml"]
 language-servers = ["pyright", "ruff"]
 auto-format = true
 
+[[language]]
+name = "jsonc"
+comment-token = "//"
+
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "strict"
 autoImportCompletions = true
 
-[[language]]
-name = "jsonc"
-comment-token = "//"
+[language-server.rust-analyzer.config]
+check.workspace = true

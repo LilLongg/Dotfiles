@@ -19,7 +19,9 @@ return {
           "cssls",
           "html",
           "jsonls",
-          "tsserver",
+          "stylua",
+          "black",
+          "prettier"
         },
       })
     end,
@@ -54,7 +56,6 @@ return {
       lspconfig.cssls.setup({ capabilities = capabilities })
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.jsonls.setup({ capabilities = capabilities })
-      lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.bashls.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
