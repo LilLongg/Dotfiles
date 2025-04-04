@@ -5,7 +5,7 @@ return {
 			filetype = {
 				cpp = {
 					'cd "$dir" &&',
-					'g++ -std=c++20 "$fileName" -o "$fileNameWithoutExt" && ',
+					'g++ -std=c++20 "$fileName" -o "$fileNameWithoutExt" -D__ONLINE_JUDGE && ',
 					'"./$fileNameWithoutExt"',
 				},
 				python = {
@@ -28,7 +28,7 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>ef", ":RunFile<CR>", { noremap = true, silent = false })
-		vim.keymap.set("n", "<leader>eft", ":RunFile tab<CR>", { noremap = true, silent = false })
+		vim.keymap.set("n", "<leader>ef", ":w<CR>:RunFile<CR>", { noremap = true, silent = false })
+		vim.keymap.set("n", "<leader>eft", ":w<CR>:RunFile tab<CR>", { noremap = true, silent = false })
 	end,
 }
