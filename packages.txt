@@ -20,6 +20,7 @@ clang
 cmake
 cronie
 docker
+downgrade
 doxygen
 efibootmgr
 eog
@@ -78,10 +79,8 @@ libva-utils
 lsd
 mako
 man-db
-marimo
 mesa
 meson
-miniconda3
 mpc
 mpd
 mpd-notification
@@ -114,7 +113,6 @@ proton-vpn-gtk-app
 pyright
 python-dateparser
 python-dateparser-docs
-python-pipx
 python-pyqt5
 python-pyqt6
 python-requests
@@ -208,6 +206,7 @@ ueberzugpp
 ufw
 ufw-docker
 unzip
+uv
 uwsm
 valgrind
 vesktop
@@ -234,4 +233,3 @@ zellij
 zen-browser-bin
 zip
 zoxide
-zram-generator
