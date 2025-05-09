@@ -19,7 +19,7 @@ echo "#!/bin/bash"\n\npacman -Sy | sudo tee /etc/cron.hourly/update_db
 sudo cp grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-systemctl enable --user mpd mpd-notification pipewire-pulse wireplumber waybar
+systemctl enable --user mpd mpd-notification pipewire-pulse wireplumber waybar hypridle
 sudo systemctl enable bluetooth ufw cronie sddm update-db
 sudo ufw enable
 sudo ufw default deny
