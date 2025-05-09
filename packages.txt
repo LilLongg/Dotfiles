@@ -7,6 +7,7 @@ base
 base-devel
 bash-completion
 bash-language-server
+bat
 bc
 blueman
 bluez
@@ -22,6 +23,7 @@ cronie
 docker
 downgrade
 doxygen
+duf
 efibootmgr
 eog
 fastfetch
@@ -97,6 +99,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 nushell
+nvtop
 nwg-look
 obs-studio
 obs-vaapi
@@ -110,6 +113,7 @@ pipewire
 pipewire-pulse
 power-profiles-daemon
 proton-vpn-gtk-app
+protonup-qt
 pyright
 python-dateparser
 python-dateparser-docs
