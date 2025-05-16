@@ -22,6 +22,7 @@ int main() {
   auto [total_hours, age_minutes] = std::div(duration / 60, 60L);
   auto [total_days, age_hours] = std::div(total_hours, 24L);
   auto [total_months, age_days] = std::div(total_days, 61L);
+  total_months <<= 1;
   if (age_days > 30) {
     ++total_months;
     age_days -= 30;
