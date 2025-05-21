@@ -1,4 +1,5 @@
 7zip
+activate-linux
 ani-cli
 aquamarine
 audacity
@@ -43,6 +44,7 @@ fzf
 gamemode
 git
 github-cli
+glow
 gnome-calendar
 gnome-weather
 go
