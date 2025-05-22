@@ -108,6 +108,7 @@ obs-vaapi
 os-prober
 pacman-contrib
 pamixer
+pandoc-cli
 papirus-icon-theme
 pavucontrol
 pipe-viewer-git
@@ -204,10 +205,15 @@ sweet-gtk-theme
 swww
 taplo-cli
 tealdeer
+texlive-fontsrecommended
+texlive-latexrecommended
+texlive-xetex
+tinymist
 trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
 ttf-ms-fonts
+typst
 ueberzugpp
 ufw
 ufw-docker
