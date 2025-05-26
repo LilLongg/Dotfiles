@@ -11,7 +11,7 @@ then
 	exec fish $LOGIN_OPTION
 fi
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+# export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
