@@ -1,0 +1,7 @@
+ipykernel
+nbformat
+numpy
+polars
+scikit-learn
+matplotlib
+seaborn
