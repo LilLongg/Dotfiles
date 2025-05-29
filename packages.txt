@@ -110,13 +110,13 @@ pacman-contrib
 pamixer
 pandoc-cli
 papirus-icon-theme
-pavucontrol
 pipe-viewer-git
 pipewire
 pipewire-pulse
 power-profiles-daemon
 proton-vpn-gtk-app
 protonup-qt
+pwvucontrol
 pyright
 python-dateparser
 python-dateparser-docs
@@ -214,6 +214,7 @@ ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
 ttf-ms-fonts
 typst
+typstyle-bin
 ueberzugpp
 ufw
 ufw-docker
