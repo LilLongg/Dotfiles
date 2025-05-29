@@ -22,3 +22,4 @@ image/gif=mpv.desktop;
 image/jpeg=swappy.desktop;
 image/png=swappy.desktop;
 application/x-ipynb+json=code.desktop;
+text/plain=helix.desktop;
