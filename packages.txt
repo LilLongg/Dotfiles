@@ -84,6 +84,7 @@ libva-utils
 lsd
 mako
 man-db
+marksman
 mesa
 meson
 mpc
@@ -93,7 +94,6 @@ mpv
 mpvpaper
 nautilus
 ncdu
-ncmpcpp
 neovim
 network-manager-applet
 networkmanager
@@ -116,6 +116,7 @@ pipe-viewer-git
 pipewire
 pipewire-pulse
 power-profiles-daemon
+prettier
 proton-vpn-gtk-app
 protonup-qt
 pwvucontrol
@@ -216,6 +217,7 @@ trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
 ttf-ms-fonts
+typescript-language-server
 typst
 typstyle-bin
 ueberzugpp
@@ -242,6 +244,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
 xterm
+yaml-language-server
 yay
 yazi
 yt-dlp
