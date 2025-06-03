@@ -76,7 +76,7 @@
     "tooltip-format-stopped": "MPD stopped",
     "smooth-scrolling-threshold": 1.5,
     "on-click-right": "mpc toggle",
-    "on-click": "kitty --class ncmpcpp sh -c 'ncmpcpp'",
+    "on-click": "kitty --class rmpc sh -c 'rmpc'",
     "on-scroll-down": "mpc next",
     "on-scroll-up": "mpc prev"
   },

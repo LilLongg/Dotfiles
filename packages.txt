@@ -4,6 +4,7 @@ ani-cli
 aquamarine
 audacity
 avizo
+aylurs-gtk-shell-git
 base
 base-devel
 bash-completion
@@ -91,6 +92,7 @@ mpd-notification
 mpv
 mpvpaper
 nautilus
+ncdu
 ncmpcpp
 neovim
 network-manager-applet
@@ -191,6 +193,7 @@ qt6-websockets
 qt6-webview
 rar
 reflector
+rmpc
 rsync
 ruff
 rust
