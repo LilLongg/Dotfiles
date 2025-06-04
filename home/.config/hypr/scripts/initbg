@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+#start swwww
+swww init
+matugen image ~/.config/hypr/WPP

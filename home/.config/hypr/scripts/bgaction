@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-
-#start swwww
-swww query || swww init
-swww img ~/.config/hypr/WPP

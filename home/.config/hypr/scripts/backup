@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-rsync -a --quiet --delete /home/TNonggChann /backup
