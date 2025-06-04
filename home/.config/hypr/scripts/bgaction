@@ -2,4 +2,4 @@
 
 #start swwww
 swww query || swww init
-swww img ~/.config/hypr/WPP.GIF
+swww img ~/.config/hypr/WPP
