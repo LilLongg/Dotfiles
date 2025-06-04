@@ -2,4 +2,4 @@
 
 #start swwww
 swww init
-matugen image ~/.config/hypr/WPP
+sww img --transition-type center ~/.config/hypr/WPP
