@@ -1,0 +1,35 @@
+#!/usr/bin/fish
+
+if count $argv >
+    if not test -f $argv[1]
+        echo "File not found..."
+        exit 1
+    end
+
+    set -l IMG_PATH $argv[1]
+    ln -sf $IMG_PATH ~/.config/hypr/WPP
+
+    if test (string split . $IMG_PATH | tail -n1) = mp4
+        if not test -f ~/.config/hypr/.vidlock
+            swww kill
+            touch ~/.config/hypr/.vidlock
+        end
+        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH &
+    else
+        if test -f ~/.config/hypr/.vidlock
+            kill mpvpaper
+            swww-daemon &
+            sh -c "rm ~/.config/hypr/.vidlock"
+        end
+        swww img --transition-type random $IMG_PATH &
+    end
+else
+    set -l IMG_PATH ~/.config/hypr/WPP
+
+    if test -f ~/.config/hypr/.vidlock
+        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH &
+    else
+        swww-daemon &
+        swww img --transition-type random $IMG_PATH &
+    end
+end

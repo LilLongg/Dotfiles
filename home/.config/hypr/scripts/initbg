@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-
-#start swwww
-swww init
-sww img --transition-type center ~/.config/hypr/WPP
