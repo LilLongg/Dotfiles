@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-if count $argv >
+if count $argv >/dev/null
     if not test -f $argv[1]
         echo "File not found..."
         exit 1
@@ -14,22 +14,22 @@ if count $argv >
             swww kill
             touch ~/.config/hypr/.vidlock
         end
-        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH &
+        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
         if test -f ~/.config/hypr/.vidlock
             kill mpvpaper
-            swww-daemon &
+            swww-daemon >/dev/null &
             sh -c "rm ~/.config/hypr/.vidlock"
         end
-        swww img --transition-type random $IMG_PATH &
+        swww img --transition-type random $IMG_PATH >/dev/null &
     end
 else
     set -l IMG_PATH ~/.config/hypr/WPP
 
     if test -f ~/.config/hypr/.vidlock
-        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH &
+        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
-        swww-daemon &
-        swww img --transition-type random $IMG_PATH &
+        swww-daemon >/dev/null &
+        swww img --transition-type random $IMG_PATH >/dev/null &
     end
 end

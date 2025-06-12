@@ -11,6 +11,7 @@ bash-completion
 bash-language-server
 bat
 bc
+bind
 blueman
 bluez
 brightnessctl
@@ -77,11 +78,13 @@ kitty
 kwindowsystem
 layan-cursor-theme-git
 leetgo-bin
+lib32-gamemode
 libreoffice-fresh
 libva
 libva-intel-driver
 libva-utils
 lsd
+lutris
 mako
 man-db
 marksman
@@ -92,6 +95,7 @@ mpd
 mpd-notification
 mpv
 mpvpaper
+msmtp-mta
 nautilus
 ncdu
 neovim
@@ -105,6 +109,7 @@ npm
 nushell
 nvtop
 nwg-look
+oama-bin
 obs-studio
 obs-vaapi
 os-prober
@@ -199,6 +204,7 @@ rsync
 ruff
 rust
 rust-analyzer
+s-nail
 sddm
 slurp
 spotdl
@@ -209,10 +215,14 @@ sweet-gtk-theme
 swww
 taplo-cli
 tealdeer
+texlive-fontsextra
 texlive-fontsrecommended
+texlive-latexextra
 texlive-latexrecommended
+texlive-plaingeneric
 texlive-xetex
 tinymist
+traceroute
 trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-nerd
@@ -234,6 +244,7 @@ vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
 waybar
+wget
 wine
 wine-gecko
 wl-clipboard
