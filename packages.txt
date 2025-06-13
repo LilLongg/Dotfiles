@@ -23,7 +23,6 @@ chaotic-mirrorlist
 clang
 cmake
 cronie
-deno
 docker
 downgrade
 doxygen
