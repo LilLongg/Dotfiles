@@ -68,6 +68,11 @@ name = "yaml"
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 auto-format = true
 
+[[language]]
+name = "bash"
+formatter = { command = "shfmt" }
+auto-format = true
+
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "strict"
 autoImportCompletions = true
