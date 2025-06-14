@@ -80,7 +80,7 @@ tooltip {
 #power-profiles-daemon,
 #mpd {
   background: #303643;
-  opacity: 0.8;
+  opacity: 0.925;
   padding: 0px 7.5px;
   margin-top: 10px;
 }
@@ -133,7 +133,6 @@ tooltip {
   color: #c678dd;
 }
 
-
 #window {
   margin-left: 60px;
   margin-right: 60px;
@@ -177,7 +176,6 @@ tooltip {
   margin-left: 7.5px;
   border-right: 0px;
 }
-
 
 #cpu {
   color: #61afef;

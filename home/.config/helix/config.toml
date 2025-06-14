@@ -63,6 +63,7 @@ C-z = "undo"
 C-y = "redo"
 A-v = "paste_clipboard_after"
 C-v = "paste_clipboard_before"
+esc = ["normal_mode", ":sh fcitx5-remote -g Default"]
 
 [keys.select]
 esc = ["normal_mode", "collapse_selection", "keep_primary_selection"]

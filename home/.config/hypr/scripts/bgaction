@@ -10,12 +10,14 @@ if count $argv >/dev/null
     ln -sf $IMG_PATH ~/.config/hypr/WPP
 
     if test (string split . $IMG_PATH | tail -n1) = mp4
+        ffmpeg -y -i $IMG_PATH -vf "select=eq(n\,0)" -q:v 1 ~/.config/hypr/asset/LOCK.JPG
         if not test -f ~/.config/hypr/.vidlock
             swww kill
             touch ~/.config/hypr/.vidlock
         end
         mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
+        ln -sf ~/.config/hypr/WPP ~/.config/hypr/asset/LOCK.JPG
         if test -f ~/.config/hypr/.vidlock
             kill mpvpaper
             swww-daemon >/dev/null &
