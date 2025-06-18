@@ -15,7 +15,7 @@ sudo cp update-db.service /etc/systemd/system/
 sudo cp -r custom /usr/share/sddm/themes
 sudo cp pixelon.regular.ttf /usr/share/fonts
 echo [Theme]\nCurrent=custom | sudo tee /etc/sddm.conf
-echo "#!/bin/bash"\n\npacman -Sy | sudo tee /etc/cron.hourly/update_db
+echo "#!/bin/bash"\n\npacman -Sy chaotic-keyring --noconfirm | sudo tee /etc/cron.hourly/update_db
 sudo cp grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 

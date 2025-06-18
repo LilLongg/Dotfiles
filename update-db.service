@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/pacman -Sy
+ExecStart=/usr/bin/pacman -Sy chaotic-keyring --noconfirm
 
 [Install]
 WantedBy=network-online.target
