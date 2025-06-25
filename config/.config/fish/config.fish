@@ -25,6 +25,9 @@ set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green
 
+set -q VIRTUAL_ENV_DISABLE_PROMPT
+or set -g VIRTUAL_ENV_DISABLE_PROMPT true
+
 set -x PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 zoxide init fish | source
