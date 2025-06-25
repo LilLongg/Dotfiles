@@ -14,7 +14,9 @@ switch $argv[1]
     case remove
         rm -rf $HOME/.venv/$argv[2]
     case activate
+        set -l cur_dir (pwd)
         source $HOME/.venv/$argv[2]/bin/activate.fish
+        cd $cur_dir
     case rename
         rm -rf $HOME/.venv/$argv[3]
         mv $HOME/.venv/$argv[2] $HOME/.venv/$argv[3]
