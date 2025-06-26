@@ -30,7 +30,7 @@ if count $argv >/dev/null
             swww-daemon >/dev/null &
             sh -c "rm ~/.config/hypr/.vidlock"
         end
-        swww img --transition-type random $IMG_PATH >/dev/null &
+        swww img --transition-type random $IMG_PATH >/dev/null
     end
 else
     set -l IMG_PATH ~/.config/hypr/WPP
@@ -39,6 +39,6 @@ else
         mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
         swww-daemon >/dev/null &
-        swww img --transition-type random $IMG_PATH >/dev/null &
+        swww img --transition-type random $IMG_PATH >/dev/null
     end
 end
