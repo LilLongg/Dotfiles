@@ -1,0 +1,6 @@
+backend = "wal"
+color_space = "lchmixed"
+check_contrast = true
+
+[templates]
+kitty = { src = 'kitty.conf', dst = '~/.config/kitty/colors.conf' }
