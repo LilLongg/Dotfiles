@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     password: None,
-    theme: None,
+    theme: "default",
     cache_dir: None,
     on_song_change: None,
     volume_step: 5,
@@ -35,6 +35,7 @@
             "4":       SwitchToTab("Playlists"),
             "5":       SwitchToTab("Search"),
             "6":       SwitchToTab("Directories"),
+            "7":       SwitchToTab("Lyrics"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -114,8 +115,51 @@
         (
             name: "Queue",
             pane: Split(
-                direction: Horizontal,
-                panes: [(size: "20%", pane: Pane(AlbumArt)), (size: "80%", pane: Pane(Queue))],
+                direction: Vertical,
+                panes: [
+                    (
+                        size: "100%",
+                        borders: "NONE",
+                        pane: Split(
+                            borders: "NONE",
+                            direction: Horizontal,
+                            panes: [
+                                (
+                                    size: "70%",
+                                    borders: "ALL",
+                                    pane: Pane(Queue),
+                                ),
+                                (
+                                    size: "30%",
+                                    borders: "NONE",
+                                    pane: Split(
+                                        direction: Vertical,
+                                        panes: [
+                                            (
+                                                size: "50%",
+                                                borders: "ALL",
+                                                pane: Pane(AlbumArt),
+                                            ),
+                                            (
+                                                size: "50%",
+                                                borders: "NONE",
+                                                pane: Split(
+                                                    direction: Vertical,
+                                                    panes: [
+                                                        (
+                                                            size: "100%",
+                                                            pane: Pane(Lyrics),
+                                                        ),
+                                                    ]
+                                                ),
+                                            ),
+                                        ]
+                                    ),
+                                ),
+                            ]
+                        ),
+                    ),
+                ],
             ),
         ),
         (
@@ -138,6 +182,9 @@
             name: "Directories",
             pane: Pane(Directories),
         ),
+        (
+            name: "Lyrics",
+            pane: Pane(Lyrics),
+        ),
     ],
 )
-
