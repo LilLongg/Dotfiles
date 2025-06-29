@@ -42,3 +42,5 @@ else
         swww img --transition-type random $IMG_PATH >/dev/null
     end
 end
+
+matugen image ~/.config/hypr/WPP
