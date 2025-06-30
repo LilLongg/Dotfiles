@@ -45,3 +45,4 @@ end
 
 matugen image ~/.config/hypr/WPP
 wallust run ~/.config/hypr/WPP
+pywalfox update
