@@ -276,6 +276,8 @@ yaml-language-server
 yay
 yazi
 yt-dlp
+zathura
+zathura-pdf-mupdf
 zellij
 zen-browser-bin
 zip
