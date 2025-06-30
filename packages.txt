@@ -26,8 +26,6 @@ clang
 cmake
 cmatrix
 cronie
-discord_arch_electron
-discover-overlay
 docker
 docker-compose
 downgrade
@@ -252,6 +250,7 @@ unzip
 uv
 uwsm
 valgrind
+vesktop-bin
 virtualbox
 virtualbox-host-dkms
 visual-studio-code-bin
@@ -259,6 +258,7 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
+walcord
 wallust-git
 waybar
 wget
