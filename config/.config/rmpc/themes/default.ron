@@ -49,13 +49,13 @@
             prop: (kind: Property(Album), style: (fg: "white"),
                 default: (kind: Text("Unknown Album"), style: (fg: "white"))
             ),
-            width: "30%",
+            width: "40%",
         ),
         (
             prop: (kind: Property(Duration),
                 default: (kind: Text("-"))
             ),
-            width: "15%",
+            width: "5%",
             alignment: Right,
         ),
     ],

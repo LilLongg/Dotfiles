@@ -6,6 +6,7 @@
     password: None,
     theme: "default",
     cache_dir: None,
+    lyrics_dir: "~/Music/Lyrics",
     on_song_change: None,
     volume_step: 5,
     max_fps: 30,

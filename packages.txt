@@ -26,6 +26,8 @@ clang
 cmake
 cmatrix
 cronie
+discord
+discover-overlay
 docker
 docker-compose
 downgrade
@@ -133,8 +135,10 @@ proton-vpn-gtk-app
 protonup-qt
 pwvucontrol
 pyright
+python-capstone
 python-dateparser
 python-dateparser-docs
+python-pyelftools
 python-pyqt5
 python-pyqt6
 python-pywalfox
@@ -247,7 +251,6 @@ unzip
 uv
 uwsm
 valgrind
-vesktop
 virtualbox
 virtualbox-host-dkms
 visual-studio-code-bin
