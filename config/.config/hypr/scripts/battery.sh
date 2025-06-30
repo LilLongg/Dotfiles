@@ -4,15 +4,15 @@ BATTERY=$(cat /sys/class/power_supply/BAT0/capacity)
 if [[ $(cat /sys/class/power_supply/BAT0/status) == "Discharging" ]]; then
 	ICON="󰁹"
 	if (($BATTERY > 30)); then
-		COLOR="\$green"
+		COLOR="rgb(34ec23)"
 	elif (($BATTERY > 20)); then
-		COLOR="\$yellow"
+		COLOR="rgb(ffcc00)"
 	else
-		COLOR="\$red"
+		COLOR="rgb(e92d4d)"
 	fi
 else
 	ICON=""
-	COLOR="\$green"
+	COLOR="rgb(34ec23)"
 fi
 
 echo "$ICON $BATTERY"
