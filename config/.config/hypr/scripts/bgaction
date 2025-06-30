@@ -52,3 +52,4 @@ end
 matugen image ~/.config/hypr/asset/LOCK.JPG
 wallust run ~/.config/hypr/asset/LOCK.JPG
 kitty @ set-colors -a -c ~/.config/kitty/colors.conf
+pywalfox update

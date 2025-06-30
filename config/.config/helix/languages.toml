@@ -9,11 +9,6 @@ language-servers = ["pyright", "ruff"]
 auto-format = true
 
 [[language]]
-name = "jsonc"
-comment-token = "//"
-auto-format = true
-
-[[language]]
 name = "typst"
 auto-format = true
 formatter = { command = "typstyle" }
@@ -40,11 +35,13 @@ auto-format = true
 
 [[language]]
 name = "json"
+comment-token = "//"
 formatter = { command = "prettier", args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]
 name = "jsonc"
+comment-token = "//"
 formatter = { command = "prettier", args = ["--parser", "jsonc"] }
 auto-format = true
 
