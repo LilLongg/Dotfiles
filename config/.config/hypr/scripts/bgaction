@@ -7,22 +7,26 @@ if count $argv >/dev/null
     end
 
     set -l IMG_PATH $argv[1]
+    set -l IMG_NAME (basename $IMG_PATH)
+    set -l IMG_CACHE ~/.cache/wpp/$IMG_NAME.JPG
     ln -sf $IMG_PATH ~/.config/hypr/WPP
 
     if test (string split . $IMG_PATH | tail -n1) = mp4
-        rm ~/.config/hypr/asset/LOCK.JPG
-        ffmpeg -i $IMG_PATH -vf "select=eq(n\,0)" -q:v 1 ~/.config/hypr/asset/LOCK.JPG
+        if not test -f $IMG_CACHE
+            ffmpeg -i $IMG_PATH -vf "select=eq(n\,0)" -q:v 1 $IMG_CACHE
+        end
         if not test -f ~/.config/hypr/.vidlock
             swww kill
             touch ~/.config/hypr/.vidlock
         end
         mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
-        if test (string split . $IMG_PATH | tail -n1) = gif
-            rm ~/.config/hypr/asset/LOCK.JPG
-            ffmpeg -i $IMG_PATH -vframes 1 ~/.config/hypr/asset/LOCK.JPG
-        else
-            ln -sf ~/.config/hypr/WPP ~/.config/hypr/asset/LOCK.JPG
+        if not test -f $IMG_CACHE
+            if test (string split . $IMG_PATH | tail -n1) = gif
+                ffmpeg -i $IMG_PATH -vframes 1 $IMG_CACHE
+            else
+                ffmpeg -i $IMG_PATH $IMG_CACHE
+            end
         end
 
         if test -f ~/.config/hypr/.vidlock
@@ -32,6 +36,8 @@ if count $argv >/dev/null
         end
         swww img --transition-type random $IMG_PATH >/dev/null
     end
+
+    ln -sf $IMG_CACHE ~/.config/hypr/asset/LOCK.JPG
 else
     set -l IMG_PATH ~/.config/hypr/WPP
 
@@ -43,5 +49,5 @@ else
     end
 end
 
-matugen image ~/.config/hypr/WPP
-wallust run ~/.config/hypr/WPP
+matugen image ~/.config/hypr/asset/LOCK.JPG
+wallust run ~/.config/hypr/asset/LOCK.JPG
