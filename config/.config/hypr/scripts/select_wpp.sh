@@ -32,7 +32,7 @@ menu() {
 			fi
 		fi
 
-		printf "%s\x00icon\x1f%s\n" "$PIC" "$PIC_CACHE"
+		printf "%s\x00icon\x1f%s\n" "$PIC_NAME" "$PIC_CACHE"
 	done
 }
 
@@ -44,6 +44,8 @@ fi
 
 if [[ "$CHOICE" == "$RANDOM_PIC_NAME" ]]; then
 	CHOICE="$RANDOM_PIC"
+else
+	CHOICE=$(find "$WPP_DIR" -name "$CHOICE")
 fi
 
 WPP_CMD="$WPP_BACKEND $CHOICE"
