@@ -51,4 +51,4 @@ end
 
 matugen image ~/.config/hypr/asset/LOCK.JPG
 wallust run ~/.config/hypr/asset/LOCK.JPG
-walcord -i ~/.config/hypr/asset/LOCK.JPG -o ~/.config/vesktop/settings/quickCss.css
+walcord -i ~/.config/hypr/asset/LOCK.JPG -t ~/.config/walcord/midnight.css
