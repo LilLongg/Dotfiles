@@ -125,12 +125,12 @@
                             direction: Horizontal,
                             panes: [
                                 (
-                                    size: "70%",
+                                    size: "71%",
                                     borders: "ALL",
                                     pane: Pane(Queue),
                                 ),
                                 (
-                                    size: "30%",
+                                    size: "29%",
                                     borders: "NONE",
                                     pane: Split(
                                         direction: Vertical,
