@@ -49,4 +49,4 @@ else
 fi
 
 WPP_CMD="$WPP_BACKEND $CHOICE"
-$WPP_CMD
+fish -lc "$WPP_CMD"

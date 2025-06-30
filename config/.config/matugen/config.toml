@@ -21,3 +21,7 @@ output_path = "~/.config/ags/colors.scss"
 input_path = "~/.config/matugen/templates/pywalfox-colors.json"
 output_path = "~/.cache/wal/colors.json"
 post_hook = "pywalfox update"
+
+[templates.discord]
+input_path = "~/.config/matugen/templates/discord-colors.css"
+output_path = "~/.config/vesktop/settings/quickCss.css"

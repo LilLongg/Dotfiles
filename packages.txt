@@ -49,6 +49,7 @@ fish
 flameshot
 fzf
 gamemode
+gimp
 git
 github-cli
 glow
@@ -258,7 +259,6 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
-walcord
 wallust-git
 waybar
 wget
