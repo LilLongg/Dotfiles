@@ -51,5 +51,9 @@ end
 
 matugen image ~/.config/hypr/asset/LOCK.JPG
 wallust run ~/.config/hypr/asset/LOCK.JPG
+
+cp ~/.cache/wallust/sequences ~/.cache/wal/sequences
+sed -i 's/""/"~\/.config\/hypr\/asset\/LOCK.JPG"/g' ~/.cache/wal/colors.json
+
 kitty @ set-colors -a -c ~/.config/kitty/colors.conf
 pywalfox update
