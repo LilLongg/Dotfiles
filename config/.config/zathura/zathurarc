@@ -1,3 +1,5 @@
+include colors
+
 set selection-clipboard clipboard
 set adjust-open "best-fit"
 set pages-per-row 1
