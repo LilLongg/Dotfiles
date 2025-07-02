@@ -1,4 +1,4 @@
-include colors
+include zathura-colors
 
 set selection-clipboard clipboard
 set adjust-open "best-fit"

@@ -23,4 +23,4 @@ output_path = "~/.config/vesktop/settings/quickCss.css"
 
 [templates.zathura]
 input_path = "~/.config/matugen/templates/zathura-colors"
-output_path = "~/.config/zathura/colors"
+output_path = "~/.config/zathura/zathura-colors"
