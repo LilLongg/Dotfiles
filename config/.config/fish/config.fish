@@ -1,4 +1,5 @@
 if status is-interactive
+    kitty @ set-colors -c ~/.config/kitty/colors.conf
     # Commands to run in interactive sessions can go here
 end
 
