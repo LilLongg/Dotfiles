@@ -1,5 +1,7 @@
 if status is-interactive
-    kitty @ set-colors -c ~/.config/kitty/colors.conf
+    if test $TERM = xterm-kitty
+        kitty @ set-colors -c ~/.config/kitty/colors.conf
+    end
     # Commands to run in interactive sessions can go here
 end
 
