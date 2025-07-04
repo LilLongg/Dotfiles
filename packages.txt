@@ -13,6 +13,7 @@ bash-completion
 bash-language-server
 bat
 bc
+bibtex-tidy
 bind
 blueman
 bluez
@@ -99,6 +100,7 @@ marksman
 matugen-bin
 mesa
 meson
+mission-center
 mpc
 mpd
 mpd-mpris
@@ -121,6 +123,7 @@ nwg-look
 oama-bin
 obs-studio
 obs-vaapi
+orchis-theme
 os-prober
 pacman-contrib
 pamixer
@@ -173,6 +176,7 @@ qt5-webengine
 qt5-websockets
 qt5-x11extras
 qt5-xmlpatterns
+qt5ct
 qt6-3d
 qt6-5compat
 qt6-charts
@@ -209,6 +213,7 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 qt6-webview
+qt6ct
 rar
 reflector
 rmpc
@@ -225,10 +230,10 @@ spotdl
 steam
 stow
 swappy
-sweet-gtk-theme
 swww
 taplo-cli
 tealdeer
+texlab
 texlive-fontsextra
 texlive-fontsrecommended
 texlive-latexextra
