@@ -8,3 +8,4 @@ hyprland = { src = 'hyprland.conf', dst = '~/.config/hypr/border.conf' }
 hyprlock = { src = 'hyprlock.conf', dst = '~/.config/hypr/colors.conf' }
 firefox = { src = 'pywalfox.json', dst = '~/.cache/wal/colors.json' }
 xres = { src = 'Xresources', dst = '~/.Xresources' }
+cava = { src = 'cava', dst = '~/.config/cava/config' }
