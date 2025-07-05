@@ -1,0 +1,14 @@
+#!/usr/bin/fish
+
+set -l IMG_PATH ~/.config/hypr/WPP
+
+if not test -f $IMG_PATH
+    $HOME/.config/hypr/scripts/bgaction (find ~/.config/hypr/wpp/* | shuf | head -n1)
+else
+    if test -f ~/.config/hypr/.vidlock
+        mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
+    else
+        swww-daemon >/dev/null &
+        swww img --transition-type random $IMG_PATH >/dev/null
+    end
+end
