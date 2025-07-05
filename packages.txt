@@ -85,6 +85,7 @@ kitty
 kwindowsystem
 layan-cursor-theme-git
 lib32-gamemode
+lib32-mangohud
 libreoffice-fresh
 libva
 libva-intel-driver
@@ -93,6 +94,7 @@ lsd
 lutris
 mako
 man-db
+mangohud
 marimo
 marksman
 matugen-bin
