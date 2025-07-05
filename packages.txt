@@ -54,8 +54,6 @@ gimp
 git
 github-cli
 glow
-gnome-calendar
-gnome-weather
 go
 graphviz
 grim
@@ -108,7 +106,6 @@ mpd-notification
 mpv
 mpvpaper
 msmtp-mta
-nautilus
 neovim
 network-manager-applet
 networkmanager
@@ -129,6 +126,7 @@ pacman-contrib
 pamixer
 pandoc-cli
 papirus-icon-theme
+pcmanfm-qt
 pipe-viewer-git
 pipewire
 pipewire-pulse
