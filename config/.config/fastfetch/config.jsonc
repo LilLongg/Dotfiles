@@ -38,62 +38,62 @@
   "logo": {
     "height": 20,
     "padding": {
-      "top": 4
-    }
+      "top": 4,
+    },
   },
   "display": {
     "separator": " -> ",
     "size": {
-      "ndigits": 2
-    }
+      "ndigits": 2,
+    },
   },
   "modules": [
     {
       "type": "custom",
-      "format": "\u001b[90m┌────────────────────────────────────────────────────────────┐"
+      "format": "\u001b[90m┌────────────────────────────────────────────────────────────┐",
     },
     {
       "type": "title",
       "key": "\u001b[90m│ ",
       "format": "{6}{7}{8}                                     \u001b[90m│",
-      "keyWidth": 3
+      "keyWidth": 3,
     },
     {
       "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────────────┘"
+      "format": "\u001b[90m└────────────────────────────────────────────────────────────┘",
     },
     {
       "type": "custom",
-      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m "
+      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m ",
     },
     {
       "type": "custom",
-      "format": "┌────────────────────────────────────────────────────────────┐"
+      "format": "┌────────────────────────────────────────────────────────────┐",
     },
     {
       "type": "os",
       "key": " OS",
-      "keyColor": "yellow"
+      "keyColor": "yellow",
     },
     {
       "type": "kernel",
       "key": "│ ├",
-      "keyColor": "yellow"
+      "keyColor": "yellow",
     },
     {
       "type": "packages",
       "key": "│ ├󰏖",
-      "keyColor": "yellow"
+      "keyColor": "yellow",
     },
     {
       "type": "shell",
       "key": "│ └",
-      "keyColor": "yellow"
+      "keyColor": "yellow",
     },
     {
       "type": "wm",
       "key": " WM",
-      "keyColor": "blue"
+      "keyColor": "blue",
     },
     /**
     {
@@ -105,27 +105,28 @@
     {
       "type": "theme",
       "key": "│ ├󰉼",
-      "keyColor": "blue"
+      "keyColor": "blue",
     },
     {
       "type": "icons",
       "key": "│ ├󰀻",
-      "keyColor": "blue"
+      "keyColor": "blue",
     },
     {
       "type": "cursor",
       "key": "│ ├󰇀",
-      "keyColor": "blue"
+      "keyColor": "blue",
     },
     {
       "type": "font",
       "key": "│ ├",
-      "keyColor": "blue"
+      "keyColor": "blue",
+      "format": "{1}",
     },
     {
       "type": "terminal",
       "key": "│ └",
-      "keyColor": "blue"
+      "keyColor": "blue",
     },
     /**
     {
@@ -136,63 +137,63 @@
     {
       "type": "host",
       "key": " PC",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "cpu",
       "key": "│ ├",
       "keyColor": "green",
-      "temp": true
+      "temp": true,
     },
     {
       "type": "gpu",
       "key": "│ ├󰍛",
       "keyColor": "green",
-      "temp": true
+      "temp": true,
     },
     {
       "type": "disk",
       "key": "│ ├",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "memory",
       "key": "│ ├󰑭",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "swap",
       "key": "│ ├󰓡",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "uptime",
       "key": "│ ├󰅐",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "display",
       "key": "│ └󰍹",
-      "keyColor": "green"
+      "keyColor": "green",
     },
     {
       "type": "sound",
       "key": " AU",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
     },
     {
       "type": "player",
       "key": "│ ├󰥠",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
     },
     {
       "type": "media",
       "key": "│ └󰝚",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
     },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────────────┘"
-    }
-  ]
+      "format": "└────────────────────────────────────────────────────────────┘",
+    },
+  ],
 }
