@@ -1,6 +1,7 @@
 7zip
 activate-linux
 advcpmv
+alacritty
 ani-cli
 aquamarine
 asciiquarium
@@ -43,6 +44,7 @@ fcitx5-im-emoji-picker-git
 fcitx5-mozc
 fcitx5-qt
 fcitx5-unikey
+feh
 ffmpeg
 file-roller
 firefox
@@ -72,6 +74,10 @@ hypridle
 hyprland
 hyprlock
 hyprpolkitagent
+i3-wm
+i3blocks
+i3lock
+i3status
 imagemagick
 intel-gpu-tools
 intel-media-driver
@@ -129,6 +135,7 @@ pamixer
 pandoc-cli
 papirus-icon-theme
 pcmanfm-qt
+picom
 pipe-viewer-git
 pipewire
 pipewire-pulse
@@ -276,7 +283,9 @@ xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
+xorg-xrdb
 xterm
+xwinwrap-git
 yaml-language-server
 yay
 yazi

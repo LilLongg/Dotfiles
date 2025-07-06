@@ -7,5 +7,6 @@ kitty = { src = 'kitty.conf', dst = '~/.config/kitty/colors.conf' }
 hyprland = { src = 'hyprland.conf', dst = '~/.config/hypr/border.conf' }
 hyprlock = { src = 'hyprlock.conf', dst = '~/.config/hypr/colors.conf' }
 firefox = { src = 'pywalfox.json', dst = '~/.cache/wal/colors.json' }
-xres = { src = 'Xresources', dst = '~/.Xresources' }
+xres = { src = 'Xresources', dst = '~/.config/X11/colors' }
 cava = { src = 'cava', dst = '~/.config/cava/config' }
+alacritty = { src = 'alacritty.toml', dst = '~/.config/alacritty/colors.toml' }
