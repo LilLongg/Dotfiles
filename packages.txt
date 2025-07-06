@@ -33,6 +33,7 @@ docker-compose
 downgrade
 doxygen
 dua-cli
+dunst
 dysk
 efibootmgr
 eog
@@ -98,7 +99,6 @@ libva-intel-driver
 libva-utils
 lsd
 lutris
-mako
 man-db
 mangohud
 marimo
