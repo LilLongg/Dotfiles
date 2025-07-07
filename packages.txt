@@ -109,7 +109,6 @@ meson
 mission-center
 mpc
 mpd
-mpd-mpris
 mpd-notification
 mpv
 mpvpaper
@@ -240,6 +239,7 @@ swappy
 swww
 taplo-cli
 tealdeer
+teamviewer
 texlab
 texlive-fontsextra
 texlive-fontsrecommended
