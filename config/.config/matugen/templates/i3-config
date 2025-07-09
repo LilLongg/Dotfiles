@@ -32,6 +32,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id picom
 exec --no-startup-id /home/TNonggChann/.local/bin/session-startup.sh
+exec --no-startup-id /home/TNonggChann/.config/i3/scripts/initbg.fish
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -102,6 +103,7 @@ bindsym $mod+mod1+q exec shutdown -h now
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+a exec rofi -show drun -terminal alacritty
+bindsym $mod+Shift+a exec /home/TNonggChann/.config/i3/scripts/select_wpp.sh
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
