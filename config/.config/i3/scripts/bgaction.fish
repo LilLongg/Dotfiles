@@ -44,3 +44,11 @@ sed -i 's/""/"~\/.config\/hypr\/asset\/LOCK.JPG"/g' ~/.cache/wal/colors.json
 pywalfox update
 pkill -USR2 cava
 dunstctl reload
+
+gsettings set org.gnome.nm-applet disable-disconnected-notifications true
+gsettings set org.gnome.nm-applet disable-connected-notifications true
+kill nm-applet && nm-applet --indicator &
+gsettings set org.gnome.nm-applet disable-disconnected-notifications false
+gsettings set org.gnome.nm-applet disable-connected-notifications false
+
+kill protonvpn-app && protonvpn-app --start-minimized &
