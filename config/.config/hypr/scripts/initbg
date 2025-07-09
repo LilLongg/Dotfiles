@@ -1,11 +1,11 @@
 #!/usr/bin/fish
 
-set -l IMG_PATH ~/.config/hypr/WPP
+set -l IMG_PATH ~/.current_wpp
 
 if not test -f $IMG_PATH
-    $HOME/.config/hypr/scripts/bgaction (find ~/.config/hypr/wpp/* | shuf | head -n1)
+    $HOME/.config/hypr/scripts/bgaction (find ~/Wallpaper/* | shuf | head -n1)
 else
-    if test -f ~/.config/hypr/.vidlock
+    if test -f ~/.wppvidlock
         mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     else
         swww-daemon >/dev/null &

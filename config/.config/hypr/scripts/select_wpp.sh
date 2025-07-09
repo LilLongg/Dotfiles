@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
-WPP_DIR="$HOME/.config/hypr/wpp"
+WPP_DIR="$HOME/Wallpaper"
 WPP_BACKEND="$HOME/.config/hypr/scripts/bgaction"
 ROFI_THEME="$HOME/.config/rofi/wallpaper.rasi"
 ICON_SIZE=$(echo "scale=1; (1080 * 3) / 150" | bc)

@@ -1,17 +1,18 @@
 #!/usr/bin/fish
 
+sel -l LOCK_FILE ~/.wppvidlock
 set -l IMG_PATH $argv[1]
 set -l IMG_NAME (basename $IMG_PATH)
 set -l IMG_CACHE ~/.cache/wpp/$IMG_NAME.JPG
-ln -sf $IMG_PATH ~/.config/hypr/WPP
+ln -sf $IMG_PATH ~/.current_wpp
 
 if test (string split . $IMG_PATH | tail -n1) = mp4
     if not test -f $IMG_CACHE
         ffmpeg -i $IMG_PATH -vf "select=eq(n\,0)" -q:v 1 $IMG_CACHE
     end
-    if not test -f ~/.config/hypr/.vidlock
+    if not test -f $LOCK_FILE
         swww kill
-        touch ~/.config/hypr/.vidlock
+        touch $LOCK_FILE
     end
     mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
 else
@@ -23,10 +24,10 @@ else
         end
     end
 
-    if test -f ~/.config/hypr/.vidlock
+    if test -f $LOCK_FILE
         kill mpvpaper
         swww-daemon >/dev/null &
-        sh -c "rm ~/.config/hypr/.vidlock"
+        sh -c "rm $LOCK_FILE"
     end
     swww img --transition-type random $IMG_PATH >/dev/null
 end

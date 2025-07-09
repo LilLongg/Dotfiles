@@ -1,2 +1,0 @@
-#!/usr/bin/bash
-mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' /home/tnonggchann/.config/hypr/Wpp.mp4
