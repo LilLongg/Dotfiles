@@ -27,8 +27,8 @@ switch (string split . $IMG_PATH | tail -n1)
     case '*'
         if test -f $LOCK_FILE
             sh -c "rm $LOCK_FILE"
-            kill xwinwrap
         end
+        kill xwinwrap
         if not test -f $IMG_CACHE
             ffmpeg $IMG_PATH $IMG_CACHE
         end
