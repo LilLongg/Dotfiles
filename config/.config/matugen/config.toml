@@ -48,3 +48,8 @@ output_path = "~/.config/gtk-3.0/gtk.css"
 [templates.gtk4]
 input_path = "~/.config/matugen/templates/gtk-colors.css"
 output_path = "~/.config/gtk-4.0/gtk.css"
+
+[templates.i3]
+input_path = "~/.config/matugen/templates/i3-config"
+output_path = "~/.config/i3/config"
+post_hook = "i3-msg reload"
