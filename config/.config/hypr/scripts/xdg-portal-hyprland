@@ -8,5 +8,3 @@ sleep 2
 
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland
-
-/home/TNonggChann/.local/bin/startup.sh
