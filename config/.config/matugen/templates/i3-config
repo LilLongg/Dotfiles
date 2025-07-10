@@ -258,14 +258,15 @@ bindsym $mod+mod1+r exec reboot
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:ComicShanns Nerd Font 11
         position top
 
         colors {
-                background {{colors.background.default.hex}}ee
-                statusline {{colors.on_background.default.hex}}
+                background {{colors.primary_container.default.hex}}
+                statusline {{colors.on_primary_container.default.hex}}
                 separator {{colors.outline.default.hex}}
 
-                focused_workspace {{colors.primary_container.default.hex}} {{colors.primary_container.default.hex}} {{colors.on_primary_container.default.hex}}
+                focused_workspace {{colors.primary.default.hex}} {{colors.primary.default.hex}} {{colors.on_primary.default.hex}}
                 active_workspace #333333 #222222 #FFFFFF
                 inactive_workspace #333333 #222222 #888888
                 urgent_workspace {{colors.error_container.default.hex}} {{colors.error_container.default.hex}} {{colors.on_error_container.default.hex}}
