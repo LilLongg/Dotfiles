@@ -7,7 +7,6 @@ aquamarine
 asciiquarium
 audacity
 avizo
-aylurs-gtk-shell-git
 base
 base-devel
 bash-completion
@@ -37,6 +36,7 @@ dunst
 dysk
 efibootmgr
 eog
+eww
 fastfetch
 fcitx5-bamboo
 fcitx5-configtool
@@ -127,7 +127,6 @@ nwg-look
 oama-bin
 obs-studio
 obs-vaapi
-orchis-theme
 os-prober
 pacman-contrib
 pamixer
@@ -229,6 +228,7 @@ ruff
 rust
 rust-analyzer
 s-nail
+screencast
 sddm
 shfmt
 slurp
@@ -279,13 +279,13 @@ wine-gecko
 wl-clipboard
 wl-screenrec
 wlogout
+wpgtk
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
 xorg-xrdb
-xterm
-xwinwrap-git
+xwinwrap-0.9-bin
 yaml-language-server
 yay
 yazi
