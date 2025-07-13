@@ -121,7 +121,6 @@
       "type": "font",
       "key": "│ ├",
       "keyColor": "blue",
-      "format": "{1}",
     },
     {
       "type": "terminal",
