@@ -59,7 +59,7 @@ for_window [title="flt-rmpc"] floating enable, resize set 1280 960
 for_window [class="Blueman-manager"] floating enable, resize set 800 600
 for_window [class="xdg-desktop-portal-gtk"] floating enable, resize set 800 600
 for_window [class="Protonvpn-app"] floating enable, resize set 800 600
-for_window [class="pcmanfm-qt"] floating enable, resize set 1064 580
+for_window [class="Pcmanfm"] floating enable, resize set 1064 580
 for_window [class="fcitx5-config-qt"] floating enable, resize set 1094 600
 for_window [class="pwvucontrol"] floating enable, resize set 1094 600
 for_window [class="FileRoller"] floating enable, resize set 1280 960
@@ -94,7 +94,6 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 bindsym $mod+t exec alacritty
 bindsym $mod+Shift+t exec alacritty -t "flt-btop" -e btop
-# bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -166,7 +165,7 @@ bindsym $mod+m exec alacritty -t "flt-rmpc" -e rmpc
 bindsym $mod+Shift+m exec volumectl toggle-mute
 bindsym $mod+mod1+m exec volumectl -m toggle-mute
 
-bindsym $mod+f exec pcmanfm-qt --platform xcb
+bindsym $mod+f exec pcmanfm
 bindsym $mod+b exec blueman-manager
 bindsym $mod+n exec alacritty -t "flt-nmtui" -e nmtui
 bindsym $mod+i exec zen-browser

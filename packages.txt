@@ -27,6 +27,7 @@ clang
 cmake
 cmatrix
 cronie
+dconf-editor
 docker
 docker-compose
 downgrade
@@ -109,6 +110,7 @@ meson
 mission-center
 mpc
 mpd
+mpd-mpris
 mpd-notification
 mpv
 mpvpaper
@@ -132,7 +134,7 @@ pacman-contrib
 pamixer
 pandoc-cli
 papirus-icon-theme
-pcmanfm-qt
+pcmanfm-gtk3
 picom
 pipe-viewer-git
 pipewire
