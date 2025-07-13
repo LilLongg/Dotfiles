@@ -5,4 +5,4 @@ export XMODIFIERS=@im=ibus
 export KITTY_DISABLE_WAYLAND=1
 export EDITOR=helix
 
-export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_QPA_PLATFORMTHEME=gtk3

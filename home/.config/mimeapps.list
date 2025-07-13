@@ -19,7 +19,7 @@ application/x-ipynb+json=code.desktop
 image/svg+xml=org.gnome.eog.desktop
 
 [Added Associations]
-application/pdf=zen.desktop;org.pwmt.zathura.desktop;
+application/pdf=org.pwmt.zathura.desktop;
 image/gif=mpv.desktop;
 image/jpeg=swappy.desktop;
 image/png=swappy.desktop;
