@@ -50,6 +50,7 @@ file-roller
 firefox
 fish
 flameshot
+font-manager
 fzf
 gamemode
 gimp
@@ -249,7 +250,7 @@ tinymist
 traceroute
 trash-cli
 ttf-cascadia-code-nerd
-ttf-comic-shanns-nerd
+ttf-comic-shanns-v2
 ttf-ms-fonts
 typescript-language-server
 typst

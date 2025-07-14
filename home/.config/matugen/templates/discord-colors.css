@@ -19,7 +19,7 @@
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: 'figtree';
+	--font: 'CaskaydiaCove Nerd Font Mono';
 
 	/* top left corner text */
 	--corner-text: 'Midnight';
