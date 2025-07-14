@@ -1,8 +1,11 @@
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 export KITTY_DISABLE_WAYLAND=1
 export EDITOR=helix
 
+export QT_QPA_PLATFORM=xcb
 export QT_QPA_PLATFORMTHEME=gtk3
+
+xsettingsd &
