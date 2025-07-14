@@ -25,7 +25,6 @@ chaotic-keyring
 chaotic-mirrorlist
 clang
 cmake
-cmatrix
 cronie
 docker
 docker-compose
@@ -284,6 +283,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xorg-xhost
 xorg-xrdb
+xsettingsd
 xwinwrap-0.9-bin
 yaml-language-server
 yay
