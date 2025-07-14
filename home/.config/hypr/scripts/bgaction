@@ -19,7 +19,7 @@ switch (string split . $IMG_PATH | tail -n1)
         mpvpaper -o "--loop-playlist --hwdec=vaapi" '*' $IMG_PATH >/dev/null &
     case gif GIF
         if test -f $LOCK_FILE
-            sh -c "rm $LOCK_FILE"
+            rm $LOCK_FILE
             kill mpvpaper
         end
         if not test -f $IMG_CACHE
@@ -28,7 +28,7 @@ switch (string split . $IMG_PATH | tail -n1)
         swww img --transition-type random $IMG_PATH >/dev/null
     case '*'
         if test -f $LOCK_FILE
-            sh -c "rm $LOCK_FILE"
+            rm $LOCK_FILE
             kill mpvpaper
         end
         if not test -f $IMG_CACHE

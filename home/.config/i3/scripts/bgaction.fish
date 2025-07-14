@@ -18,7 +18,7 @@ switch (string split . $IMG_PATH | tail -n1)
         nice xwinwrap -ov -fs -fdt -ni -- mpv -wid WID -loop $IMG_PATH &
     case gif GIF
         if test -f $LOCK_FILE
-            sh -c "rm $LOCK_FILE"
+            rm $LOCK_FILE
         end
         if not test -f $IMG_CACHE
             ffmpeg -i $IMG_PATH -vframes 1 $IMG_CACHE
@@ -26,7 +26,7 @@ switch (string split . $IMG_PATH | tail -n1)
         nice xwinwrap -ov -fs -fdt -ni -- mpv -wid WID -loop $IMG_PATH &
     case '*'
         if test -f $LOCK_FILE
-            sh -c "rm $LOCK_FILE"
+            rm $LOCK_FILE
         end
         kill xwinwrap
         if not test -f $IMG_CACHE
