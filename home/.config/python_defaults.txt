@@ -1,5 +1,7 @@
 ipykernel
 nbformat
+ruff
+ty
 numpy
 polars
 scikit-learn

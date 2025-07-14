@@ -1,8 +1,5 @@
 if status is-interactive
-    if test $TERM = xterm-kitty
-        kitty @ set-colors -c ~/.config/kitty/colors.conf
-    end
-    # Commands to run in interactive sessions can go here
+    cat ~/.cache/wal/sequences
 end
 
 set -U fish_prompt_pwd_dir_length 0

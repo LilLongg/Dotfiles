@@ -5,7 +5,7 @@ auto-format = true
 [[language]]
 name = "python"
 roots = ["pyproject.toml"]
-language-servers = ["pyright", "ruff"]
+language-servers = ["ty", "ruff"]
 auto-format = true
 
 [[language]]
@@ -70,6 +70,6 @@ name = "bash"
 formatter = { command = "shfmt" }
 auto-format = true
 
-[language-server.pyright.config.python.analysis]
-typeCheckingMode = "strict"
-autoImportCompletions = true
+[language-server.ty]
+command = "ty"
+args = ["server"]
