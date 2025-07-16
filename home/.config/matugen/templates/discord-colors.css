@@ -98,6 +98,6 @@
 }
 
 body {
-  --font: 'CaskaydiaCove Nerd Font Mono';
-  --code-font: 'CaskaydiaCove Nerd Font Mono';
+	--font: 'CaskaydiaCove Nerd Font Mono', "Cascadia Next JP";
+	--code-font: 'CaskaydiaCove Nerd Font Mono', "Cascadia Next JP";
 }

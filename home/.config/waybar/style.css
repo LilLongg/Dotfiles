@@ -2,7 +2,7 @@
   all: unset;
   border: none;
   border-radius: 0;
-  font-family: "Comic Shanns", "Symbols Nerd Font";
+  font-family: "Comic Shanns", "Cascadia Next JP", "Symbols Nerd Font";
   font-weight: bold;
   font-size: 12px;
   min-height: 0;

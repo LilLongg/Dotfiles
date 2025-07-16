@@ -53,7 +53,7 @@ function fish_prompt
         set_color green
     end
     printf "[%d]" $last_status
-    set_color normal
     # printf '↪  '
     printf "> "
+    set_color normal
 end
