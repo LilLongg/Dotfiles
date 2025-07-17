@@ -4,7 +4,6 @@ advcpmv
 alacritty
 ani-cli
 aquamarine
-asciiquarium
 audacity
 avizo
 base
@@ -34,7 +33,6 @@ dua-cli
 dunst
 dysk
 efibootmgr
-eog
 eww
 fastfetch
 fcitx5-bamboo
@@ -227,6 +225,7 @@ ruff
 rust
 rust-analyzer
 s-nail
+satty
 screencast
 sddm
 shfmt
@@ -234,7 +233,6 @@ slurp
 spotdl
 steam
 stow
-swappy
 swww
 taplo-cli
 tealdeer
@@ -252,6 +250,7 @@ trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-v2
 ttf-ms-fonts
+ty
 typescript-language-server
 typst
 typstyle-bin
