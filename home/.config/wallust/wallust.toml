@@ -10,3 +10,4 @@ firefox = { src = 'pywalfox.json', dst = '~/.cache/wal/colors.json' }
 xres = { src = 'Xresources', dst = '~/.config/X11/colors' }
 cava = { src = 'cava', dst = '~/.config/cava/config' }
 alacritty = { src = 'alacritty.toml', dst = '~/.config/alacritty/colors.toml' }
+zathura = { src = 'zathura-colors', dst = '~/.config/zathura/zathura-colors' }
