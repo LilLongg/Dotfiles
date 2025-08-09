@@ -24,6 +24,7 @@ chaotic-keyring
 chaotic-mirrorlist
 clang
 cmake
+cmake-language-server
 cronie
 docker
 docker-compose
@@ -225,7 +226,6 @@ ruff
 rust
 rust-analyzer
 s-nail
-satty
 screencast
 sddm
 shfmt
