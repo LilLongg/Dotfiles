@@ -33,7 +33,7 @@ stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
 icon_position = left
-icon_theme = Papirus
+icon_theme = /usr/share/icons/Papirus
 enable_recursive_icon_lookup = true
 max_icon_size = 72
 sticky_history = yes
@@ -70,3 +70,6 @@ timeout = 0
 background = "{{colors.surface.default.hex}}99"
 foreground = "{{colors.on_surface.default.hex}}"
 highlight = "{{colors.error.default.hex}}"
+[ignore_flameshot_warning]
+body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
+format = ""

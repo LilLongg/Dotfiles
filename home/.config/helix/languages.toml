@@ -3,6 +3,16 @@ name = "cpp"
 auto-format = true
 
 [[language]]
+name = "xml"
+auto-format = true
+language-servers = ["lemminx"]
+
+[[language]]
+name = "qml"
+auto-format = true
+language-servers = ["qmlls"]
+
+[[language]]
 name = "python"
 roots = ["pyproject.toml"]
 language-servers = ["ty", "ruff"]
@@ -73,3 +83,9 @@ auto-format = true
 [language-server.ty]
 command = "ty"
 args = ["server"]
+
+[language-server.lemminx]
+command = "lemminx"
+
+[language-server.qmlls]
+command = "qmlls6"

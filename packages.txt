@@ -6,6 +6,7 @@ ani-cli
 aquamarine
 audacity
 avizo
+aylurs-gtk-shell
 base
 base-devel
 bash-completion
@@ -25,6 +26,7 @@ chaotic-mirrorlist
 clang
 cmake
 cmake-language-server
+cmatrix
 cronie
 docker
 docker-compose
@@ -34,7 +36,6 @@ dua-cli
 dunst
 dysk
 efibootmgr
-eww
 fastfetch
 fcitx5-bamboo
 fcitx5-configtool
@@ -57,9 +58,7 @@ git
 github-cli
 glow
 go
-graphviz
 grim
-grsync
 grub
 grub-theme-bsol-git
 gst-libav
@@ -85,11 +84,11 @@ intel-ucode
 java-environment-common
 java-runtime-common
 jdk-openjdk
-jdtls
 jq
 kitty
 kwindowsystem
 layan-cursor-theme-git
+lemminx
 lib32-gamemode
 lib32-mangohud
 libreoffice-fresh
@@ -97,7 +96,6 @@ libva
 libva-intel-driver
 libva-utils
 lsd
-lutris
 man-db
 mangohud
 marimo
@@ -142,7 +140,6 @@ prettier
 proton-vpn-gtk-app
 protonup-qt
 pwvucontrol
-pyright
 python-capstone
 python-dateparser
 python-dateparser-docs
@@ -220,11 +217,8 @@ qt6-webview
 rar
 reflector
 rmpc
-rofi-wayland
-rsync
+rofi
 ruff
-rust
-rust-analyzer
 s-nail
 screencast
 sddm
@@ -245,7 +239,6 @@ texlive-latexrecommended
 texlive-plaingeneric
 texlive-xetex
 tinymist
-traceroute
 trash-cli
 ttf-cascadia-code-nerd
 ttf-comic-shanns-v2
@@ -272,8 +265,6 @@ vulkan-intel
 wallust-git
 waybar
 wget
-wine
-wine-gecko
 wl-clipboard
 wl-screenrec
 wlogout
