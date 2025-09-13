@@ -73,3 +73,6 @@ highlight = "{{colors.error.default.hex}}"
 [ignore_flameshot_warning]
 body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
 format = ""
+[ignore_fcitx_warning]
+summary = "Switch group"
+format = ""

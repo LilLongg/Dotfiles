@@ -25,6 +25,7 @@ switch (string split . $IMG_PATH | tail -n1)
         if not test -f $IMG_CACHE
             ffmpeg -i $IMG_PATH -vframes 1 $IMG_CACHE
         end
+        swww query || swww-daemon &
         swww img --transition-type random $IMG_PATH >/dev/null
     case '*'
         if test -f $LOCK_FILE
@@ -34,12 +35,13 @@ switch (string split . $IMG_PATH | tail -n1)
         if not test -f $IMG_CACHE
             ffmpeg -i $IMG_PATH $IMG_CACHE
         end
+        swww query || swww-daemon &
         swww img --transition-type random $IMG_PATH >/dev/null
 end
 
 wpg -ns "$IMG_CACHE"
-matugen image $IMG_CACHE
-wallust run $IMG_CACHE
+matugen image "$IMG_CACHE"
+wallust run "$IMG_CACHE"
 
 cp ~/.cache/wallust/sequences ~/.cache/wal/sequences
 sed -i 's/""/"~\/.config\/hypr\/asset\/LOCK.JPG"/g' ~/.cache/wal/colors.json

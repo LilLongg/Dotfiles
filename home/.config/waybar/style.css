@@ -1,11 +1,37 @@
-* {
+#custom-weather,
+#custom-record,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#temperature,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#disk,
+#custom-cava_mviz,
+#custom-launch_wofi,
+#custom-updates,
+#custom-lock_screen,
+#custom-power_btn,
+#network,
+#bluetooth,
+#backlight,
+#waybar,
+#power-profiles-daemon,
+#mpd {
   all: unset;
   border: none;
   border-radius: 0;
-  font-family: "Comic Shanns", "Cascadia Next JP", "Symbols Nerd Font";
+  font-family: "Pixelon", "LanaPixel", "Symbols Nerd Font";
   font-weight: bold;
   font-size: 12px;
   min-height: 0;
+  background: #303643;
+  opacity: 0.925;
+  padding: 0px 7.5px;
+  margin-top: 10px;
 }
 
 window#waybar {
@@ -14,14 +40,18 @@ window#waybar {
 }
 
 tooltip {
+  all: unset;
+  font-family: "Pixelon", "LanaPixel", "Symbols Nerd Font";
+  font-weight: bold;
   background: #1e1e2e;
-  border-radius: 10px;
+  border-radius: 7px;
   border-width: 2px;
   border-style: solid;
   border-color: #11111b;
 }
 
 #workspaces button {
+  all: unset;
   padding: 5px;
   color: #313244;
   /* margin-right: 5px; */
@@ -55,35 +85,6 @@ tooltip {
 
 #custom-record {
   border-right: solid 1px #495557;
-}
-
-#custom-weather,
-#custom-record,
-#window,
-#clock,
-#battery,
-#pulseaudio,
-#temperature,
-#workspaces,
-#tray,
-#cpu,
-#memory,
-#disk,
-#custom-cava_mviz,
-#custom-launch_wofi,
-#custom-updates,
-#custom-lock_screen,
-#custom-power_btn,
-#network,
-#bluetooth,
-#backlight,
-#waybar,
-#power-profiles-daemon,
-#mpd {
-  background: #303643;
-  opacity: 0.925;
-  padding: 0px 7.5px;
-  margin-top: 10px;
 }
 
 #memory {

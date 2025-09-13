@@ -133,8 +133,7 @@
   },
   "clock": {
     // "interval": 1,
-    "locale": "ja_JP.UTF-8",
-    "format": " {:L%H:%M   %m月%d日、%a}",
+    "format": " {:L%H:%M   %a, %b %d}",
     // "format": " {:L%A %c}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "tooltip": true,

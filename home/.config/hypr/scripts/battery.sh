@@ -15,5 +15,5 @@ else
 	COLOR="rgb(34ec23)"
 fi
 
-echo "$ICON $BATTERY"
+echo "$ICON $BATTERY%"
 echo "\$batteryColor = $COLOR" >~/.config/hypr/batteryColor.conf

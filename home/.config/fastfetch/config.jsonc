@@ -55,7 +55,7 @@
     {
       "type": "title",
       "key": "\u001b[90m│ ",
-      "format": "{6}{7}{8}                                     \u001b[90m│",
+      "format": "{6}{7}{8}                              \u001b[90m│",
       "keyWidth": 3,
     },
     {
