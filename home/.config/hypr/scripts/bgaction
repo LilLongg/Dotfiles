@@ -46,7 +46,9 @@ wallust run "$IMG_CACHE"
 cp ~/.cache/wallust/sequences ~/.cache/wal/sequences
 sed -i 's/""/"~\/.config\/hypr\/asset\/LOCK.JPG"/g' ~/.cache/wal/colors.json
 
-kitty @ set-colors -a -c ~/.config/kitty/colors.conf
-pywalfox update
-pkill -USR2 cava
-dunstctl reload
+kitty @ set-colors -a -c ~/.config/kitty/colors.conf &
+pywalfox update &
+pkill -USR2 cava &
+dunstctl reload &
+gsettings set org.gnome.desktop.interface gtk-theme ""
+gsettings set org.gnome.desktop.interface gtk-theme linea-nord-color
