@@ -26,3 +26,6 @@ image/png=satty.desktop;
 application/x-ipynb+json=code.desktop;
 text/plain=helix.desktop;
 image/svg+xml=zen.desktop;
+x-scheme-handler/http=zen.desktop;
+x-scheme-handler/https=zen.desktop;
+x-scheme-handler/chrome=zen.desktop;

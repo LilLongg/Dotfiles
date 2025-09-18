@@ -33,7 +33,6 @@ cmatrix
 cronie
 docker
 docker-compose
-dolphin
 downgrade
 dua-cli
 dunst
@@ -94,6 +93,7 @@ libreoffice-fresh
 libva
 libva-intel-driver
 libva-utils
+libvdpau-va-gl
 linux-cachyos
 linux-cachyos-headers
 linux-firmware
@@ -256,14 +256,17 @@ unzip
 uv
 uwsm
 valgrind
+vdpauinfo
 vesktop
 virtualbox
 virtualbox-host-dkms
 visual-studio-code-bin
+vpl-gpu-rt
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
+vulkan-tools
 wallust-git
 waybar
 wireless-regdb

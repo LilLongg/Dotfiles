@@ -144,6 +144,7 @@
       "key": "│ ├",
       "keyColor": "green",
       "temp": true,
+      "format": "{1} ({4}) @ {6}",
     },
     {
       "type": "gpu",

@@ -240,7 +240,7 @@
   },
   "custom/launch_wofi": {
     "format": "",
-    "on-click": "wofi -n",
+    "on-click": "rofi -show drun",
     "tooltip": true,
     "tooltip-format": "Open an app",
   },
@@ -264,7 +264,7 @@
     "tooltip": true,
   },
   "network": {
-    "interface": "wlo1",
+    "interface": "wlp1s0",
     "interval": 1,
     "tooltip-format-ethernet": "{ifname}  \n {bandwidthDownBits}  {bandwidthUpBits}",
     "format": " {bandwidthDownBits}  {bandwidthUpBits}",
