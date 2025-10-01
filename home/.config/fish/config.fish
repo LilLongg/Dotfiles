@@ -1,8 +1,9 @@
 if status is-interactive
     cat ~/.cache/wal/sequences
     alias rm="trash"
-    zoxide init fish | source
 end
+
+zoxide init fish | source
 
 set -U fish_prompt_pwd_dir_length 0
 

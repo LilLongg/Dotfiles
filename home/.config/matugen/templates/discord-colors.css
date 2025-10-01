@@ -98,6 +98,6 @@
 }
 
 body {
-	--font: 'BHN Neue Pixel Grotesk', 'LanaPixel';
+	--font: 'BHN Neue Pixel Grotesk', 'LanaPixel', "Noto Color Emoji";
 	--code-font: 'CaskaydiaCove Nerd Font Mono', monospace;
 }

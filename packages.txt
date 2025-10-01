@@ -290,7 +290,6 @@ zam-plugins-lv2
 zathura
 zathura-pdf-mupdf
 zellij
-zen-browser-bin
 zip
 zoxide
 zram-generator
