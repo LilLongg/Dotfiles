@@ -14,8 +14,6 @@ bash-completion
 bash-language-server
 bat
 bc
-bibtex-tidy
-bind
 blueman
 bluez
 brightnessctl
@@ -47,7 +45,6 @@ fcitx5-im-emoji-picker-git
 fcitx5-mozc
 fcitx5-qt
 fcitx5-unikey
-feh
 ffmpeg
 file-roller
 firefox
@@ -74,14 +71,12 @@ hypridle
 hyprland
 hyprlock
 hyprpolkitagent
-i3-wm
-i3blocks
-i3lock
-i3status
 imagemagick
+impala
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+iwd
 java-environment-common
 java-runtime-common
 jdk-openjdk
@@ -115,8 +110,6 @@ mpd-mpris
 mpv
 mpvpaper
 neovim
-network-manager-applet
-networkmanager
 ninja
 noto-fonts
 noto-fonts-cjk
@@ -133,7 +126,6 @@ pacman-contrib
 pamixer
 pandoc-cli
 pcmanfm-gtk3
-picom
 pipe-viewer-git
 pipewire
 pipewire-pulse
@@ -154,7 +146,6 @@ python-requests
 qt5-3d
 qt5-charts
 qt5-connectivity
-qt5-datavis3d
 qt5-declarative
 qt5-doc
 qt5-examples
@@ -222,7 +213,6 @@ reflector
 rmpc
 rofi
 ruff
-screencast
 sddm
 shfmt
 slurp
@@ -234,13 +224,6 @@ swww
 taplo-cli
 tealdeer
 teamviewer
-texlab
-texlive-fontsextra
-texlive-fontsrecommended
-texlive-latexextra
-texlive-latexrecommended
-texlive-plaingeneric
-texlive-xetex
 tinymist
 trash-cli
 ttf-cascadia-code-nerd
@@ -277,10 +260,7 @@ wpgtk
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xorg-xhost
-xorg-xrdb
-xsettingsd
-xwinwrap-0.9-bin
+xfsprogs
 yaml-language-server
 yay
 yazi

@@ -264,7 +264,7 @@
     "tooltip": true,
   },
   "network": {
-    "interface": "wlp1s0",
+    "interface": "wlan0",
     "interval": 1,
     "tooltip-format-ethernet": "{ifname}  \n {bandwidthDownBits}  {bandwidthUpBits}",
     "format": " {bandwidthDownBits}  {bandwidthUpBits}",
@@ -274,7 +274,7 @@
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "Wifi: {essid}\n {bandwidthDownBits}  {bandwidthUpBits}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty --title nmtui sh -c 'nmtui'",
+    "on-click": "kitty --title impala sh -c 'impala'",
   },
   "bluetooth": {
     "format-on": " on",
