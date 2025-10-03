@@ -1,7 +1,6 @@
 7zip
 activate-linux
 advcpmv
-alacritty
 ananicy-cpp
 ani-cli
 aquamarine
@@ -29,8 +28,6 @@ clang
 cmake
 cmatrix
 cronie
-docker
-docker-compose
 downgrade
 dua-cli
 dunst
@@ -66,6 +63,7 @@ gstreamer-vaapi
 gtk2
 gtk3
 gtk4
+gvfs
 helix
 hypridle
 hyprland
@@ -110,6 +108,8 @@ mpd-mpris
 mpv
 mpvpaper
 neovim
+network-manager-applet
+networkmanager-iwd
 ninja
 noto-fonts
 noto-fonts-cjk
@@ -234,7 +234,6 @@ typst
 typstyle-bin
 ueberzugpp
 ufw
-ufw-docker
 unzip
 uv
 uwsm

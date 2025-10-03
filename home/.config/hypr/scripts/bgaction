@@ -53,4 +53,4 @@ dunstctl reload &
 gsettings set org.gnome.desktop.interface gtk-theme ""
 gsettings set org.gnome.desktop.interface gtk-theme linea-nord-color
 gsettings set org.gnome.desktop.interface icon-theme ""
-gsettings set org.gnome.desktop.interface icon-theme FlattrColor
+gsettings set org.gnome.desktop.interface icon-theme flattrcolor
