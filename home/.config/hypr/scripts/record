@@ -8,9 +8,9 @@ if [ $PID ]
     notify-send "Screen Recording" "Screen Recording stopped"
 else
     if [ $argv[1] = select ]
-        wl-screenrec --audio -f $HOME/Videos/Records/(date +'%Y%m%d_%Hh%Mm%Ss').mp4 -g (slurp) &
+        wl-screenrec --audio -f $HOME/Videos/Records/(date +'%Y-%m-%d %H-%M-%S').mp4 -g (slurp) &
     else
-        wl-screenrec --audio -f $HOME/Videos/Records/(date +'%Y%m%d_%Hh%Mm%Ss').mp4 &
+        wl-screenrec --audio -f $HOME/Videos/Records/(date +'%Y-%m-%d %H-%M-%S').mp4 &
     end
 
     python -u "$HOME/.config/hypr/scripts/record_tray.py" &
