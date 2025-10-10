@@ -1,16 +1,10 @@
 [[language]]
+name = "c"
+auto-format = true
+
+[[language]]
 name = "cpp"
 auto-format = true
-
-[[language]]
-name = "xml"
-auto-format = true
-language-servers = ["lemminx"]
-
-[[language]]
-name = "qml"
-auto-format = true
-language-servers = ["qmlls"]
 
 [[language]]
 name = "python"
@@ -83,9 +77,3 @@ auto-format = true
 [language-server.ty]
 command = "ty"
 args = ["server"]
-
-[language-server.lemminx]
-command = "lemminx"
-
-[language-server.qmlls]
-command = "qmlls6"

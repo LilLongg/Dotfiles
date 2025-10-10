@@ -11,17 +11,8 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "clangd",
-          "pyright",
-          "cmake",
-          "rust_analyzer",
-          "bashls",
-          "cssls",
-          "html",
-          "jsonls",
           "stylua",
-          "black",
-          "prettier"
+          "clangd",
         },
       })
     end,
@@ -50,13 +41,6 @@ return {
           },
         },
       })
-      lspconfig.cmake.setup({ capabilities = capabilities })
-      lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-      lspconfig.arduino_language_server.setup({ capabilities = capabilities })
-      lspconfig.cssls.setup({ capabilities = capabilities })
-      lspconfig.html.setup({ capabilities = capabilities })
-      lspconfig.jsonls.setup({ capabilities = capabilities })
-      lspconfig.bashls.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", function()

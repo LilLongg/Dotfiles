@@ -8,10 +8,6 @@ return {
 					'g++ -std=c++20 "$fileName" -o "$fileNameWithoutExt" -D__ONLINE_JUDGE && ',
 					'"./$fileNameWithoutExt"',
 				},
-				python = {
-					'cd "$dir" &&',
-					'python -u "$fileName"',
-				},
 			},
 
 			mode = "float",
