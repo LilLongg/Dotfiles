@@ -31,6 +31,7 @@ dua-cli
 dunst
 dysk
 efibootmgr
+eog
 fastfetch
 fcitx5-bamboo
 fcitx5-configtool
@@ -64,13 +65,11 @@ helix
 hypridle
 hyprland
 hyprlock
-hyprpolkitagent
 imagemagick
 impala
 intel-gpu-tools
 intel-media-driver
 intel-ucode
-iwd
 java-environment-common
 java-runtime-common
 jdk-openjdk
@@ -93,6 +92,7 @@ linux-firmware
 linux-zen
 linux-zen-headers
 lsd
+mandoc
 mangohud
 marksman
 matugen-bin
@@ -100,7 +100,6 @@ meson
 mission-center
 mpc
 mpd
-mpd-mpris
 mpv
 mpvpaper
 neovim
@@ -110,20 +109,20 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
-npm
 nushell
 nvtop
 nwg-look
 obs-studio
 obs-vaapi
 pacman-contrib
-pandoc-cli
+pandoc-bin
 pcmanfm-gtk3
 pipewire
 pipewire-alsa
 pipewire-audio
 pipewire-jack
 pipewire-pulse
+polkit-gnome
 power-profiles-daemon
 prettier
 proton-vpn-gtk-app
@@ -204,6 +203,7 @@ rar
 rmpc
 rofi
 ruff
+rust
 sddm
 shfmt
 slurp
@@ -226,10 +226,10 @@ ufw
 unzip
 uv
 uwsm
-valgrind
 vdpauinfo
 vesktop
 virtualbox
+virtualbox-guest-iso
 virtualbox-host-dkms
 visual-studio-code-bin
 vpl-gpu-rt
@@ -248,7 +248,6 @@ wpgtk
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xfsprogs
 yaml-language-server
 yay
 yazi
@@ -256,6 +255,5 @@ yt-dlp
 zathura
 zathura-pdf-mupdf
 zellij
-zip
 zoxide
 zram-generator

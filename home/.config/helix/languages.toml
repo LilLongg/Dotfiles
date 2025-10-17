@@ -8,8 +8,7 @@ auto-format = true
 
 [[language]]
 name = "python"
-roots = ["pyproject.toml"]
-language-servers = ["ty", "ruff"]
+language-servers = ["ruff", "ty"]
 auto-format = true
 
 [[language]]
@@ -77,3 +76,8 @@ auto-format = true
 [language-server.ty]
 command = "ty"
 args = ["server"]
+
+[language-server.ruff.config.settings.lint.isort]
+docstring-code-format = true
+length-sort = true
+lines-after-imports = 2

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-BATTERY=$(cat /sys/class/power_supply/BAT0/capacity)
-if [[ $(cat /sys/class/power_supply/BAT0/status) == "Discharging" ]]; then
+BATTERY=$(cat /sys/class/power_supply/BAT1/capacity)
+if [[ $(cat /sys/class/power_supply/BAT1/status) == "Discharging" ]]; then
 	ICON="󰁹"
 	if (($BATTERY > 30)); then
 		COLOR="rgb(34ec23)"
