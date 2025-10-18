@@ -25,6 +25,7 @@ chaotic-mirrorlist
 chrony
 clang
 cmake
+cpio
 cronie
 downgrade
 dua-cli
@@ -64,12 +65,14 @@ gvfs
 helix
 hypridle
 hyprland
+hyprland-qtutils
 hyprlock
 imagemagick
 impala
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+iwd
 java-environment-common
 java-runtime-common
 jdk-openjdk
@@ -203,7 +206,6 @@ rar
 rmpc
 rofi
 ruff
-rust
 sddm
 shfmt
 slurp
