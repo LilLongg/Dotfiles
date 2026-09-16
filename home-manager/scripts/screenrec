@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+
+from os import environ
+from sys import exit
+from json import loads
+from pathlib import Path
+from argparse import ArgumentParser
+from subprocess import CalledProcessError, run
+
+
+try:
+    run(["pkill", "-INT", "-f", "wlr-shot record"], check=True)
+except CalledProcessError:
+    pass
+else:
+    exit(0)
+
+
+PROG_NAME = "screenrec"
+FILENAME = (
+    Path(environ["XDG_RECORDS_DIR"])
+    / run(
+        ["date", "+%Y-%m-%d_%H-%M-%S.mp4"], check=False, capture_output=True, text=True
+    ).stdout.strip()
+)
+screenrec_cmd = ["wlr-shot", "record", "--encoder", "vaapi"]
+
+
+parser = ArgumentParser(
+    PROG_NAME, description="Screen record an area/window/fullscreen"
+)
+parser.add_argument(
+    "-w",
+    "--window",
+    action="store_true",
+    help="Record the current focus window (conflicts with `-o`)",
+)
+parser.add_argument(
+    "-o",
+    "--output",
+    action="store_true",
+    help="Record the current output (conflicts with `-w`)",
+)
+args = parser.parse_args()
+
+if args.window and args.output:
+    print(f"{PROG_NAME}: error: cannot capture window and output simultaneously")
+    parser.print_help()
+    exit(1)
+
+if args.window or args.output:
+    data = loads(
+        run(
+            ["mmsg", "get", "focusing-client"],
+            check=False,
+            capture_output=True,
+            text=True,
+        ).stdout
+    )
+    if args.window:
+        screenrec_cmd.extend(["-w", data["foreign_toplevel_id"]])
+    else:
+        screenrec_cmd.extend(["-o", data["monitor"]])
+else:
+    screenrec_cmd.append("-s")
+
+
+screenrec_cmd.append(FILENAME)
+run(screenrec_cmd, check=True)

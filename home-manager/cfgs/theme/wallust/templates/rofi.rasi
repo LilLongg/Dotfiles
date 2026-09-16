@@ -1,0 +1,31 @@
+* {
+    red:                         {{ color1 }};
+    blue:                        {{ color4 }};
+    lightfg:                     {{ color7 | saturate(0.2) }};
+    lightbg:                     {{ color0 | saturate(0.2) }};
+    selected:                    {{ color2 }};
+    foreground:                  {{ color7 }};
+    background:                  {{ background | blend(cursor) | blend(background) }};
+    alternate-background:        {{ color3 }};
+    background-color:            rgba ( {{ background | blend(cursor) | blend(background) | red }}, {{ background | blend(cursor) | blend(background) | green }}, {{ background | blend(cursor) | blend(background) | blue }}, 85 % );
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+}

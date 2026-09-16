@@ -1,0 +1,59 @@
+@import "colors.css";
+
+* {
+  font-family: "Maple Mono NF CN";
+}
+
+window {
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+button {
+  color: color-mix(in srgb, var(--view-fg-color), var(--fg));
+  background-color: var(--bg);
+  opacity: 0.925;
+  border: none;
+  padding: 10px;
+}
+
+button:focus,
+button:active,
+button:hover {
+  opacity: 1;
+}
+
+button:focus,
+button:hover {
+  background-color: color-mix(in srgb, var(--highlight), var(--bg));
+}
+
+button:active {
+  color: var(--highlight-text);
+  background-color: var(--highlight);
+}
+
+button#shutdown {
+  --view-fg-color: var(--red);
+}
+
+button#hibernate {
+  --view-fg-color: var(--cyan);
+}
+
+button#reboot {
+  --view-fg-color: var(--green);
+}
+
+button#lock {
+  --view-fg-color: var(--yellow);
+}
+
+button#logout {
+  --view-fg-color: var(--orange);
+}
+
+button#suspend {
+  --view-fg-color: var(--magenta);
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env fish
+
+set -l IMG_PATH ~/.current_wpp
+
+if not test -f $IMG_PATH
+    "$XDG_BIN_HOME/bgaction" (find "~/Wallpaper/*" | shuf | head -n1)
+else
+    if test -f ~/.wppvidlock
+        mpvpaper -o "--loop-playlist --hwdec=vaapi --panscan=1.0" '*' $IMG_PATH >/dev/null &
+    else
+        awww-daemon >/dev/null &
+    end
+end

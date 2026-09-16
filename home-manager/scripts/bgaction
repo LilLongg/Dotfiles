@@ -1,0 +1,69 @@
+#!/usr/bin/env fish
+
+set -l LOCK_FILE ~/.wppvidlock
+set -l IMG_PATH "$argv[1]"
+set -l IMG_NAME (basename $IMG_PATH)
+set -l IMG_CACHE "$XDG_CACHE_HOME/wpp/$IMG_NAME.JPG"
+ln -sf "$IMG_PATH" ~/.current_wpp
+ln -sf "$IMG_CACHE" "$XDG_DATA_HOME/assets/LOCK.JPG"
+set -l THEME ("$XDG_DATA_HOME/scripts/image-theme.py" "$IMG_CACHE")
+
+pkill mpvpaper
+switch (string split . "$IMG_PATH" | tail -n1)
+    case mp4 MP4
+        if not test -f "$LOCK_FILE"
+            awww kill
+            touch "$LOCK_FILE"
+        end
+        if not test -f "$IMG_CACHE"
+            ffmpeg -i "$IMG_PATH" -vf "select=eq(n\,0)" -q:v 1 "$IMG_CACHE"
+        end
+        mpvpaper -o "--loop-playlist --panscan=1.0" '*' "$IMG_PATH" >/dev/null &
+    case gif GIF
+        if test -f "$LOCK_FILE"
+            rm "$LOCK_FILE"
+        end
+        if not test -f "$IMG_CACHE"
+            ffmpeg -i "$IMG_PATH" -vframes 1 "$IMG_CACHE"
+        end
+        awww query || awww-daemon &
+        while not awww query
+            true
+        end
+        awww img --transition-type random "$IMG_PATH" >/dev/null &
+    case '*'
+        if test -f "$LOCK_FILE"
+            rm "$LOCK_FILE"
+        end
+        if not test -f "$IMG_CACHE"
+            ffmpeg -i "$IMG_PATH" "$IMG_CACHE"
+        end
+        awww query || awww-daemon &
+        while not awww query
+            true
+        end
+        awww img --transition-type random "$IMG_PATH" >/dev/null &
+end
+
+if [ "$THEME" = dark ]
+    wallust run "$IMG_CACHE" --colorspace lchmixed --check-contrast
+    "$XDG_DATA_HOME/scripts/update-icon.py"
+    dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+    pywalfox dark && sleep 0.1 && pywalfox update &
+else
+    wallust run "$IMG_CACHE" --colorspace salience --palette saliencelight
+    "$XDG_DATA_HOME/scripts/update-icon.py" light
+    dconf write /org/gnome/desktop/interface/color-scheme "'prefer-light'"
+    pywalfox light && sleep 0.1 && pywalfox update &
+end
+
+gtk-update-icon-cache -ft "$XDG_DATA_HOME/icons/flattrcolor" && gtk4-update-icon-cache -ft "$XDG_DATA_HOME/icons/flattrcolor"
+
+pkill -USR1 hx &
+pkill -USR2 cava &
+pkill -USR2 waybar &
+swaync-client --reload-css &
+mmsg dispatch reload_config &
+
+dconf write /org/gnome/desktop/interface/gtk-theme "''" && sleep 0.1 && dconf write /org/gnome/desktop/interface/gtk-theme "'linea-nord-color'"
+dconf write /org/gnome/desktop/interface/icon-theme "''" && sleep 0.1 && dconf write /org/gnome/desktop/interface/icon-theme "'flattrcolor'"

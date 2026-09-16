@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set -l BACKUP_DIR "$XDG_CONFIG_HOME/vesktop.bak"
+set -l DST_DIR /dev/shm/vesktop-data
+
+rsync -a --delete "$DST_DIR"/ "$BACKUP_DIR"/

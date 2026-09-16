@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set -l BACKUP_DIR ~/.floorp/browser-profile-"$USER".bak
+set -l DST_DIR /dev/shm/browser-profile-"$USER"
+
+rsync -a --delete "$DST_DIR"/ "$BACKUP_DIR"/

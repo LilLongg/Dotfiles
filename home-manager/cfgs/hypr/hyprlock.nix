@@ -1,0 +1,90 @@
+{
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      source = [
+        "$HOME/.config/hypr/colors.conf"
+        "$HOME/.config/hypr/batteryColor.conf"
+      ];
+
+      "$font" = "Maple Mono NF CN";
+
+      # GENERAL
+      general = {
+        hide_cursor = true;
+      };
+
+      # BACKGROUND
+      background = {
+        path = "$HOME/.local/share/assets/LOCK.JPG";
+        blur_passes = 0;
+        color = "$background";
+      };
+
+      # LAYOUT
+      label = [
+        {
+          text = "cmd[update:1000] $HOME/.local/share/scripts/battery.sh";
+          color = "$batteryColor";
+          font_size = 25;
+          font_family = "$font";
+          position = "30, -30";
+          halign = "left";
+          valign = "top";
+        }
+        # TIME
+        {
+          text = "$TIME";
+          color = "$accent";
+          font_size = 90;
+          font_family = "$font";
+          position = "-30, 0";
+          halign = "right";
+          valign = "top";
+        }
+        # DATE
+        {
+          text = "cmd[update:43200000] date +\"%A, %x\"";
+          color = "$accent";
+          font_size = 25;
+          font_family = "$font";
+          position = "-30, -150";
+          halign = "right";
+          valign = "top";
+        }
+      ];
+
+      # USER AVATAR
+      image = {
+        path = "$HOME/.local/share/assets/FACE.JPG";
+        size = 100;
+        border_color = "$accent";
+        position = "0, 75";
+        halign = "center";
+        valign = "center";
+      };
+
+      # INPUT FIELD
+      input-field = {
+        size = "300, 60";
+        outline_thickness = 4;
+        dots_size = 0.2;
+        dots_spacing = 0.2;
+        dots_center = true;
+        outer_color = "$accent";
+        inner_color = "$background";
+        font_color = "$foreground";
+        fade_on_empty = false;
+        placeholder_text = "<span foreground=\"##$foregroundAlpha\" font=\"Pixelon\"><i>󰌾 Logged in as </i><span foreground=\"##$accentAlpha\" font=\"Pixelon\">$USER</span></span>";
+        hide_input = false;
+        check_color = "$accent";
+        fail_color = "rgb(e92d4d)";
+        fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+        capslock_color = "rgb(ffcc00)";
+        position = "0, -47";
+        halign = "center";
+        valign = "center";
+      };
+    };
+  };
+}

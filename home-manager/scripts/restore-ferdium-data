@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+set -l DATA_DIR "$XDG_CONFIG_HOME/Ferdium"
+set -l BACKUP_DIR "$DATA_DIR.bak"
+set -l DST_DIR /dev/shm/ferdium-data
+
+if not test -L "$DATA_DIR"
+    if not test -d "$BACKUP_DIR"
+        mv "$DATA_DIR" "$BACKUP_DIR"
+    else
+        rsync -a --delete "$DATA_DIR"/ "$BACKUP_DIR"/
+    end
+
+    if test -e "$DATA_DIR"
+        rm -rf "$DATA_DIR"
+    end
+    ln -s "$DST_DIR" "$DATA_DIR"
+end
+
+mkdir -p "$DST_DIR"
+rsync -a "$BACKUP_DIR"/ "$DST_DIR"/

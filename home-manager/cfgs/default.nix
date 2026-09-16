@@ -1,0 +1,32 @@
+{
+  imports = [
+    ./bat
+    ./btop
+    ./fastfetch
+    ./fcitx5
+    ./ferdium
+    ./fish
+    ./floorp
+    ./fonts
+    ./git
+    ./helix
+    ./hypr
+    ./kitty
+    ./mango
+    ./mangohud
+    ./media
+    ./nix
+    ./obs-studio
+    ./onlyoffice
+    ./rofi
+    ./services
+    ./swaync
+    ./theme
+    ./vesktop
+    ./vscode
+    ./waybar
+    ./wleave
+    ./xdg
+    ./yazi
+  ];
+}

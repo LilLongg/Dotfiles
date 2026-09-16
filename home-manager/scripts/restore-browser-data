@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+set -l PROFILE_DIR ~/.floorp/"$USER"
+set -l BACKUP_DIR ~/.floorp/browser-profile-"$USER".bak
+set -l DST_DIR /dev/shm/browser-profile-"$USER"
+
+if not test -L "$PROFILE_DIR"
+    if not test -d "$BACKUP_DIR"
+        mv "$PROFILE_DIR" "$BACKUP_DIR"
+    else
+        rsync -a --delete "$PROFILE_DIR"/ "$BACKUP_DIR"/
+    end
+
+    if test -e "$PROFILE_DIR"
+        rm -rf "$PROFILE_DIR"
+    end
+    ln -s "$DST_DIR" "$PROFILE_DIR"
+end
+
+mkdir -p "$DST_DIR"
+rsync -a "$BACKUP_DIR"/ "$DST_DIR"/

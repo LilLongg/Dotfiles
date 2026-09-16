@@ -1,0 +1,99 @@
+"attribute" = "base09"
+"comment" = { fg = "base03", modifiers = ["italic"] }
+"constant" = { fg = "base09", modifiers = ["italic"] }
+"constant.character.escape" = { fg = "base0C", modifiers = ["italic"] }
+"constant.numeric" = { fg = "base09", modifiers = ["italic"] }
+"constructor" = { fg = "base0D", modifiers = ["italic"] }
+"debug" = "base03"
+"diagnostic" = { modifiers = ["underlined"] }
+"diff.delta" = "base09"
+"diff.minus" = "base08"
+"diff.plus" = "base0B"
+"error" = "base08"
+"function" = { fg = "base0D", modifiers = ["italic"] }
+"hint" = "base03"
+"info" = "base0D"
+"keyword" = { fg = "base0E", modifiers = ["italic"] }
+"label" = { fg = "base0E", modifiers = ["italic"] }
+"namespace" = "base0E"
+"operator" = { fg = "base05", modifiers = ["italic"] }
+"punctuation" = { modifiers = ["italic"] }
+"special" = { fg = "base0D", modifiers = ["italic"] }
+"string" = { fg = "base09", modifiers = ["italic"] }
+"tag" = { fg = "base08", modifiers = ["italic"] }
+"type" = { fg = "base0A", modifiers = ["italic"] }
+"variable" = "base08"
+"variable.builtin" = { modifiers = ["italic"] }
+"variable.other.member" = "base0D"
+"warning" = "base09"
+
+"markup.bold" = { fg = "base0A", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "base0D", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "base08", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "base09", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "base0A", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "base0B", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "base0C", modifiers = ["bold"] }
+"markup.italic" = { fg = "base0E", modifiers = ["italic"] }
+"markup.link.text" = "base08"
+"markup.link.url" = { fg = "base09", modifiers = ["underlined"] }
+"markup.list" = "base08"
+"markup.quote" = "base0C"
+"markup.raw" = "base0B"
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"diagnostic.hint" = { underline = { style = "curl" } }
+"diagnostic.info" = { underline = { style = "curl" } }
+"diagnostic.warning" = { underline = { style = "curl" } }
+"diagnostic.error" = { underline = { style = "curl" } }
+
+"ui.background" = { bg = "base00" }
+"ui.bufferline.active" = { fg = "base00", bg = "base03", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "base04", bg = "base00" }
+"ui.cursor" = { fg = "base06", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "base05", modifiers = ["reversed"] }
+"ui.cursorline.primary" = { fg = "base05", bg = "base01" }
+"ui.cursor.match" = { fg = "base05", bg = "base02", modifiers = ["bold"] }
+"ui.cursor.select" = { fg = "base05", modifiers = ["reversed"] }
+"ui.gutter" = { bg = "base00" }
+"ui.help" = { fg = "base06", bg = "base01" }
+"ui.linenr" = { fg = "base03", bg = "base00" }
+"ui.linenr.selected" = { fg = "base04", bg = "base01", modifiers = ["bold"] }
+"ui.menu" = { fg = "base05", bg = "base01" }
+"ui.menu.scroll" = { fg = "base03", bg = "base01" }
+"ui.menu.selected" = { fg = "base01", bg = "base04" }
+"ui.popup" = { bg = "base01" }
+"ui.selection" = { bg = "base02" }
+"ui.selection.primary" = { bg = "base02" }
+"ui.statusline" = { fg = "base04", bg = "base01" }
+"ui.statusline.inactive" = { bg = "base01", fg = "base03" }
+"ui.statusline.insert" = { fg = "base00", bg = "base0B" }
+"ui.statusline.normal" = { fg = "base00", bg = "base03" }
+"ui.statusline.select" = { fg = "base00", bg = "base0F" }
+"ui.text" = "base05"
+"ui.text.directory" = "base0D"
+"ui.text.focus" = "base05"
+"ui.virtual.indent-guide" = { fg = "base03" }
+"ui.virtual.inlay-hint" = { fg = "base03" }
+"ui.virtual.ruler" = { bg = "base01" }
+"ui.virtual.jump-label" = { fg = "base0A", modifiers = ["bold"] }
+"ui.virtual.whitespace" = { fg = "base03" }
+"ui.window" = { bg = "base01" }
+
+[palette]
+base00 = "{{ color0 }}"
+base01 = "{{ color0 | saturate(0.2) }}"
+base02 = "{{ background | blend(cursor) | blend(background) }}"
+base03 = "{{ color8 }}"
+base04 = "{{ color8 | saturate(0.2) }}"
+base05 = "{{ color7 }}"
+base06 = "{{ color7 | saturate(0.2) }}"
+base07 = "{{ color15 }}"
+base08 = "{{ color1 }}"
+base09 = "{{ color1 | blend(color3) }}"
+base0A = "{{ color3 }}"
+base0B = "{{ color2 }}"
+base0C = "{{ color6 }}"
+base0D = "{{ color4 }}"
+base0E = "{{ color5 }}"
+base0F = "{{ color1 | darken(0.1) }}"

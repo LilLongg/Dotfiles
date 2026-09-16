@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set -l LOOP_STATUS (playerctl loop)
+if test "$LOOP_STATUS" = Track
+    playerctl loop Playlist
+else
+    playerctl loop Track
+end

@@ -1,0 +1,15 @@
+backdrop = "{{ color0 }}aa"
+bg = "{{ background | blend(cursor) | blend(background) }}"
+card = "{{ background | blend(cursor) | blend(background) }}"
+tile = "{{ background | blend(cursor) | blend(background) }}"
+tile-hover = "{{ color0 | saturate(0.2) }}"
+tile-selected = "{{ color2 }}"
+thumb = "{{ color0 }}"
+text = "{{ color7 }}"
+text-dim = "{{ color7 }}aa"
+accent = "{{ cursor }}"
+screen-accent = "{{ color1 }}"
+window-accent = "{{ color2 }}"
+
+font = "Maple Mono NF CN"
+font-size = 11.0
