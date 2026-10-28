@@ -69,13 +69,6 @@
         };
       }
       {
-        name = "qml";
-        auto-format = true;
-        language-servers = [
-          "qmlls"
-        ];
-      }
-      {
         name = "typst";
         auto-format = true;
       }

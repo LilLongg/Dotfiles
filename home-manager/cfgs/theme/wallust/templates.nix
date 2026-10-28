@@ -21,7 +21,7 @@
       dst = "${config.xdg.configHome}/gtk-3.0/gtk.css";
     };
     gtk4 = {
-      src = "gtk4.css";
+      src = "gtk.css";
       dst = "${config.xdg.configHome}/gtk-4.0/gtk.css";
     };
     helix = {

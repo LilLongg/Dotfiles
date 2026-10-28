@@ -1,0 +1,12 @@
+[language-server.qmlformat]
+args = [ "%{buffer_name}" ]
+command = "qmlformat"
+
+[language-server.qmlls]
+args = [ "-E" ]
+command = "qmlls"
+
+[[language]]
+auto-format = true
+language-servers = ["qmlls"]
+name = "qml"
