@@ -11,11 +11,10 @@
     systemd.enable = true;
     topPrefixes = [
       "source"
-      "source-optional"
+      "source_optional"
     ];
-    settings.source-optional = [
+    settings.source_optional = [
       "./theme.conf"
-      "./dropin.conf"
     ];
   };
 }

@@ -1,13 +1,13 @@
 { pkgs, ... }: {
   gtk = {
     enable = true;
-
-    theme.name = "linea-nord-color";
-    gtk4.theme.name = "linea-nord-color";
-    iconTheme.name = "flattrcolor";
-    cursorTheme.name = "Bibata-Modern-Ice";
-    cursorTheme.size = 24;
-
+    theme.name = "adw-gtk3";
+    gtk4.theme.name = "adw-gtk3";
+    iconTheme.name = "Papirus";
+    cursorTheme = {
+      name = "Bibata-Modern-Ice";
+      size = 24;
+    };
     font = {
       name = "Maple Mono NF CN";
       size = 12;
@@ -18,8 +18,8 @@
     enable = true;
     settings = {
       "org/gnome/desktop/interface" = {
-        gtk-theme = "linea-nord-color";
-        icon-theme = "flattrcolor";
+        gtk-theme = "adw-gtk3";
+        icon-theme = "Papirus";
         cursor-theme = "Bibata-Modern-Ice";
         cursor-size = 24;
       };
@@ -30,8 +30,8 @@
     pointerCursor = {
       enable = true;
       gtk.enable = true;
-      name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
       size = 24;
       x11 = {
         enable = true;

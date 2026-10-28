@@ -7,9 +7,9 @@
     scroller_default_proportion_single = 1.0;
 
     new_is_master = 0;
-    default_mfact = 0.618;
+    default_master_factor = 0.618;
     center_master_overspread = 1;
 
-    circle_layout = "tile,scroller";
+    circle_layout = "monocle,scroller,tile";
   };
 }

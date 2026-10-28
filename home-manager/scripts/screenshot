@@ -1,11 +1,20 @@
 #!/usr/bin/env python
 
 from os import environ
-from sys import exit
+from sys import exit, stderr
 from json import loads
 from pathlib import Path
 from argparse import ArgumentParser
 from subprocess import CalledProcessError, run
+
+
+try:
+    run(["pgrep", "-f", "wlr-shot screenshot"], check=True)
+except CalledProcessError:
+    pass
+else:
+    print("Another instance of screenshot is running", file=stderr)
+    exit(1)
 
 
 PROG_NAME = "screenshot"
@@ -78,9 +87,11 @@ screenshot_cmd.append(OUTPUT)
 
 try:
     run(screenshot_cmd, check=True)
-    notify(MSG, "-i", str(OUTPUT))
-    if not args.save:
-        run(["sh", "-c", f"wl-copy < {OUTPUT}"], check=False)
+    if args.save:
+        notify(MSG, "-i", str(OUTPUT))
+    else:
+        run(["sh", "-c", f"wl-copy < {OUTPUT}"], check=True)
+        notify(MSG, "-i", str(OUTPUT))
         OUTPUT.unlink()
 except CalledProcessError:
     notify(ABORTED_MSG)

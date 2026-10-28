@@ -11,6 +11,7 @@
     gtk4
     qt5.qtbase
     qt5.qtwayland
+    qt6.qt5compat
     qt6.qtbase
     qt6.qtwayland
 

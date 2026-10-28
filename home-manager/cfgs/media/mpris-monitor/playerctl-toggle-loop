@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set -l EXECUTABLE "$XDG_DATA_HOME/scripts/playerctl.py"
+set -l LOOP_STATUS ("$EXECUTABLE" loop)
+if test "$LOOP_STATUS" = Track
+    "$EXECUTABLE" loop Playlist
+else
+    "$EXECUTABLE" loop Track
+end

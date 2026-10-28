@@ -1,7 +1,7 @@
 * {
-  --bg: {{ color1 }};
-  --fg: {{ color7 }};
-  --border: {{ color8 }};
+  --bg: {{ background }};
+  --fg: {{ foreground }};
+  --border: {{ color2 }};
   --highlight: {{ color0 | saturate(0.2) }};
   --highlight-text: {{ cursor }};
   --cyan: {{ color6 }};

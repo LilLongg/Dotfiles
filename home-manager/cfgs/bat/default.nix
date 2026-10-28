@@ -5,5 +5,8 @@
       batdiff
       batman
     ];
+    config = {
+      theme = "ansi";
+    };
   };
 }

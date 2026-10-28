@@ -2,12 +2,12 @@
   imports = [
     ./mpd.nix
     ./mpv.nix
-    ./playerctl.nix
 
-    ./mpris-notifier
+    ./mpris-monitor
     ./rmpc
   ];
 
+  services.playerctld.enable = true;
   home.packages = with pkgs; [
     mpc
     rmpc

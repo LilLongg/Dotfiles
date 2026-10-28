@@ -1,78 +1,183 @@
-
-@import url("gtk-version.css");
-@import url("widgets-version.css");
-@import url("../general/gtk-colors.css");
-@import url("../general/widgets.css");
-@import url("../general/titlebar.css");
-
-@define-color gtk_titlebar_bg_color mix(@gtk_bg_color,@gtk_fg_color,0.05);
-
-@define-color gtk_fg_color {{ color7 }};
-@define-color gtk_text_color @gtk_fg_color;
-@define-color gtk_base_color {{ color0 }};
-@define-color gtk_bg_color mix(@gtk_base_color, @gtk_fg_color, 0.03);
-
-@define-color gtk_button_color mix(@gtk_bg_color, @gtk_fg_color, 0.1);
-@define-color gtk_widget_color alpha(currentcolor,0.1);
-
-@define-color gtk_shadow alpha(black,0.3);
-@define-color gtk_button_shadow alpha(@gtk_shadow,0.15);
-@define-color gtk_menu_shadow alpha(@gtk_shadow,0.5);
-
-@define-color text_shadow_color alpha(@panel_bg,0.5);
-
-@define-color gtk_borders mix(@gtk_bg_color,@gtk_fg_color,0.1);
-@define-color gtk_transparent_borders alpha(@gtk_fg_color,0.1);
-
-@define-color gtk_selected_bg_color {{ color1 }};
-@define-color gtk_selected_fg_color shade(@gtk_selected_bg_color, 0.2);
-
-@define-color gtk_highlight alpha(@gtk_selected_bg_color,0.6);
-@define-color gtk_titlebar_highlight alpha(@gtk_selected_bg_color,0.2);
-
-check,
-radio,
-treeview.view.content-view.check:not(list),
-iconview.content-view.check:not(list),
-.content-view:not(list) check,
-.view check:not(:checked):selected,
-.view radio:not(:checked):selected,
-check.view:not(treeview):not(:checked):selected,
-radio.view:not(treeview):not(:checked):selected,
-progressbar trough
-{background-clip: padding-box;}
-check:checked,
-check:indeterminate,
-radio:checked,
-radio:indeterminate,
-treeview.view check:checked,
-treeview.view check:indeterminate,
-treeview.view radio:checked,
-treeview.view radio:indeterminate,
-treeview.view.content-view.check:not(list):checked,
-iconview.content-view.check:not(list):checked,
-.content-view:not(list) check:checked,
-switch,
-progressbar progress,
-levelbar block,
-scale highlight,
-button.suggested-action,
-button.destructive-action
-{background-clip: border-box;}
-
-.window-frame, .window-frame:backdrop {
-    box-shadow: 0 0 0 black; /* removes shadow completely */
-    border-style: none;
-    margin: 1px; /* this retains the ability to resize with the mouse, if 1px is too narrow, set some higher values */
-    border-radius: 0;
+{% if palette[:4] == "dark" %}
+:root {
+  --accent-blue: #62a0ea;
+  --accent-green: #57e389;
+  --accent-orange: #ffa348;
+  --accent-purple: #fc8add;
+  --accent-red: #f66151;
+  --accent-yellow: #f5d32d;
+  --accent-bg-color: @accent_bg_color;
 }
 
-window-frame, window, headerbar, .titlebar, menubar {
-	box-shadow: none;
-	margin: 1px;
+@define-color accent_bg_color {{ color1 | blend(color5) }};
+@define-color accent_fg_color {{ color7 }};
+@define-color window_bg_color {{ background }};
+@define-color window_fg_color {{ foreground }};
+@define-color view_bg_color {{ background }};
+@define-color view_fg_color {{ foreground }};
+@define-color headerbar_bg_color {{ color1 }};
+@define-color headerbar_fg_color {{ color7 }};
+@define-color sidebar_bg_color {{ background }};
+@define-color sidebar_fg_color {{ foreground }};
+@define-color sidebar_backdrop_color {{ color0 }};
+@define-color dialog_bg_color {{ background }};
+@define-color dialog_fg_color {{ foreground }};
+@define-color popover_bg_color {{ background }};
+@define-color popover_fg_color {{ foreground }};
+@define-color thumbnail_bg_color {{ color1 }};
+@define-color thumbnail_fg_color {{ color7 }};
+@define-color panel_bg_color {{ background }};
+@define-color panel_fg_color {{ foreground }};
+@define-color destructive_bg_color @red_1;
+@define-color destructive_fg_color white;
+@define-color success_bg_color @green_2;
+@define-color success_fg_color white;
+@define-color warning_bg_color @yellow_3;
+@define-color warning_fg_color rgba(0,0,0,0.8);
+@define-color error_bg_color @red_1;
+@define-color error_fg_color white;
+@define-color accent_color mix(@accent_bg_color,white,0.4);
+@define-color destructive_color mix(@destructive_bg_color,white,0.4);
+@define-color success_color mix(@success_bg_color,white,0.4);
+@define-color warning_color mix(@warning_bg_color,white,0.4);
+@define-color error_color mix(@error_bg_color,white,0.4);
+@define-color headerbar_border_color {{ color1 }};
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color rgba(0, 0, 6, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 12, 0.9);
+@define-color sidebar_shade_color rgba(0, 0, 6, 0.25);
+@define-color sidebar_border_color alpha({{ color1 }}, 0.36);
+@define-color card_bg_color alpha({{ background }}, 0.08);
+@define-color card_fg_color {{ foreground }};
+@define-color card_shade_color rgba(0, 0, 6, 0.36);
+@define-color popover_shade_color rgba(0, 0, 6, 0.25);
+@define-color shade_color rgba(0, 0, 6, 0.25);
+@define-color scrollbar_outline_color rgba(0, 0, 12, 0.95);
+@define-color theme_fg_color @window_fg_color;
+@define-color theme_text_color @view_fg_color;
+@define-color theme_bg_color @window_bg_color;
+@define-color theme_base_color @view_bg_color;
+@define-color theme_selected_bg_color @accent_bg_color;
+@define-color theme_selected_fg_color @accent_fg_color;
+@define-color insensitive_bg_color mix(@window_bg_color,@view_bg_color,0.4);
+@define-color insensitive_fg_color alpha(@window_fg_color,0.5);
+@define-color insensitive_base_color @view_bg_color;
+@define-color theme_unfocused_fg_color mix(@window_fg_color,@window_bg_color,0.5);
+@define-color theme_unfocused_text_color @view_fg_color;
+@define-color theme_unfocused_bg_color @window_bg_color;
+@define-color theme_unfocused_base_color @window_bg_color;
+@define-color theme_unfocused_selected_bg_color @accent_bg_color;
+@define-color theme_unfocused_selected_fg_color @accent_fg_color;
+@define-color unfocused_insensitive_color mix(mix(@window_fg_color,@window_bg_color,0.5),@window_bg_color,0.5);
+@define-color borders mix(currentColor,@window_bg_color,0.85);
+@define-color unfocused_borders mix(currentColor,@window_bg_color,0.73);
+@define-color warning_color @warning_color;
+@define-color error_color @error_color;
+@define-color success_color @success_color;
+@define-color wm_title shade(@window_fg_color, 1.8);
+@define-color wm_unfocused_title mix(@window_fg_color,@window_bg_color,0.5);
+@define-color wm_highlight {{ color1 }};
+@define-color wm_borders_edge alpha(@window_fg_color,0.07);
+@define-color wm_bg_a shade(@window_bg_color, 1.2);
+@define-color wm_bg_b @window_bg_color;
+@define-color wm_shadow alpha({{ color1 }}, 0.35);
+@define-color wm_border alpha({{ color1 }}, 0.18);
+@define-color wm_button_hover_color_a shade(@window_bg_color, 1.3);
+@define-color wm_button_hover_color_b @window_bg_color;
+@define-color wm_button_active_color_a shade(@window_bg_color, 0.85);
+@define-color wm_button_active_color_b shade(@window_bg_color, 0.89);
+@define-color wm_button_active_color_c shade(@window_bg_color, 0.9);
+@define-color content_view_bg @view_bg_color;
+@define-color text_view_bg shade(@view_bg_color,0.94);
+{% else %}
+:root {
+  --accent-blue: #1c71d8;
+  --accent-green: #2ec27e;
+  --accent-orange: #ff7800;
+  --accent-purple: #9141ac;
+  --accent-red: #ed333b;
+  --accent-yellow: #e5a50a;
+  --accent-bg-color: @accent_bg_color;
 }
 
-*:focus {
-	outline: 1px dashed alpha(currentColor, 0.3);
-	outline-offset: -2px;
-}
+@define-color accent_bg_color {{ color1 | blend(color5) }};
+@define-color accent_fg_color {{ color7 }};
+@define-color window_bg_color {{ background }};
+@define-color window_fg_color {{ foreground }};
+@define-color view_bg_color {{ background }};
+@define-color view_fg_color {{ foreground }};
+@define-color headerbar_bg_color {{ color1 }};
+@define-color headerbar_fg_color {{ color7 }};
+@define-color sidebar_bg_color {{ background }};
+@define-color sidebar_fg_color {{ foreground }};
+@define-color sidebar_backdrop_color {{ color0 }};
+@define-color dialog_bg_color {{ background }};
+@define-color dialog_fg_color {{ foreground }};
+@define-color popover_bg_color {{ background }};
+@define-color popover_fg_color {{ foreground }};
+@define-color thumbnail_bg_color {{ color1 }};
+@define-color thumbnail_fg_color {{ color7 }};
+@define-color panel_bg_color {{ background }};
+@define-color panel_fg_color {{ foreground }};
+@define-color destructive_bg_color @red_2;
+@define-color destructive_fg_color white;
+@define-color success_bg_color @green_4;
+@define-color success_fg_color white;
+@define-color warning_bg_color @yellow_5;
+@define-color warning_fg_color rgba(0,0,0,0.8);
+@define-color error_bg_color @red_2;
+@define-color error_fg_color white;
+@define-color accent_color mix(@accent_bg_color,black,0.17);
+@define-color destructive_color mix(@destructive_bg_color,black,0.17);
+@define-color success_color mix(@success_bg_color,black,0.17);
+@define-color warning_color mix(@warning_bg_color,black,0.17);
+@define-color error_color mix(@error_bg_color,black,0.17);
+@define-color headerbar_border_color alpha({{ color1 }}, 0.8);
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color rgba(0, 0, 6, 0.12);
+@define-color headerbar_darker_shade_color rgba(0, 0, 6, 0.12);
+@define-color sidebar_shade_color rgba(0, 0, 6, 0.07);
+@define-color sidebar_border_color alpha({{ color1 }}, 0.07);
+@define-color card_bg_color {{ background }};
+@define-color card_fg_color {{ foreground }};
+@define-color card_shade_color rgba(0, 0, 6, 0.07);
+@define-color popover_shade_color rgba(0, 0, 6, 0.07);
+@define-color shade_color rgba(0, 0, 6, 0.07);
+@define-color scrollbar_outline_color white;
+@define-color theme_fg_color @window_fg_color;
+@define-color theme_text_color @view_fg_color;
+@define-color theme_bg_color @window_bg_color;
+@define-color theme_base_color @view_bg_color;
+@define-color theme_selected_bg_color @accent_bg_color;
+@define-color theme_selected_fg_color @accent_fg_color;
+@define-color insensitive_bg_color mix(@window_bg_color,@view_bg_color,0.4);
+@define-color insensitive_fg_color alpha(@window_fg_color,0.5);
+@define-color insensitive_base_color @view_bg_color;
+@define-color theme_unfocused_fg_color mix(@window_fg_color,@window_bg_color,0.5);
+@define-color theme_unfocused_text_color @view_fg_color;
+@define-color theme_unfocused_bg_color @window_bg_color;
+@define-color theme_unfocused_base_color @window_bg_color;
+@define-color theme_unfocused_selected_bg_color @accent_bg_color;
+@define-color theme_unfocused_selected_fg_color @accent_fg_color;
+@define-color unfocused_insensitive_color mix(mix(@window_fg_color,@window_bg_color,0.5),@window_bg_color,0.5);
+@define-color borders mix(currentColor,@window_bg_color,0.85);
+@define-color unfocused_borders mix(currentColor,@window_bg_color,0.81);
+@define-color warning_color @warning_color;
+@define-color error_color @error_color;
+@define-color success_color @success_color;
+@define-color wm_title shade(@window_fg_color, 1.8);
+@define-color wm_unfocused_title mix(@window_fg_color,@window_bg_color,0.5);
+@define-color wm_highlight alpha({{ color1 }},0.5);
+@define-color wm_borders_edge alpha({{ color1 }},0.5);
+@define-color wm_bg_a shade(@window_bg_color, 1.2);
+@define-color wm_bg_b @window_bg_color;
+@define-color wm_shadow alpha({{ color1 }}, 0.35);
+@define-color wm_border alpha({{ color1 }}, 0.18);
+@define-color wm_button_hover_color_a shade(@window_bg_color, 1.3);
+@define-color wm_button_hover_color_b @window_bg_color;
+@define-color wm_button_active_color_a shade(@window_bg_color, 0.85);
+@define-color wm_button_active_color_b shade(@window_bg_color, 0.89);
+@define-color wm_button_active_color_c shade(@window_bg_color, 0.9);
+@define-color content_view_bg @view_bg_color;
+@define-color text_view_bg @view_bg_color;
+{% endif %}

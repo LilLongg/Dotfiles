@@ -42,7 +42,7 @@
         rb = "sudo nixos-rebuild switch --flake ${flakeDir} --impure";
         hrb = "home-manager switch --flake ${flakeDir} --impure";
         upd = "nix flake update --flake ${flakeDir}";
-        upg = "rb && hrb";
+        upg = "rb && sleep 2 && hrb";
         rmcache = "sudo nix-collect-garbage -d && home-manager expire-generations '-1 mins' --flake ${flakeDir}";
 
         cl = "clear && smallfetch";

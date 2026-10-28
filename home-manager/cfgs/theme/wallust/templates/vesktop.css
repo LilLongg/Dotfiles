@@ -1,19 +1,6 @@
-/**
- * @name system24
- * @description a tui-like discord theme.
- * @author refact0r
- * @version 2.0.0
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
- * @authorId 508863359777505290
- * @authorLink https://www.refact0r.dev
-*/
-
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
-/* @import url('https://refact0r.github.io/midnight-discord/themes/midnight.theme.css'); */
-/* @import url('https://refact0r.github.io/system24/theme/system24.theme.css'); */
+@import url('https://refact0r.github.io/midnight-discord/themes/midnight.theme.css');
 @import url('https://refact0r.github.io/system24/src/main.css');
 
 /* customize things here */
@@ -22,22 +9,29 @@
 	--corner-text: 'Midnight';
 
 	/* color of status indicators and window controls */
-  --online-indicator: {{ color2 }};    /* change to #23a55a for default green */
-	--dnd-indicator: {{ color1 | darken(0.1) }};       /* change to #f13f43 for default red */
-	--idle-indicator: {{ color3 }};      /* change to #f0b232 for default yellow */
-	--streaming-indicator: {{ color4 | darken(0.1) }}; /* change to #593695 for default purple */
+{% if palette[:4] == "dark" %}
+  --online-indicator: #57e389;
+	--dnd-indicator: #f66151;
+	--idle-indicator: #f6d32d;
+	--streaming-indicator: #dc8add;
+{% else %}
+  --online-indicator: #2ec27e;
+	--dnd-indicator: #ed333d;
+	--idle-indicator: #e5a50a;
+	--streaming-indicator: #9141ac;
+{% endif %}
 
 	/* accent colors */
-	--accent-1: {{ color5 }};                      /* links */
-	--accent-2: {{ color5 }};                      /* general unread/mention elements, some icons when active */
-	--accent-3: {{ color5 }};                      /* accent buttons */
-	--accent-4: {{ color0 | saturate(0.2) }};      /* accent buttons when hovered */
-	--accent-5: {{ color2 }};                      /* accent buttons when clicked */
-	--mention:  {{ color0 }};                      /* mentions & mention messages */
-	--mention-hover: {{ color0 | saturate(0.2) }}; /* mentions & mention messages when hovered */
+	--accent-1: {{ color6 }};                 /* links */
+	--accent-2: {{ color1 | blend(color5) }}; /* general unread/mention elements, some icons when active */
+	--accent-3: {{ color1 | blend(color5) }}; /* accent buttons */
+	--accent-4: {{ color1 }};                 /* accent buttons when hovered */
+	--accent-5: {{ color1 | blend(color5) }}; /* accent buttons when clicked */
+	--mention:  {{ color1 | blend(color5) }}; /* mentions & mention messages */
+	--mention-hover: {{ color1 }};            /* mentions & mention messages when hovered */
 
 	/* text colors */
-	--text-0: {{ color0 }}; /* text on colored elements */
+	--text-0: {{ color6 }}; /* text on colored elements */
 	--text-1: {{ color7 }}; /* other normally white text */
 	--text-2: {{ color7 }}; /* headings and important text */
 	--text-3: {{ color7 }}; /* normal text */
@@ -45,13 +39,13 @@
 	--text-5: {{ color7 }}; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: {{ color4 }};                                         /* dark buttons when clicked */
-	--bg-2: {{ color4 }};                                         /* dark buttons */
-	--bg-3: {{ color2 }};                                         /* spacing, secondary elements */
+	--bg-1: {{ color1 | blend(color5) }};                         /* dark buttons when clicked */
+	--bg-2: {{ color1 | blend(color5) }};                         /* dark buttons */
+	--bg-3: {{ color1 }};                                         /* spacing, secondary elements */
 	--bg-4: {{ background | blend(cursor) | blend(background) }}; /* main background color */
-	--hover: {{ color0 | saturate(0.2) }};                        /* channels and buttons when hovered */
-	--active: {{ color0 | saturate(0.2) }};                       /* channels and buttons when clicked or selected */
-	--message-hover: {{ color0 | saturate(0.2) }};                /* messages when hovered */
+	--hover: {{ color1 }};                                        /* channels and buttons when hovered */
+	--active: {{ color1 }};                                       /* channels and buttons when clicked or selected */
+	--message-hover: {{ color1 }};                                /* messages when hovered */
 
 	/* amount of spacing and padding */
 	--spacing: 12px;

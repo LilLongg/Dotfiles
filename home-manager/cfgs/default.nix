@@ -18,13 +18,12 @@
     ./nix
     ./obs-studio
     ./onlyoffice
+    ./quickshell
     ./rofi
     ./services
-    ./swaync
     ./theme
     ./vesktop
     ./vscode
-    ./waybar
     ./wleave
     ./xdg
     ./yazi

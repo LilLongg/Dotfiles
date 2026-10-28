@@ -12,17 +12,17 @@
       src = "colors";
       dst = "${config.xdg.cacheHome}/wal/colors";
     };
-    gtk-dark = {
-      src = "gtk.css";
-      dst = "${config.xdg.dataHome}/themes/linea-nord-color/general/dark.css";
+    colors-json = {
+      src = "colors.json";
+      dst = "${config.xdg.cacheHome}/wal/colors.json";
     };
-    gtk-light = {
+    gtk3 = {
       src = "gtk.css";
-      dst = "${config.xdg.dataHome}/themes/linea-nord-color/general/light.css";
+      dst = "${config.xdg.configHome}/gtk-3.0/gtk.css";
     };
-    gtkrc = {
-      src = "gtkrc";
-      dst = "${config.xdg.dataHome}/themes/linea-nord-color/gtk-2.0/gtkrc";
+    gtk4 = {
+      src = "gtk4.css";
+      dst = "${config.xdg.configHome}/gtk-4.0/gtk.css";
     };
     helix = {
       src = "helix.toml";
@@ -40,29 +40,17 @@
       src = "mango.conf";
       dst = "${config.xdg.configHome}/mango/theme.conf";
     };
-    niri = {
-      src = "niri.kdl";
-      dst = "${config.xdg.configHome}/niri/colors.kdl";
-    };
-    pywalfox = {
-      src = "colors.json";
-      dst = "${config.xdg.cacheHome}/wal/colors.json";
+    quickshell = {
+      src = "quickshell.json";
+      dst = "${config.xdg.configHome}/quickshell/Common/colors.json";
     };
     rofi = {
       src = "rofi.rasi";
       dst = "${config.xdg.configHome}/rofi/colors.rasi";
     };
-    swaync = {
-      src = "swaync.css";
-      dst = "${config.xdg.configHome}/swaync/colors.css";
-    };
     vesktop = {
       src = "vesktop.css";
       dst = "${config.xdg.configHome}/vesktop/settings/quickCss.css";
-    };
-    waybar = {
-      src = "waybar.css";
-      dst = "${config.xdg.configHome}/waybar/colors.css";
     };
     wleave = {
       src = "wleave.css";

@@ -1,12 +1,7 @@
 @import "~/.config/rofi/config.rasi"
 
-/* ---- Configuration ---- */ 
-configuration {
-  modi: "drun";
-}
-
 window {
-  width: 75%;
+  width: 50%;
   height: inherit;
 }
 
@@ -25,7 +20,7 @@ entry {
 
 /* ---- Listview ---- */
 listview {
-  columns: 5;
+  columns: 4;
   lines: 3;
   spacing: 20px;
   padding: 10px;

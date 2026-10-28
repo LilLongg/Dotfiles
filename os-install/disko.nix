@@ -19,63 +19,58 @@
                 mountOptions = [ "umask=0077" ];
               };
             };
-
-            SWAP = {
-              label = "SWAP";
-              size = "8G";
-              content = {
-                type = "swap";
-                resumeDevice = true;
-              };
-            };
-
             ROOT = {
-              end = "-136G";
+              size = "100%";
               content = {
-                type = "btrfs";
-                extraArgs = [
-                  "-L"
-                  "ROOT"
-                  "-f"
-                ];
-                subvolumes = {
-                  "/root" = {
-                    mountpoint = "/";
-                    mountOptions = [
-                      "subvol=root"
-                      "noatime"
-                      "compress=zstd"
-                    ];
+                type = "luks";
+                name = "crypted-root";
+                settings.allowDiscards = true;
+                content = {
+                  type = "btrfs";
+                  extraArgs = [ "-f" ];
+                  subvolumes = {
+                    "@root" = {
+                      mountpoint = "/";
+                      mountOptions = [
+                        "subvol=root"
+                        "noatime"
+                        "compress=zstd"
+                      ];
+                    };
+                    "@swap" = {
+                      mountpoint = "/.swapvol";
+                      swap.swapfile.size = "16G";
+                    };
+                    "@nix" = {
+                      mountpoint = "/nix";
+                      mountOptions = [
+                        "subvol=nix"
+                        "noatime"
+                        "nodatacow"
+                        "nodatasum"
+                        "compress=zstd:1"
+                      ];
+                    };
+                    "@log" = {
+                      mountpoint = "/var/log";
+                      mountOptions = [
+                        "subvol=log"
+                        "noatime"
+                        "nodatacow"
+                        "nodatasum"
+                        "compress=zstd:1"
+                      ];
+                    };
+                    "@home" = {
+                      mountpoint = "/home";
+                      mountOptions = [
+                        "subvol=home"
+                        "noatime"
+                        "compress=zstd:1"
+                      ];
+                    };
+                    "/home/TNonggChann" = { };
                   };
-                  "/nix" = {
-                    mountpoint = "/nix";
-                    mountOptions = [
-                      "subvol=nix"
-                      "noatime"
-                      "nodatacow"
-                      "nodatasum"
-                      "compress=zstd:1"
-                    ];
-                  };
-                  "/log" = {
-                    mountpoint = "/var/log";
-                    mountOptions = [
-                      "subvol=log"
-                      "noatime"
-                      "nodatacow"
-                      "nodatasum"
-                      "compress=zstd:1"
-                    ];
-                  };
-                  "/home" = {
-                    mountpoint = "/home";
-                    mountOptions = [
-                      "subvol=home"
-                      "noatime"
-                      "compress=zstd:1"
-                    ];
-                  };
-                  "/home/TNonggChann" = { };
                 };
               };
             };

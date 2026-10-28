@@ -1,0 +1,5 @@
+*,
+*::before,
+*::after {
+  font-family: "Maple Mono NF CN" !important;
+}

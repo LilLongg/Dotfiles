@@ -1,0 +1,40 @@
+{
+  "wallpaper": "{{ wallpaper }}",
+  "accent": "{{ color1 | blend(color5) }}",
+  "foreground": "{{ foreground }}",
+  "background": "{{ background }}",
+  "coloredText": "{{ color6 }}",
+  "coloredBackground": "{{ color1 }}",
+  "secondaryBackground": "{{ background | blend(cursor) | blend(background) }}",
+  "color0": "{{ color0 }}",
+  "color1": "{{ color1 }}",
+  "color2": "{{ color2 }}",
+  "color3": "{{ color3 }}",
+  "color4": "{{ color4 }}",
+  "color5": "{{ color5 }}",
+  "color6": "{{ color6 }}",
+  "color7": "{{ color7 }}",
+{% if palette[:4] == "dark" %}
+  "black": "#77767b",
+  "blue": "#62a0ea",
+  "brown": "#cdab8f",
+  "green": "#57e389",
+  "orange": "#ffa348",
+  "purple": "#dc8add",
+  "red": "#f66151",
+  "white": "#f6f5f4",
+  "yellow": "#f6d32d",
+  "scheme": "dark"
+{% else %}
+  "black": "#3d3846",
+  "blue": "#1c71d8",
+  "brown": "#865e3c",
+  "green": "#2ec27e",
+  "orange": "#ff7800",
+  "purple": "#9141ac",
+  "red": "#ed333b",
+  "white": "#9a9996",
+  "yellow": "#e5a50a",
+  "scheme": "light"
+{% endif %}
+}

@@ -18,41 +18,11 @@
 
     keys = {
       normal = {
-        C-s = ":w";
-        C-q = ":bc";
-        C-r = ":rl";
-        a = [
-          "append_mode"
-          "collapse_selection"
-        ];
         esc = [
           "collapse_selection"
           "keep_primary_selection"
         ];
-        X = "extend_line_above";
-        A-x = "select_line_above";
-        "C-/" = "toggle_comments";
-        C-c = [
-          "yank"
-          "yank_to_clipboard"
-        ];
-        C-x = [
-          "yank"
-          "yank_to_clipboard"
-          "delete_selection"
-        ];
-        C-v = [
-          "paste_clipboard_after"
-          "collapse_selection"
-        ];
-        C-z = "undo";
-        C-y = "redo";
         C-j = [
-          "extend_to_line_bounds"
-          "delete_selection"
-          "paste_after"
-        ];
-        C-down = [
           "extend_to_line_bounds"
           "delete_selection"
           "paste_after"
@@ -63,23 +33,9 @@
           "move_line_up"
           "paste_before"
         ];
-        C-up = [
-          "extend_to_line_bounds"
-          "delete_selection"
-          "move_line_up"
-          "paste_before"
-        ];
-        space = {
-          q = ":q";
-        };
       };
       insert = {
-        C-s = ":w";
-        "C-/" = "toggle_comments";
-        C-z = "undo";
-        C-y = "redo";
-        A-v = "paste_clipboard_after";
-        C-v = "paste_clipboard_before";
+        C-c = "toggle_comments";
         esc = [
           "normal_mode"
           ":sh fcitx5-remote -g Default"
@@ -91,39 +47,12 @@
           "collapse_selection"
           "keep_primary_selection"
         ];
-        C-c = [
-          "yank"
-          "yank_to_clipboard"
-        ];
-        C-x = [
-          "yank"
-          "yank_to_clipboard"
-          "delete_selection"
-        ];
-        C-v = [
-          "delete_selection"
-          "paste_clipboard_before"
-        ];
-        "C-/" = "toggle_comments";
-        X = "select_line_above";
-        A-x = "select_line_below";
         C-j = [
           "extend_to_line_bounds"
           "delete_selection"
           "paste_after"
         ];
-        C-down = [
-          "extend_to_line_bounds"
-          "delete_selection"
-          "paste_after"
-        ];
         C-k = [
-          "extend_to_line_bounds"
-          "delete_selection"
-          "move_line_up"
-          "paste_before"
-        ];
-        C-up = [
           "extend_to_line_bounds"
           "delete_selection"
           "move_line_up"

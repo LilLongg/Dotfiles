@@ -13,10 +13,6 @@
       {
         name = "cpp";
         auto-format = true;
-        language-servers = [
-          "clangd"
-          "hx-lsp"
-        ];
       }
       {
         name = "python";
@@ -71,6 +67,17 @@
             "scss"
           ];
         };
+      }
+      {
+        name = "qml";
+        auto-format = true;
+        language-servers = [
+          "qmlls"
+        ];
+      }
+      {
+        name = "typst";
+        auto-format = true;
       }
     ];
   };

@@ -1,9 +1,9 @@
 configuration {
-  font: "Maple Mono NF CN SemiBold 15";
+  font: "Maple Mono NF CN SemiBold 13";
 }
 
 element-text {
-  font: "Maple Mono NF CN SemiBold 13";
+  font: "Maple Mono NF CN SemiBold 12";
 }
 
 /*****----- Configuration -----*****/
@@ -33,7 +33,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       35%;
+    width:                       25%;
     x-offset:                    0px;
     y-offset:                    0px;
 

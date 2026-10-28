@@ -2,7 +2,6 @@
   imports = [
     ./bluetooth.nix
     ./bootloader.nix
-    ./firewall.nix
     ./fonts.nix
     ./hw-accel.nix
     ./mango.nix
@@ -13,8 +12,7 @@
     ./sddm.nix
     ./services.nix
     ./steam.nix
-    ./tmpfs.nix
     ./users.nix
-    ./zram-swap.nix
+    ./virtual-memory.nix
   ];
 }

@@ -4,6 +4,7 @@
     configPath = "${config.xdg.configHome}/rofi/_.rasi";
   };
 
+  xdg.configFile."rofi/cliphist.rasi".source = ./cliphist.rasi;
   xdg.configFile."rofi/config.rasi".source = ./config.rasi;
   xdg.configFile."rofi/wallpaper.rasi".source = ./wallpaper.rasi;
 }

@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+
 for file in Path.home().iterdir():
     try:
         data = bytes(file)

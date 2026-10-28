@@ -15,6 +15,7 @@ in
         return-youtube-dislikes # {762f9885-5a13-4abd-9c77-433dcd38b8fd}
         search_by_image # {2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}
         sponsorblock # sponsorBlocker@ajay.app
+        styl-us # {7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}
         tampermonkey # firefox@tampermonkey.net
         ublock-origin # uBlock0@raymondhill.net
         youtube-anti-translate-mv3 # youtube-anti-translate-mv3@namakeingo.co.uk

@@ -81,16 +81,16 @@
 "ui.window" = { bg = "base01" }
 
 [palette]
-base00 = "{{ color0 }}"
+base00 = "{{ background }}"
 base01 = "{{ color0 | saturate(0.2) }}"
 base02 = "{{ background | blend(cursor) | blend(background) }}"
 base03 = "{{ color8 }}"
-base04 = "{{ color8 | saturate(0.2) }}"
-base05 = "{{ color7 }}"
-base06 = "{{ color7 | saturate(0.2) }}"
+base04 = "{{ color7 }}"
+base05 = "{{ foreground }}"
+base06 = "{{ foreground | blend(cursor) | blend(foreground) }}"
 base07 = "{{ color15 }}"
 base08 = "{{ color1 }}"
-base09 = "{{ color1 | blend(color3) }}"
+base09 = "{{ color1 | blend(color5) }}"
 base0A = "{{ color3 }}"
 base0B = "{{ color2 }}"
 base0C = "{{ color6 }}"

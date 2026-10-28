@@ -1,8 +1,9 @@
-{
+{ pkgs-stable, ... }: {
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
     fcitx5.waylandFrontend = true;
+    fcitx5.fcitx5-with-addons = pkgs-stable.kdePackages.fcitx5-with-addons;
   };
 
   home.sessionVariables = {

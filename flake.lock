@@ -28,11 +28,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789545333,
-        "narHash": "sha256-LRKD6c4yiD4YXwqcngLo82qGtWu8kI9qorligMfJw4g=",
+        "lastModified": 1793001988,
+        "narHash": "sha256-AFx0VgZSOCQwzZRxawzJgwPMmc0/trUDjrsZvkZYZdQ=",
         "owner": "osipog",
         "repo": "nix-firefox-addons",
-        "rev": "0afce0200552948eedcbf2c2f7f07e5669b0c10b",
+        "rev": "16dc790fe3bbb219cb822295267c83602a2f5b11",
         "type": "github"
       },
       "original": {
@@ -106,11 +106,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789482455,
-        "narHash": "sha256-pD3qVlQ4mUCFoTWrYtxecpSitQMsgJvJIN0FUIDZoEU=",
+        "lastModified": 1793033486,
+        "narHash": "sha256-fXVURa0+CSCgaxLt8tmPNJq2U+fGYOwbk5j2YUe7kSc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "efa3ccb4c3cc90d832eab232976379058fa75aa3",
+        "rev": "7db163b2aee7e410e396b48aed02f646d742b9b8",
         "type": "github"
       },
       "original": {
@@ -128,27 +128,26 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1787813077,
-        "narHash": "sha256-od6lK1KOquakP/GD17fGEm1ck5EMZa/s+jhmvGrRFzk=",
+        "lastModified": 1792817697,
+        "narHash": "sha256-S823QIxWR96C1ltI+PXg1BT5cHsBv3zH19X2kT7hQkc=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "641c36fcbbe508c46f27b435d5a68d4e9b32f59f",
+        "rev": "900b8d7e06c396a20b6d4e56f242c4e240a69dfa",
         "type": "github"
       },
       "original": {
         "owner": "mangowm",
-        "ref": "0.16.2",
         "repo": "mango",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1789426278,
-        "narHash": "sha256-GnotcvKtbTMnoVx6G4E7ZdUX6487Dky74dqq3pU7iRk=",
+        "lastModified": 1792773339,
+        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "efe6f071ede9d21c37462d2d6682d5e670099684",
+        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
         "type": "github"
       },
       "original": {
@@ -173,13 +172,30 @@
         "type": "github"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1792898606,
+        "narHash": "sha256-Mg3rRjsbMqhSMxop5PYMXos8SwAjejrxSgVThTvP9eg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1f607aa79b6356ed45d3cd3c8079c196e79efa2c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "fcitx5-im-emoji-picker": "fcitx5-im-emoji-picker",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "mangowm": "mangowm",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-stable": "nixpkgs-stable"
       }
     },
     "scenefx": {
