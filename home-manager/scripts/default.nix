@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, ... }: {
   home.file."${config.xdg.binHome}/bgaction".source = ./bgaction;
   home.file."${config.xdg.binHome}/initbg".source = ./initbg;
   home.file."${config.xdg.binHome}/install-themes.sh".source = ./install-themes.sh;
@@ -6,6 +6,8 @@
   home.file."${config.xdg.binHome}/screenshot".source = ./screenshot;
   home.file."${config.xdg.binHome}/select-cliphist".source = ./select-cliphist;
   home.file."${config.xdg.binHome}/select-wpp".source = ./select-wpp;
+  home.file."${config.xdg.binHome}/system-age".source = ./system-age;
+  home.file."${config.xdg.binHome}/uptime-fmt".source = ./uptime-fmt;
 
   xdg.dataFile."scripts/battery.sh".source = ./battery.sh;
   xdg.dataFile."scripts/cpu-monitor.py".source = ./cpu-monitor.py;
@@ -22,8 +24,4 @@
   xdg.dataFile."scripts/save-vscode-data".source = ./save-vscode-data;
   xdg.dataFile."scripts/update-icons.py".source = ./update-icons.py;
   xdg.dataFile."scripts/waybar-wttr.py".source = ./waybar-wttr.py;
-
-  home.packages = [
-    (pkgs.callPackage ./cpp-scripts.nix { })
-  ];
 }

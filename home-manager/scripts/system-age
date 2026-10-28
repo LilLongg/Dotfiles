@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+
+from datetime import datetime
+from subprocess import run
+from dataclasses import dataclass
+
+
+@dataclass
+class Duration_Part:
+    name: str
+    value: int
+
+    def to_string(self) -> str:
+        return f"{self.value} {self.name}{'s' if self.value != 1 else ''}"
+
+
+data = run(
+    ["stat", "-c", "%W", "/"], capture_output=True, text=True, check=True
+).stdout.strip()
+system_start = datetime.fromtimestamp(int(data))
+current_time = datetime.now()
+system_age_seconds = (current_time - system_start).seconds
+system_age_days = (current_time - system_start).days
+
+hours, seconds = divmod(system_age_seconds, 3600)
+minutes = seconds // 60
+years, days = divmod(system_age_days, 365)
+months = days * 12 // 365
+days -= 30 * months
+
+duration_parts = [
+    Duration_Part("year", years),
+    Duration_Part("month", months),
+    Duration_Part("day", days),
+    Duration_Part("hour", hours),
+    Duration_Part("minute", minutes),
+]
+formatted_parts = [
+    duration_part.to_string() for duration_part in duration_parts if duration_part.value
+]
+
+if not formatted_parts:
+    print("0 minutes")
+else:
+    print(", ".join(formatted_parts))
