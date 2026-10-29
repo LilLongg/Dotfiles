@@ -56,9 +56,9 @@
       src = "wleave.css";
       dst = "${config.xdg.configHome}/wleave/colors.css";
     };
-    wlr-chooser = {
-      src = "wlr-chooser.toml";
-      dst = "${config.xdg.configHome}/wlr-chooser/theme.toml";
+    wlr-utils = {
+      src = "wlr-utils.toml";
+      dst = "${config.xdg.configHome}/wlr-utils/themes/wallust.toml";
     };
   };
 }

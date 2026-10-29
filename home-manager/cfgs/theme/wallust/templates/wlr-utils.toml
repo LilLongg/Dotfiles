@@ -10,6 +10,3 @@ text-dim = "{{ foreground }}aa"
 accent = "{{ background | blend(cursor) | blend(background) }}"
 screen-accent = "{{ color1 | blend(color5) }}"
 window-accent = "{{ color1 }}"
-
-font = "Maple Mono NF CN"
-font-size = 11.0

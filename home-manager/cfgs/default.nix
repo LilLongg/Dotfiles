@@ -25,6 +25,7 @@
     ./vesktop
     ./vscode
     ./wleave
+    ./wlr-utils
     ./xdg
     ./yazi
   ];

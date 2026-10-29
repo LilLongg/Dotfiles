@@ -27,8 +27,6 @@
     pkgs.wget
     pkgs.wget2
     pkgs.wl-clipboard
-    pkgs.wl-mirror
-    pkgs.wlr-utils
 
     (pkgs.python3.withPackages (
       ps: with ps; [
