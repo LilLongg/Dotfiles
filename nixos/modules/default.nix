@@ -4,6 +4,7 @@
     ./bootloader.nix
     ./fonts.nix
     ./hw-accel.nix
+    ./kernel-modules.nix
     ./mango.nix
     ./network.nix
     ./nix.nix

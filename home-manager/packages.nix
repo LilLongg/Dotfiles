@@ -21,6 +21,7 @@
     pkgs.nautilus
     pkgs.p7zip
     pkgs.proton-vpn
+    pkgs.pywalfox-native
     pkgs.trash-cli
     pkgs.uv
     pkgs.viewnior
