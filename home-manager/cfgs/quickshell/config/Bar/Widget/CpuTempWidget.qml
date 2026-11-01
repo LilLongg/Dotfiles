@@ -1,8 +1,24 @@
-import QtQuick
 import "../../Common"
 import "../../Services"
 
-DisplayText {
-  text: CpuMon.tempIcon + CpuMon.temp + "°C"
-  color: CpuMon.tempStatus === ServicesConfig.Status.Normal ? Theme.green : (CpuMon.tempStatus === ServicesConfig.Status.Critical ? Theme.red : Theme.yellow)
+PercentageCircle {
+  id: root
+  itemSize: Config.fontSize
+  percentage: CpuMon.temp / 100
+  color: {
+    switch (CpuMon.tempStatus) {
+    case Config.Status.Warning:
+      return Theme.yellow;
+    case Config.Status.Critical:
+      return Theme.red;
+    default:
+      return Theme.green;
+    }
+  }
+
+  DisplayText {
+    anchors.centerIn: parent
+    text: CpuMon.tempIcon
+    color: root.color
+  }
 }

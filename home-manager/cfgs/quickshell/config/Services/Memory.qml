@@ -1,8 +1,8 @@
 pragma Singleton
 
-import QtQuick
 import Quickshell
 import Quickshell.Io
+import "../Common"
 
 Singleton {
   id: root
@@ -13,13 +13,11 @@ Singleton {
   property real swapUsedGB: 0
   property real swapTotalGB: 0
   property real swapUsedPercentage: 0
-  property string memIcon: " "
-  property string swapIcon: " "
-  property var memStatus: memUsedPercentage < memCritical ? ServicesConfig.Status.Normal : ServicesConfig.Status.Critical
+  property var memStatus: memUsedPercentage < memCritical ? Config.Status.Normal : Config.Status.Critical
 
   Process {
     running: true
-    command: ["free", "-m", "-s", ServicesConfig.sampleIntervalS]
+    command: ["free", "-m", "-s", Config.sampleIntervalS]
     stdout: SplitParser {
       splitMarker: ""
       onRead: data => {

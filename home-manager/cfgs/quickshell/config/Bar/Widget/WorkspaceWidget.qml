@@ -21,6 +21,7 @@ RowLayout {
       readonly property bool isUrgent: modelData["urgent"] ?? false
       readonly property bool isFocused: modelData["focused"] ?? false
       readonly property var index: modelData["index"]
+      readonly property var displayText: modelData["display_text"]
       property real textOpacity: isUrgent || isFocused ? 1.0 : Config.inactiveOpacity
       property string baseColor: isUrgent ? Theme.color1 : "transparent"
 
@@ -51,7 +52,7 @@ RowLayout {
 
         DisplayText {
           id: wsText
-          text: Workspaces.tagIconMap[ws.index] ?? ws.index
+          text: ws.displayText
           color: Theme.foreground
           opacity: ws.textOpacity
         }

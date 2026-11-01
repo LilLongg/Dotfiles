@@ -1,8 +1,11 @@
-import QtQuick
+import Quickshell
 import "../../Common"
 import "../../Services"
 
-DisplayText {
-  text: CpuMon.loadIcon + CpuMon.load + "%"
-  color: CpuMon.loadStatus === ServicesConfig.Status.Normal ? Theme.blue : Theme.red
+PercentageColoredSvg {
+  imageSource: Quickshell.iconPath("cpu-symbolic")
+  imageSize: Config.fontSize
+  percentage: CpuMon.load / 100
+  color: CpuMon.loadStatus === Config.Status.Normal ? Theme.blue : Theme.red
+  addBrightness: true
 }

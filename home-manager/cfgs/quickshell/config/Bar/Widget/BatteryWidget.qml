@@ -1,9 +1,22 @@
-import QtQuick
 import "../../Common"
 import "../../Services"
 
-DisplayText {
-  text: Battery.icon + Battery.bat + "%"
-  color: Battery.isCharging || Battery.status === ServicesConfig.Status.Normal ? Theme.green : (Battery.status === ServicesConfig.Status.Critical ? Theme.red : Theme.yellow)
-  visible: Battery.isAvailable
+PercentageColoredSvg {
+  imageSource: Battery.icon
+  imageSize: Config.fontSize
+  percentage: Battery.bat / 100
+  color: {
+    if (Battery.isCharging || Battery.status === Config.Status.Normal)
+      return Theme.green;
+
+    switch (Battery.status) {
+    case Config.Status.Warning:
+      return Theme.yellow;
+    case Config.Status.Critical:
+      return Theme.red;
+    default:
+      return Theme.green;
+    }
+  }
+  addBrightness: Battery.isCharging && Theme.scheme === "light"
 }

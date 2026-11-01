@@ -3,27 +3,38 @@ pragma Singleton
 import QtQuick
 import Quickshell
 import Quickshell.Io
+import "../Common"
 
 Singleton {
   id: root
-  readonly property var iconMap: ["󰁺 ", "󰁻 ", "󰁼 ", "󰁽 ", "󰁾 ", "󰁿 ", "󰂀 ", "󰂁 ", "󰂂 ", "󰁹 "]
   readonly property var batThresholds: [
     {
       "threshold": 30,
-      "status": ServicesConfig.Status.Normal
+      "status": Config.Status.Normal
     },
     {
       "threshold": 20,
-      "status": ServicesConfig.Status.Warning
+      "status": Config.Status.Warning
     },
     {
       "threshold": 0,
-      "status": ServicesConfig.Status.Critical
+      "status": Config.Status.Critical
     },
   ]
-  property int bat: 0
-  property string icon: root.isCharging ? " " : iconMap[Math.trunc((bat - 1) * iconMap.length / 100)]
-  property var status: ServicesConfig.Status.Normal
+  property int bat: 100
+  property var icon: {
+    if (root.isCharging)
+      return Quickshell.iconPath("battery_plugged");
+
+    return Quickshell.iconPath(`battery-${String(Math.trunc(bat / 10) * 10).padStart(3, '0')}-symbolic`);
+  }
+  property var status: {
+    for (const batThreshold of root.batThresholds) {
+      if (bat > batThreshold["threshold"]) {
+        return batThreshold["status"];
+      }
+    }
+  }
   property bool isCharging: false
   property bool isAvailable: true
 
@@ -37,16 +48,10 @@ Singleton {
           root.isAvailable = false;
           return;
         }
+
         const bat = parseInt(text);
         root.bat = bat;
         root.isAvailable = true;
-
-        for (const batThreshold of root.batThresholds) {
-          if (bat > batThreshold["threshold"]) {
-            root.status = batThreshold["status"];
-            break;
-          }
-        }
       }
     }
   }
@@ -63,7 +68,7 @@ Singleton {
   Timer {
     running: true
     repeat: true
-    interval: ServicesConfig.sampleIntervalMs
+    interval: Config.sampleIntervalMs
     onTriggered: {
       getBat.running = true;
       getChargingStatus.running = true;

@@ -4,9 +4,9 @@ import QtQuick.Shapes
 Item {
   id: root
   required property real itemSize
-  required property real strokeSize
   required property string color
   required property real percentage
+  property real strokeSize: Config.borderSize
 
   width: itemSize * 2
   height: itemSize * 2

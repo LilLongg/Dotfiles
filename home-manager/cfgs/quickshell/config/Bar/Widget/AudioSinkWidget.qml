@@ -18,7 +18,6 @@ RowLayout {
   PercentageColoredSvg {
     imageSize: Config.fontSize
     imageSource: Quickshell.iconPath(root.icon)
-    strokeSize: Config.borderSize
     color: Theme.blue
     percentage: root.volume
   }

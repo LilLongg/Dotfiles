@@ -7,14 +7,6 @@
         formatter.command = "nixfmt";
       }
       {
-        name = "c";
-        auto-format = true;
-      }
-      {
-        name = "cpp";
-        auto-format = true;
-      }
-      {
         name = "python";
         auto-format = true;
         language-servers = [
@@ -67,10 +59,6 @@
             "scss"
           ];
         };
-      }
-      {
-        name = "typst";
-        auto-format = true;
       }
     ];
   };

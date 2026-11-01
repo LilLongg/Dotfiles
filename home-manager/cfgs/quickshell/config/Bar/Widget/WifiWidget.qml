@@ -24,7 +24,6 @@ RowLayout {
   PercentageColoredSvg {
     imageSource: Quickshell.iconPath(root.icon)
     imageSize: Config.fontSize
-    strokeSize: Config.borderSize
     percentage: root.wifiStrength
     color: Theme.purple
   }

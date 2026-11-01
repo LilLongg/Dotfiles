@@ -1,15 +1,10 @@
 import QtQuick
 
-PercentageCirle {
+PercentageCircle {
   id: root
   required property var imageSource
   property alias imageSize: root.itemSize
   property bool addBrightness: false
-
-  itemSize: itemSize
-  strokeSize: strokeSize
-  color: color
-  percentage: percentage
 
   ColoredSvg {
     anchors.fill: parent

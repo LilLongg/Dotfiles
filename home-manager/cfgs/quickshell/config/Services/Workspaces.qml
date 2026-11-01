@@ -32,8 +32,10 @@ Singleton {
           output[name] = [];
 
           for (const tag of monitor["tags"]) {
-            var tagData = {
-              "index": tag["index"],
+            const index = tag["index"];
+            let tagData = {
+              "index": index,
+              "display_text": root.tagIconMap[index] ?? index,
               "active": false,
               "urgent": false,
               "focused": false

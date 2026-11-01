@@ -1,6 +1,5 @@
 pragma Singleton
 
-import QtQuick
 import Quickshell
 import Quickshell.Io
 
@@ -11,7 +10,7 @@ Singleton {
   property int maxBrightness: 0
   property real brightnessPercentage: brightness / maxBrightness || 0
   property string brightnessLevel: brightnessLevels[Math.trunc((brightnessPercentage - 0.01) * brightnessLevels.length)]
-  property string icon: "display-brightness-" + brightnessLevel + "-symbolic"
+  property var icon: Quickshell.iconPath(`display-brightness-${brightnessLevel}-symbolic`)
 
   Process {
     id: getBrightness

@@ -1,8 +1,11 @@
-import QtQuick
+import Quickshell
 import "../../Common"
 import "../../Services"
 
-DisplayText {
-  text: Memory.memIcon + Math.round(Memory.memUsedPercentage) + "%"
-  color: Memory.memStatus === ServicesConfig.Status.Normal ? Theme.orange : Theme.red
+PercentageColoredSvg {
+  imageSource: Quickshell.iconPath("memory-symbolic")
+  imageSize: Config.fontSize
+  percentage: Memory.memUsedPercentage / 100
+  color: Memory.memStatus === Config.Status.Normal ? Theme.orange : Theme.red
+  addBrightness: true
 }

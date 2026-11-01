@@ -20,7 +20,6 @@ RowLayout {
     PercentageColoredSvg {
       imageSource: Quickshell.iconPath("bluetooth-disabled-symbolic")
       imageSize: Config.fontSize
-      strokeSize: Config.borderSize
       percentage: 0
       color: Theme.blue
     }
@@ -43,7 +42,6 @@ RowLayout {
       PercentageColoredSvg {
         imageSource: Quickshell.iconPath(connection.modelData.icon, "bluetooth-active-symbolic")
         imageSize: Config.fontSize
-        strokeSize: Config.borderSize
         percentage: !connection.modelData.batteryAvailable ? 0 : connection.modelData.battery
         color: Theme.blue
         addBrightness: Theme.scheme === "light"

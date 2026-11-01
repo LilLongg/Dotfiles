@@ -6,7 +6,7 @@
   ...
 }:
 {
-  env.GREET = "devenv";
+  env.GREET = "quickshell";
   env.QML_IMPORT_PATH = "${config.env.DEVENV_PROFILE}/lib/qt-6/qml";
   packages = with pkgs; [
     quickshell
