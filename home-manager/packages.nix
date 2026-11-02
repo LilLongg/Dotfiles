@@ -34,6 +34,7 @@
         colorspacious
         opencv-python-headless
         psutil
+        pyqt6
         requests
       ]
     ))

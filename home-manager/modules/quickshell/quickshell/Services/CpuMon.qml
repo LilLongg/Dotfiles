@@ -45,7 +45,7 @@ Singleton {
 
   Process {
     running: true
-    command: ["sh", "-c", "$XDG_DATA_HOME/scripts/cpu-monitor.py " + Config.sampleIntervalS]
+    command: ["sh", "-c", `$XDG_BIN_HOME/cpu-monitor ${Config.sampleIntervalS}`]
     stdout: SplitParser {
       onRead: data => {
         const parsedData = JSON.parse(data);

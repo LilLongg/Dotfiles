@@ -18,5 +18,5 @@ PercentageColoredSvg {
       return Theme.green;
     }
   }
-  addBrightness: Battery.isCharging && Theme.scheme === "light"
+  addBrightness: Battery.isCharging
 }

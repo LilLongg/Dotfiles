@@ -8,7 +8,7 @@ import "../Common"
 
 Singleton {
   id: root
-  readonly property string playerName: playerWatcher.text()
+  readonly property string playerName: playerFetcher.text()
   readonly property string dbusPrefix: "org.mpris.MediaPlayer2."
   readonly property var player: Mpris.players.values.filter(player => player.dbusName.startsWith(playerName, dbusPrefix.length))[0]
   readonly property var playerIcon: Quickshell.iconPath(playerName, "media-player-48")
@@ -56,7 +56,7 @@ Singleton {
   }
 
   FileView {
-    id: playerWatcher
+    id: playerFetcher
     path: Qt.resolvedUrl("/tmp/mpris-monitor/default-player.txt")
     watchChanges: true
     onFileChanged: reload()

@@ -13,7 +13,7 @@ Singleton {
   property var icon: Quickshell.iconPath(`display-brightness-${brightnessLevel}-symbolic`)
 
   Process {
-    id: getBrightness
+    id: brightnessFetcher
     running: true
     command: ["brightnessctl", "get"]
     stdout: StdioCollector {
@@ -25,7 +25,7 @@ Singleton {
   }
 
   Process {
-    id: getMaxBrightness
+    id: maxBrightnessFetcher
     running: true
     command: ["brightnessctl", "max"]
     stdout: StdioCollector {
@@ -40,7 +40,7 @@ Singleton {
     running: true
     command: ["sh", "-c", "inotifywait -e modify -m -q /sys/class/backlight/*/actual_brightness"]
     stdout: SplitParser {
-      onRead: getBrightness.running = true
+      onRead: brightnessFetcher.running = true
     }
   }
 }

@@ -18,6 +18,7 @@ Singleton {
   readonly property real opacity: 0.9
   readonly property real inactiveOpacity: 0.3
   readonly property int animationDurationMs: 300
+  readonly property int weatherSampleIntervalMs: 30 * 60 * 1000
   readonly property int sampleIntervalMs: 1000
   readonly property real sampleIntervalS: sampleIntervalMs / 1000
 

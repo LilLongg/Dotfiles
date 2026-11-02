@@ -24,7 +24,7 @@ Singleton {
   property int bat: 100
   property var icon: {
     if (root.isCharging)
-      return Quickshell.iconPath("battery_plugged");
+      return Quickshell.iconPath("ac-adapter-symbolic");
 
     return Quickshell.iconPath(`battery-${String(Math.trunc(bat / 10) * 10).padStart(3, '0')}-symbolic`);
   }
@@ -39,7 +39,7 @@ Singleton {
   property bool isAvailable: true
 
   Process {
-    id: getBat
+    id: batteryFetcher
     running: true
     command: ["sh", "-c", "cat /sys/class/power_supply/BAT*/capacity"]
     stdout: StdioCollector {
@@ -57,7 +57,7 @@ Singleton {
   }
 
   Process {
-    id: getChargingStatus
+    id: chargingStatusFetcher
     running: true
     command: ["cat", "/sys/class/power_supply/ACAD/online"]
     stdout: StdioCollector {
@@ -70,8 +70,8 @@ Singleton {
     repeat: true
     interval: Config.sampleIntervalMs
     onTriggered: {
-      getBat.running = true;
-      getChargingStatus.running = true;
+      batteryFetcher.running = true;
+      chargingStatusFetcher.running = true;
     }
   }
 }

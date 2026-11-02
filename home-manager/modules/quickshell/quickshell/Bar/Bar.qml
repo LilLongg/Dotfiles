@@ -31,17 +31,20 @@ PanelWindow {
     anchors.left: parent.left
 
     BarWrapper {
-      ClockWidget {}
+      Clock {}
     }
     BarWrapper {
-      BatteryWidget {}
-      CpuTempWidget {}
-      CpuLoadWidget {}
-      MemoryWidget {}
+      Weather {}
     }
     BarWrapper {
-      WifiWidget {}
-      BluetoothWidget {}
+      Battery {}
+      CpuTemp {}
+      CpuLoad {}
+      Memory {}
+    }
+    BarWrapper {
+      Wifi {}
+      Bluetooth {}
     }
   }
 
@@ -51,11 +54,11 @@ PanelWindow {
     anchors.horizontalCenter: parent.horizontalCenter
 
     BarWrapper {
-      LauncherWidget {}
-      WorkspaceWidget {
+      Launcher {}
+      Workspaces {
         monitor: root.monitor
       }
-      ScreenlockWidget {}
+      ScreenLocker {}
     }
   }
 
@@ -65,13 +68,13 @@ PanelWindow {
     anchors.right: parent.right
 
     BarWrapper {
-      MprisWidget {}
-      AudioSinkWidget {}
-      AudioSourceWidget {}
-      BacklightWidget {}
+      Mpris {}
+      AudioSink {}
+      AudioSource {}
+      Backlight {}
     }
     BarWrapper {
-      SystrayWidget {
+      Systray {
         bar: root
       }
     }

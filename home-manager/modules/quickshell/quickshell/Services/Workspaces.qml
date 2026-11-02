@@ -64,7 +64,7 @@ Singleton {
     command: ["mmsg", "dispatch", "view," + wsIndex]
   }
   Process {
-    id: wsToggle
+    id: wsToggler
     running: false
     property var wsIndex: 1
 
@@ -76,7 +76,7 @@ Singleton {
     wsSwitcher.running = true;
   }
   function toggleWorkspace(wsIndex: var) {
-    wsToggle.wsIndex = wsIndex;
-    wsToggle.running = true;
+    wsToggler.wsIndex = wsIndex;
+    wsToggler.running = true;
   }
 }
