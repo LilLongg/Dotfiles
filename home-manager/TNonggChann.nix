@@ -3,7 +3,7 @@
     ./packages.nix
 
     ./assets
-    ./cfgs
+    ./modules
     ./scripts
   ];
 

@@ -4,7 +4,7 @@
     systemd.enable = true;
   };
   xdg.configFile."quickshell" = {
-    source = ./config;
+    source = ./quickshell;
     recursive = true;
   };
   home.packages = with pkgs; [

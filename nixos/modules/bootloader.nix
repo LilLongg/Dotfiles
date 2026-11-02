@@ -14,12 +14,12 @@
         useOSProber = true;
         theme = "${
           (pkgs.fetchFromGitHub {
-            owner = "harishnkr";
-            repo = "bsol";
-            rev = "8f39f66967e2391b11ee554578f0b821070ec72a";
-            hash = "sha256-UD5crwJdqnKVnxTN2vHIukJnQuzxmkko3E5wb8Xg6gs=";
+            owner = "lfelipe1501";
+            repo = "Atomic-GRUB2-Theme";
+            rev = "7e5fe5167c3768060aeabfe6fa45e55336b4b33e";
+            hash = "sha256-M9nnh43fhPYXOKKhVgRM5V6AROXbdzI30af9OP+p0Vw=";
           })
-        }/bsol";
+        }/Atomic";
       };
     };
   };
