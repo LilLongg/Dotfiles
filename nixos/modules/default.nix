@@ -2,6 +2,7 @@
   imports = [
     ./bluetooth.nix
     ./bootloader.nix
+    ./console.nix
     ./fonts.nix
     ./hw-accel.nix
     ./kernel-modules.nix
