@@ -6,22 +6,21 @@ import "../Common"
 
 Singleton {
   id: root
-  property real memUsedGB: 0
-  property real memTotalGB: 0
-  property real memUsedPercentage: 0
-  property real memCritical: 80
-  property real swapUsedGB: 0
-  property real swapTotalGB: 0
-  property real swapUsedPercentage: 0
-  property var memStatus: memUsedPercentage < memCritical ? Config.Status.Normal : Config.Status.Critical
+  readonly property real memUsedGB: memoryFetcher.memUsedGB
+  readonly property real memTotalGB: memoryFetcher.memTotalGB
+  readonly property real memUsedPercentage: memTotalGB === 0 ? 0 : memUsedGB / memTotalGB * 100
+  readonly property real swapUsedGB: memoryFetcher.swapUsedGB
+  readonly property real swapTotalGB: memoryFetcher.swapTotalGB
+  readonly property real swapUsedPercentage: swapTotalGB === 0 ? 0 : swapUsedGB / swapTotalGB * 100
+  readonly property var memStatus: memUsedPercentage < 80 ? Config.Status.Normal : Config.Status.Critical
 
   Process {
+    id: memoryFetcher
     running: true
     command: ["free", "-m", "-s", Config.sampleIntervalS]
     stdout: SplitParser {
       splitMarker: ""
       onRead: data => {
-        const rawData = data.trim();
         const [memData, swapData] = data.trim().split("\n").slice(1);
         const memDataParsed = memData.split(/(\s+)/).filter(e => e.trim().length > 0);
         const swapDataParsed = swapData.split(/(\s+)/).filter(e => e.trim().length > 0);
@@ -30,13 +29,16 @@ Singleton {
         const swapTotalMB = parseInt(swapDataParsed[1]);
         const swapUsedMB = parseInt(swapDataParsed[2]);
 
-        root.memUsedPercentage = memUsedMB / memTotalMB * 100;
-        root.swapUsedPercentage = swapUsedMB / swapTotalMB * 100;
-        root.memUsedGB = memUsedMB / 1024;
-        root.memTotalGB = memTotalMB / 1024;
-        root.swapUsedGB = swapUsedMB / 1024;
-        root.swapTotalGB = swapTotalMB / 1024;
+        memoryFetcher.memUsedGB = memUsedMB / 1024;
+        memoryFetcher.memTotalGB = memTotalMB / 1024;
+        memoryFetcher.swapUsedGB = swapUsedMB / 1024;
+        memoryFetcher.swapTotalGB = swapTotalMB / 1024;
       }
     }
+
+    property real memUsedGB: 0
+    property real memTotalGB: 0
+    property real swapUsedGB: 0
+    property real swapTotalGB: 0
   }
 }

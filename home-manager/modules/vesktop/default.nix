@@ -1,8 +1,7 @@
-{ pkgs-stable, ... }: {
+{
   xdg.configFile."vesktop/settings/settings.json".source = ./settings.json;
   programs.vesktop = {
     enable = true;
-    package = pkgs-stable.vesktop;
     settings = {
       arRPC = true;
       autoStartMinimized = false;

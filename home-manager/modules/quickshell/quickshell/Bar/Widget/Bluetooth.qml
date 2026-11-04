@@ -1,21 +1,15 @@
-pragma ComponentBehavior: Bound
-
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
-import Quickshell.Bluetooth
 import "../../Common"
+import "../../Services"
 
 RowLayout {
   id: root
   spacing: Config.spacing
-  readonly property var adapter: Bluetooth.defaultAdapter
-  readonly property var connections: adapter?.devices.values.filter(connection => connection.connected) ?? []
-  readonly property bool isEnabled: adapter?.enabled ?? false
-  readonly property bool isConnected: connections.length
 
   RowLayout {
-    visible: !root.isConnected
+    visible: !Bluetooth.isConnected
 
     PercentageColoredSvg {
       imageSource: Quickshell.iconPath("bluetooth-disabled-symbolic")
@@ -25,14 +19,14 @@ RowLayout {
     }
 
     DisplayText {
-      text: root.isEnabled ? "off" : "disabled"
+      text: Bluetooth.isEnabled ? "off" : "disabled"
       color: Theme.blue
     }
   }
 
   Repeater {
-    visible: root.isConnected
-    model: root.connections
+    visible: Bluetooth.isConnected
+    model: Bluetooth.connections
 
     RowLayout {
       id: connection

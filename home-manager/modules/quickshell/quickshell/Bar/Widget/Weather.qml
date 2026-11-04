@@ -8,7 +8,7 @@ RowLayout {
 
   IconImage {
     source: Weather.current_icon
-    implicitSize: Config.iconSize
+    implicitSize: 2 * Config.fontSize
   }
 
   DisplayText {

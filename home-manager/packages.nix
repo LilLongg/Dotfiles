@@ -13,17 +13,12 @@
     pkgs.dua
     pkgs.dysk
     pkgs.ffmpeg-full
-    pkgs.file-roller
-    pkgs.gcc
     pkgs.impala
-    pkgs.inotify-tools
     pkgs.libnotify
     pkgs.nautilus
     pkgs.p7zip
-    pkgs.proton-vpn
     pkgs.pywalfox-native
     pkgs.trash-cli
-    pkgs.uv
     pkgs.viewnior
     pkgs.wget
     pkgs.wget2
@@ -35,7 +30,6 @@
         opencv-python-headless
         psutil
         pyqt6
-        requests
       ]
     ))
   ];

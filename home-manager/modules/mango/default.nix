@@ -1,6 +1,7 @@
 {
   imports = [
     ./autostart.nix
+    ./env.nix
     ./general.nix
     ./keybinds.nix
     ./layouts.nix

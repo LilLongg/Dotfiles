@@ -2,6 +2,7 @@ import "../../Common"
 import "../../Services"
 
 PercentageColoredSvg {
+  visible: Battery.isAvailable
   imageSource: Battery.icon
   imageSize: Config.fontSize
   percentage: Battery.bat / 100

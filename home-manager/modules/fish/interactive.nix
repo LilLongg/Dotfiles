@@ -46,11 +46,13 @@
         rmcache = "sudo nix-collect-garbage -d && home-manager expire-generations '-1 mins' --flake ${flakeDir}";
 
         cl = "clear && smallfetch";
-        clf = "clear && fastfetch";
         clear = "printf '\\033[2J\\033[H'";
-        tremp = "trash-empty -f";
-        smallfetch = "fastfetch --config $XDG_CONFIG_HOME/fastfetch/smallfetch.jsonc";
+        clf = "clear && fastfetch";
+        cp = "cpx";
+        diff = "batdiff";
         o7 = "shutdown -h now";
+        smallfetch = "fastfetch --config $XDG_CONFIG_HOME/fastfetch/smallfetch.jsonc";
+        tremp = "trash-empty -f";
         wf-test = "ping google.com -c 5";
       };
   };
