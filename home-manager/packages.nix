@@ -5,7 +5,6 @@
     pkgs.audacity_3
     pkgs.awww
     pkgs.bc
-    pkgs.bluetui
     pkgs.brightnessctl
     pkgs.cava
     pkgs.cpx
@@ -13,7 +12,7 @@
     pkgs.dua
     pkgs.dysk
     pkgs.ffmpeg-full
-    pkgs.impala
+    pkgs.inotify-tools
     pkgs.libnotify
     pkgs.nautilus
     pkgs.p7zip

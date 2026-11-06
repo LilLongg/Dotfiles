@@ -43,7 +43,7 @@ Singleton {
     const fieldSeparator = " | ";
     return `${artist ? artist + fieldSeparator : ""}${player?.trackTitle || "Unknown Title"}${album ? fieldSeparator + album : ""}`;
   }
-  readonly property int maxTextWidth: Config.fontSize * 30
+  readonly property int maxTextWidth: Config.fontSize * 50
 
   Process {
     id: positionFetcher
