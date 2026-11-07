@@ -19,8 +19,6 @@
         "--force-grab-cursor"
         "--adaptive-sync"
         "--hdr-enabled"
-        "-F"
-        "fsr"
       ];
       env = {
         PROTON_DXVK_LOWLATENCY = "1";

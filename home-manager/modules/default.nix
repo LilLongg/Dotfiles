@@ -19,6 +19,7 @@
     ./obs-studio
     ./onlyoffice
     ./quickshell
+    ./ratatui
     ./rofi
     ./services
     ./theme

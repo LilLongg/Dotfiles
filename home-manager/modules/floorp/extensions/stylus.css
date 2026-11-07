@@ -1,5 +1,28 @@
-*,
-*::before,
-*::after {
+body,
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th,
+input,
+textarea,
+button {
   font-family: "Maple Mono NF CN" !important;
+}
+
+[class^="fa-"],
+[class*=" fa-"],
+[class^="icon-"],
+[class*=" icon-"],
+[class^="mdi-"],
+[class*=" mdi-"],
+.material-icons {
+  font-family: inherit !important;
 }

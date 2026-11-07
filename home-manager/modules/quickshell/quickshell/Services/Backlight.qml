@@ -4,13 +4,12 @@ import Quickshell
 import Quickshell.Io
 
 Singleton {
-  id: root
-  readonly property var brightnessLevels: ["low", "medium", "high"]
-  property int brightness: 0
-  property int maxBrightness: 0
-  property real brightnessPercentage: brightness / maxBrightness || 0
-  property string brightnessLevel: brightnessLevels[Math.trunc((brightnessPercentage - 0.01) * brightnessLevels.length)]
-  property var icon: Quickshell.iconPath(`display-brightness-${brightnessLevel}-symbolic`)
+  readonly property real brightnessPercentage: brightnessFetcher.brightness / maxBrightnessFetcher.maxBrightness || 0
+  readonly property var icon: {
+    const brightnessLevels = ["low", "medium", "high"];
+    const brightnessLevelIdx = Math.trunc((brightnessPercentage - 0.01) * brightnessLevels.length);
+    return Quickshell.iconPath(`display-brightness-${brightnessLevels[brightnessLevelIdx]}-symbolic`);
+  }
 
   Process {
     id: brightnessFetcher
@@ -18,10 +17,12 @@ Singleton {
     command: ["brightnessctl", "get"]
     stdout: StdioCollector {
       onStreamFinished: {
-        const brightness = parseInt(text);
-        root.brightness = brightness;
+        brightnessFetcher.brightness = parseInt(text);
+        backlightListener.running = true;
       }
     }
+
+    property int brightness: 0
   }
 
   Process {
@@ -29,15 +30,15 @@ Singleton {
     running: true
     command: ["brightnessctl", "max"]
     stdout: StdioCollector {
-      onStreamFinished: {
-        const maxBrightness = parseInt(text);
-        root.maxBrightness = maxBrightness;
-      }
+      onStreamFinished: maxBrightnessFetcher.maxBrightness = parseInt(text)
     }
+
+    property int maxBrightness: 0
   }
 
   Process {
-    running: true
+    id: backlightListener
+    running: false
     command: ["sh", "-c", "inotifywait -e modify -m -q /sys/class/backlight/*/actual_brightness"]
     stdout: SplitParser {
       onRead: brightnessFetcher.running = true

@@ -1,4 +1,6 @@
 { config, ... }: {
+  xdg.dataFile."scripts/save-browser-data".source = ./scripts/save-browser-data;
+  xdg.dataFile."scripts/restore-browser-data".source = ./scripts/restore-browser-data;
   systemd.user.services.browser-on-ram = {
     Unit = {
       Description = "Save and Restore Browser data on /dev/shm";

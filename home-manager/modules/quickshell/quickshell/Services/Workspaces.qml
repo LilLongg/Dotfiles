@@ -1,26 +1,14 @@
 pragma Singleton
-pragma ComponentBehavior: Bound
 
 import QtQuick
 import Quickshell
 import Quickshell.Io
 
 Singleton {
-  id: root
-  property var tagData: ({})
-  readonly property var tagIconMap: {
-    1: "一",
-    2: "二",
-    3: "三",
-    4: "四",
-    5: "五",
-    6: "六",
-    7: "七",
-    8: "八",
-    9: "九"
-  }
+  property var tagData: wsFetcher.tagData
 
   Process {
+    id: wsFetcher
     running: true
     command: ["mmsg", "watch", "all-tags"]
     stdout: SplitParser {
@@ -35,7 +23,7 @@ Singleton {
             const index = tag["index"];
             let tagData = {
               "index": index,
-              "display_text": root.tagIconMap[index] ?? index,
+              "display_text": wsFetcher.tagIconMap[index] ?? index,
               "active": false,
               "urgent": false,
               "focused": false
@@ -50,25 +38,37 @@ Singleton {
             output[name].push(tagData);
           }
         }
-
-        root.tagData = output;
+        wsFetcher.tagData = output;
       }
+    }
+
+    property var tagData: ({})
+    property var tagIconMap: {
+      1: "一",
+      2: "二",
+      3: "三",
+      4: "四",
+      5: "五",
+      6: "六",
+      7: "七",
+      8: "八",
+      9: "九"
     }
   }
 
   Process {
     id: wsSwitcher
     running: false
-    property var wsIndex: 1
-
     command: ["mmsg", "dispatch", "view," + wsIndex]
+
+    property var wsIndex: 1
   }
   Process {
     id: wsToggler
     running: false
-    property var wsIndex: 1
-
     command: ["mmsg", "dispatch", "toggleview," + wsIndex]
+
+    property var wsIndex: 1
   }
 
   function gotoWorkspace(wsIndex: var): void {

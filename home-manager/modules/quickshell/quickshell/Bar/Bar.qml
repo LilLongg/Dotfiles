@@ -31,35 +31,21 @@ PanelWindow {
     anchors.left: parent.left
 
     BarWrapper {
-      Clock {}
+      Systray {
+        bar: root
+      }
     }
     BarWrapper {
-      Weather {}
-    }
-    BarWrapper {
-      Battery {}
-      CpuTemp {}
-      CpuLoad {}
-      Memory {}
-    }
-    BarWrapper {
-      Wifi {}
-      Bluetooth {}
+      Workspaces {
+        monitor: root.monitor
+      }
     }
   }
 
   // Center modules
-  RowLayout {
-    spacing: Config.barMargin
+  BarWrapper {
     anchors.horizontalCenter: parent.horizontalCenter
-
-    BarWrapper {
-      Launcher {}
-      Workspaces {
-        monitor: root.monitor
-      }
-      ScreenLocker {}
-    }
+    Clock {}
   }
 
   // Right modules
@@ -72,11 +58,6 @@ PanelWindow {
       AudioSink {}
       AudioSource {}
       Backlight {}
-    }
-    BarWrapper {
-      Systray {
-        bar: root
-      }
     }
   }
 }

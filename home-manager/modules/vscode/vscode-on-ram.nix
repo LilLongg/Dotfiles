@@ -1,4 +1,6 @@
 { config, ... }: {
+  xdg.dataFile."scripts/save-vscode-data".source = ./scripts/save-vscode-data;
+  xdg.dataFile."scripts/restore-vscode-data".source = ./scripts/restore-vscode-data;
   systemd.user.services.vscode-on-ram = {
     Unit = {
       Description = "Save and Restore Vscode data on /dev/shm";
