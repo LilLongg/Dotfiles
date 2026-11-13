@@ -109,14 +109,14 @@
       "SUPER+SHIFT,M,spawn,pkill -f mpris-monitor.py -USR1"
       "SUPER+ALT,M,spawn,pkill -f mpris-monitor.py -USR2"
 
-      "NONE,F1,spawn,volumectl toggle-mute"
-      "SHIFT,F1,spawn,volumectl -m toggle-mute"
-      "NONE,F2,spawn,volumectl down"
-      "SHIFT,F2,spawn,volumectl -m down"
-      "NONE,F3,spawn,volumectl up"
-      "SHIFT,F3,spawn,volumectl -m up"
-      "NONE,F4,spawn,lightctl down"
-      "NONE,F5,spawn,lightctl up"
+      "NONE,F1,spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "SHIFT,F1,spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      "NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      "SHIFT,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SOUCE@ 5%-"
+      "NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      "SHIFT,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SOUCE@ 5%+"
+      "NONE,F4,spawn,brightnessctl s 5%-"
+      "NONE,F5,spawn,brightnessctl s 5%+"
     ];
     bindc = [
       "SUPER+SHIFT,W,switch_proportion_preset"

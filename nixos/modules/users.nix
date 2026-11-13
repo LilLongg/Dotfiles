@@ -11,4 +11,7 @@
       "wheel"
     ];
   };
+  environment.variables = {
+    TERM = "xterm-256color";
+  };
 }
