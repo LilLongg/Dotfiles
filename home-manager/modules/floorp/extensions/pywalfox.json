@@ -1,0 +1,26 @@
+{
+  "templates": {
+    "light": {
+      "palette": {
+        "background": 0,
+        "backgroundLight": 16,
+        "backgroundExtra": 7,
+        "accentPrimary": 13,
+        "accentSecondary": 5,
+        "text": 1,
+        "textFocus": 3
+      }
+    },
+    "dark": {
+      "palette": {
+        "background": 0,
+        "backgroundLight": 16,
+        "backgroundExtra": 18,
+        "accentPrimary": 10,
+        "accentSecondary": 13,
+        "text": 15,
+        "textFocus": 17
+      }
+    }
+  }
+}

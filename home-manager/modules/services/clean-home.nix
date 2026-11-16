@@ -1,4 +1,4 @@
-{ config, ... }: {
+{
   systemd.user.services.clean-home-directory = {
     Unit = {
       Description = "Remove invalid encoding files in home directory";
@@ -19,7 +19,7 @@
     };
     Service = {
       Type = "oneshot";
-      ExecStart = "${config.xdg.dataHome}/scripts/remove-bad-files.py";
+      ExecStart = "${./scripts/remove-bad-files.py}";
     };
   };
 }

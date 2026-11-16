@@ -9,8 +9,6 @@
   home.file."${config.xdg.binHome}/system-age".source = ./system-age;
   home.file."${config.xdg.binHome}/uptime-fmt".source = ./uptime-fmt;
 
-  xdg.dataFile."scripts/battery.sh".source = ./battery.sh;
-  xdg.dataFile."scripts/image-theme.py".source = ./image-theme.py;
-  xdg.dataFile."scripts/remove-bad-files.py".source = ./remove-bad-files.py;
-  xdg.dataFile."scripts/update-icons.py".source = ./update-icons.py;
+  home.file."${config.xdg.userDirs.extraConfig.SCRIPTS}/image-theme.py".source = ./image-theme.py;
+  home.file."${config.xdg.userDirs.extraConfig.SCRIPTS}/update-icons.py".source = ./update-icons.py;
 }

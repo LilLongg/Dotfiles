@@ -46,7 +46,7 @@ element selected.normal {
 
 element-icon {
     text-color:                  inherit;
-    size:                        10%;
+    size:                        21.6%;
     margin:                      -30px;
     cursor:                      inherit;
 }

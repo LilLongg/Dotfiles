@@ -3,7 +3,7 @@
 set -l IMG_PATH "$XDG_CACHE_HOME/.current_wpp"
 
 if not test -f $IMG_PATH
-    "$XDG_BIN_HOME/bgaction" (find "~/Wallpaper/*" | shuf | head -n1)
+    bgaction (find "$XDG_WALLPAPER_DIR/*" | shuf | head -n1)
 else
-    "$XDG_BIN_HOME/bgaction" (readlink "$IMG_PATH")
+    bgaction (readlink "$IMG_PATH")
 end

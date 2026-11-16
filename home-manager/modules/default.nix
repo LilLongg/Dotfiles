@@ -10,7 +10,6 @@
     ./fonts
     ./git
     ./helix
-    ./hypr
     ./kitty
     ./mango
     ./mangohud
@@ -25,7 +24,6 @@
     ./theme
     ./vesktop
     ./vscode
-    ./wleave
     ./wlr-utils
     ./xdg
     ./yazi

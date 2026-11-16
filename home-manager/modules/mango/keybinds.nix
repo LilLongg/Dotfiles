@@ -58,20 +58,20 @@
 
       "SUPER,T,spawn,code"
 
-      "SUPER+SHIFT,Y,spawn,$XDG_DATA_HOME/scripts/playerctl.py shuffle Toggle"
-      "SUPER+ALT,Y,spawn_shell,$XDG_DATA_HOME/scripts/playerctl-toggle-loop"
+      "SUPER+SHIFT,Y,spawn,$XDG_SCRIPTS_DIR/playerctl.py shuffle Toggle"
+      "SUPER+ALT,Y,spawn_shell,$XDG_SCRIPTS_DIR/playerctl-toggle-loop"
 
       "SUPER,I,spawn,floorp"
       "SUPER+SHIFT,I,spawn,vesktop"
       "SUPER+ALT,I,spawn,ferdium"
 
-      "SUPER,P,spawn,$XDG_DATA_HOME/scripts/playerctl.py play-pause"
-      "SUPER+SHIFT,P,spawn,$XDG_DATA_HOME/scripts/playerctl.py stop"
+      "SUPER,P,spawn,$XDG_SCRIPTS_DIR/playerctl.py play-pause"
+      "SUPER+SHIFT,P,spawn,$XDG_SCRIPTS_DIR/playerctl.py stop"
 
-      "SUPER,Bracketleft,spawn,$XDG_DATA_HOME/scripts/playerctl.py previous"
-      "SUPER+SHIFT,Bracketleft,spawn_shell,$XDG_DATA_HOME/scripts/playerctl.py position 10-"
-      "SUPER,Bracketright,spawn,$XDG_DATA_HOME/scripts/playerctl.py next"
-      "SUPER+SHIFT,Bracketright,spawn_shell,$XDG_DATA_HOME/scripts/playerctl.py position 10+"
+      "SUPER,Bracketleft,spawn,$XDG_SCRIPTS_DIR/playerctl.py previous"
+      "SUPER+SHIFT,Bracketleft,spawn_shell,$XDG_SCRIPTS_DIR/playerctl.py position 10-"
+      "SUPER,Bracketright,spawn,$XDG_SCRIPTS_DIR/playerctl.py next"
+      "SUPER+SHIFT,Bracketright,spawn_shell,$XDG_SCRIPTS_DIR/playerctl.py position 10+"
 
       "SUPER,A,spawn,rofi -show drun"
       "SUPER+SHIFT,A,spawn,select-wpp"
@@ -95,8 +95,6 @@
 
       "SUPER,G,spawn,nautilus"
 
-      "SUPER,L,spawn,hyprlock"
-      "SUPER+SHIFT,L,spawn,wleave"
       "SUPER+ALT,L,spawn,systemctl hibernate"
 
       "SUPER,V,spawn,screenrec"

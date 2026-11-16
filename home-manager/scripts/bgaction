@@ -2,35 +2,25 @@
 
 set -l IMG_PATH "$argv[1]"
 set -l IMG_NAME (basename $IMG_PATH)
-set -l IMG_CACHE "$XDG_CACHE_HOME/wpp/$IMG_NAME.JPG"
+set -l IMG_CACHE "$XDG_WPP_CACHE_DIR/$IMG_NAME.png"
+set -l THEME ("$XDG_SCRIPTS_DIR/image-theme.py" "$IMG_CACHE")
 ln -sf "$IMG_PATH" "$XDG_CACHE_HOME/.current_wpp"
-ln -sf "$IMG_CACHE" "$XDG_DATA_HOME/assets/LOCK.JPG"
-set -l THEME ("$XDG_DATA_HOME/scripts/image-theme.py" "$IMG_CACHE")
 
 pkill mpvpaper
 switch (string split . "$IMG_PATH" | tail -n1)
     case mp4 MP4
         awww kill
-        if not test -f "$IMG_CACHE"
-            ffmpeg -i "$IMG_PATH" -vf "select=eq(n\,0)" -q:v 1 "$IMG_CACHE"
-        end
         mpvpaper -o "--loop-playlist --panscan=1.0" '*' "$IMG_PATH" >/dev/null &
     case gif GIF
         if not awww query
             awww-daemon &
             awww img --transition-type random "$IMG_PATH" >/dev/null
         end
-        if not test -f "$IMG_CACHE"
-            ffmpeg -i "$IMG_PATH" -vframes 1 "$IMG_CACHE"
-        end
         awww img --transition-type random "$IMG_PATH" >/dev/null &
     case '*'
         if not awww query
             awww-daemon &
             awww img --transition-type random "$IMG_PATH" >/dev/null
-        end
-        if not test -f "$IMG_CACHE"
-            ffmpeg -i "$IMG_PATH" "$IMG_CACHE"
         end
         awww img --transition-type random "$IMG_PATH" >/dev/null &
 end
@@ -67,4 +57,4 @@ else
     dconf write /org/gnome/desktop/interface/icon-theme "'$ICON_THEME'"
     dconf write /org/gnome/desktop/interface/color-scheme "$PREFERED_SCHEME"
 end
-"$XDG_DATA_HOME/scripts/update-icons.py"
+"$XDG_SCRIPTS_DIR/update-icons.py"

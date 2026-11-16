@@ -18,53 +18,70 @@ else:
 
 
 PROG_NAME = "screenrec"
+PROG_NAME_FMT = PROG_NAME.capitalize()
 FILENAME = (
     Path(environ["XDG_RECORDS_DIR"])
     / run(
         ["date", "+%Y-%m-%d_%H-%M-%S.mp4"], check=False, capture_output=True, text=True
     ).stdout.strip()
 )
+PREVIEW_PATH = Path("/tmp") / FILENAME.with_stem(".png").name
 screenrec_cmd = ["wlr-shot", "record", "--encoder", "vaapi"]
+current_client_data = loads(
+    run(
+        ["mmsg", "get", "focusing-client"],
+        check=False,
+        capture_output=True,
+        text=True,
+    ).stdout
+)
+
+
+def notify(body: str, *extra_args: str) -> None:
+    run(
+        ["notify-send", "-a", PROG_NAME_FMT, PROG_NAME_FMT, body, *extra_args],
+        check=False,
+    )
 
 
 parser = ArgumentParser(
     PROG_NAME, description="Screen record an area/window/fullscreen"
 )
-parser.add_argument(
+target = parser.add_mutually_exclusive_group()
+target.add_argument(
     "-w",
     "--window",
-    action="store_true",
-    help="Record the current focus window (conflicts with `-o`)",
+    action="store",
+    const=current_client_data["foreign_toplevel_id"],
+    help="Screenshot the current focus window (default to current focus client), conflicts with `-o`",
+    nargs="?",
 )
-parser.add_argument(
+target.add_argument(
     "-o",
     "--output",
-    action="store_true",
-    help="Record the current output (conflicts with `-w`)",
+    action="store",
+    const=current_client_data["monitor"],
+    help="Screenshot the current output (default to current focus monitor), conflicts with `-w`",
+    nargs="?",
 )
-args = parser.parse_args()
 
+args = parser.parse_args()
 if args.window and args.output:
     print(f"{PROG_NAME}: error: cannot capture window and output simultaneously")
     parser.print_help()
     exit(1)
 
 if args.window or args.output:
-    data = loads(
-        run(
-            ["mmsg", "get", "focusing-client"],
-            check=False,
-            capture_output=True,
-            text=True,
-        ).stdout
-    )
     if args.window:
-        screenrec_cmd.extend(["-w", data["foreign_toplevel_id"]])
+        screenrec_cmd.extend(["-w", args.window])
     else:
-        screenrec_cmd.extend(["-o", data["monitor"]])
+        screenrec_cmd.extend(["-o", args.output])
 else:
     screenrec_cmd.append("-s")
 
 
 screenrec_cmd.append(FILENAME)
 run(screenrec_cmd, check=True)
+
+run(["ffmpeg", "-i", FILENAME, "-vframes", "1", PREVIEW_PATH], check=False)
+notify(f"Record saved to {FILENAME}", "-i", str(PREVIEW_PATH))

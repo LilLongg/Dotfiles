@@ -12,9 +12,11 @@
       createDirectories = true;
       setSessionVariables = true;
       extraConfig = {
-        WPP_CACHE = "${config.xdg.cacheHome}/wpp";
-        SCREENSHOTS = "${config.xdg.userDirs.pictures}/Screenshots";
         RECORDS = "${config.xdg.userDirs.videos}/Records";
+        SCREENSHOTS = "${config.xdg.userDirs.pictures}/Screenshots";
+        SCRIPTS = "${config.xdg.dataHome}/scripts";
+        WALLPAPER = "${config.home.homeDirectory}/Wallpaper";
+        WPP_CACHE = "${config.xdg.cacheHome}/wpp";
       };
     };
   };

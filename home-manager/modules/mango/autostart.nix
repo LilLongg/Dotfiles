@@ -1,6 +1,6 @@
-{ config, ... }: {
+{
   wayland.windowManager.mango.autostart_sh = ''
-    ${config.xdg.binHome}/initbg &
+    initbg &
     sleep 5
     wlr-draw &
     steam -silent &

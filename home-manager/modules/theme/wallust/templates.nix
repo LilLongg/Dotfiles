@@ -28,10 +28,6 @@
       src = "helix.toml";
       dst = "${config.xdg.configHome}/helix/themes/wallust.toml";
     };
-    hyprlock = {
-      src = "hyprlock.conf";
-      dst = "${config.xdg.configHome}/hypr/colors.conf";
-    };
     kitty = {
       src = "kitty.conf";
       dst = "${config.xdg.configHome}/kitty/colors.conf";
@@ -51,10 +47,6 @@
     vesktop = {
       src = "vesktop.css";
       dst = "${config.xdg.configHome}/vesktop/settings/quickCss.css";
-    };
-    wleave = {
-      src = "wleave.css";
-      dst = "${config.xdg.configHome}/wleave/colors.css";
     };
     wlr-utils = {
       src = "wlr-utils.toml";

@@ -12,6 +12,8 @@
     pkgs.dua
     pkgs.dysk
     pkgs.ffmpeg-full
+    pkgs.gtk3
+    pkgs.gtk4
     pkgs.inotify-tools
     pkgs.libnotify
     pkgs.nautilus
@@ -27,8 +29,6 @@
       ps: with ps; [
         colorspacious
         opencv-python-headless
-        psutil
-        pyqt6
       ]
     ))
   ];

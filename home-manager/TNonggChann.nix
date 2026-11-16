@@ -1,8 +1,6 @@
 {
   imports = [
     ./packages.nix
-
-    ./assets
     ./modules
     ./scripts
   ];
