@@ -36,6 +36,11 @@ PanelWindow {
       }
     }
     BarWrapper {
+      Wireless {
+        bar: root
+      }
+    }
+    BarWrapper {
       Workspaces {
         monitor: root.monitor
       }

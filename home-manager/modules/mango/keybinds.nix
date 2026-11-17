@@ -101,8 +101,8 @@
       "SUPER+SHIFT,V,spawn,screenrec -w"
       "SUPER+ALT,V,spawn,screenrec -o"
 
-      "SUPER,B,spawn,kitty --title bluetui bluetui"
-      "SUPER,N,spawn,kitty --title impala impala"
+      "SUPER,B,spawn,blueman-manager"
+      "SUPER,N,spawn,iwgtk"
       "SUPER,M,spawn,kitty --title rmpc rmpc"
       "SUPER+SHIFT,M,spawn,pkill -f mpris-monitor.py -USR1"
       "SUPER+ALT,M,spawn,pkill -f mpris-monitor.py -USR2"

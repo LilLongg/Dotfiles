@@ -41,6 +41,7 @@ end
 
 pkill -USR1 hx &
 pkill -USR2 cava &
+pkill iwgtk && iwgtk -i &
 mmsg dispatch reload_config &
 systemctl --user set-environment QS_ICON_THEME="$ICON_THEME" && systemctl --user restart quickshell.service &
 

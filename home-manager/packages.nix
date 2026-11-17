@@ -5,6 +5,7 @@
     pkgs.audacity_3
     pkgs.awww
     pkgs.bc
+    pkgs.blueman
     pkgs.brightnessctl
     pkgs.cava
     pkgs.cpx
@@ -15,6 +16,7 @@
     pkgs.gtk3
     pkgs.gtk4
     pkgs.inotify-tools
+    pkgs.iwgtk
     pkgs.libnotify
     pkgs.nautilus
     pkgs.p7zip

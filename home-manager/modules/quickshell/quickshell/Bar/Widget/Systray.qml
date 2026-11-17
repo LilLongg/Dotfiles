@@ -8,7 +8,7 @@ import "../../Common"
 Repeater {
   id: root
   required property var bar
-  model: SystemTray.items
+  model: SystemTray.items.values.filter(item => !["org.twosheds.iwgtk", "blueman"].includes(item["id"]))
 
   IconImage {
     id: item
