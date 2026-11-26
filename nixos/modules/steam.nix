@@ -17,7 +17,6 @@
         "--mangoapp"
         "--fullscreen"
         "--force-grab-cursor"
-        "--adaptive-sync"
         "--hdr-enabled"
       ];
       env = {

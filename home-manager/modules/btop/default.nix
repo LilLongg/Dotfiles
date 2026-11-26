@@ -6,7 +6,7 @@
       truecolor = false;
       theme_background = false;
       proc_sorting = "memory";
-      use_fstab = false;
+      disks_filter = "/";
     };
   };
 }

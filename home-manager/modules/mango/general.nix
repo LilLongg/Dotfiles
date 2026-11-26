@@ -35,8 +35,8 @@
     shadows_blur = 18;
     shadows_color = "#1a1a1aee";
 
-    focused_opacity = 0.9;
-    unfocused_opacity = 0.9;
+    focused_opacity = 0.85;
+    unfocused_opacity = 0.85;
     dim_enable = 1;
     dim_unfocused_color = "0x0000001a";
 

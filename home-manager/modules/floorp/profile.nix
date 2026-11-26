@@ -27,7 +27,6 @@ in
       "browser.contextual-password-manager.enabled" = false;
       "browser.migrate.chrome.payment_methods.enabled" = false;
       "browser.dataFeatureRecommendations.enabled" = false;
-      "extensions.htmlaboutaddons.recommendations.enabled" = false;
 
       "browser.uiCustomization.state" = ''
         {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["sponsorblocker_ajay_app-browser-action","ublock0_raymondhill_net-browser-action","pywalfox_frewacom_org-browser-action","addon_darkreader_org-browser-action","firefox_tampermonkey_net-browser-action","youtube-anti-translate-mv3_namakeingo_co_uk-browser-action","_88ebde3a-4581-4c6b-8019-2a05a9e3e938_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","customizableui-special-spring1","vertical-spacer","workspaces-toolbar-button","urlbar-container","customizableui-special-spring2","downloads-button","reset-pbm-toolbar-button","ipprotection-button","unified-extensions-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","_2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c_-browser-action","sidebar-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["import-button","personal-bookmarks"],"nora-statusbar":["screenshot-button","fullscreen-button","status-text"]},"seen":["reset-pbm-toolbar-button","developer-button","profile-manager-button","undo-closed-tab","zen-mode-button","workspaces-toolbar-button","screenshot-button","pywalfox_frewacom_org-browser-action","ublock0_raymondhill_net-browser-action","_2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c_-browser-action","addon_darkreader_org-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","firefox_tampermonkey_net-browser-action","youtube-anti-translate-mv3_namakeingo_co_uk-browser-action","_88ebde3a-4581-4c6b-8019-2a05a9e3e938_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","sponsorblocker_ajay_app-browser-action","ipprotection-button","_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action"],"dirtyAreaCache":["nav-bar","vertical-tabs","nora-statusbar","TabsToolbar","PersonalToolbar","unified-extensions-area","toolbar-menubar"],"currentVersion":28,"newElementCount":3}
@@ -45,10 +44,48 @@ in
         **************************************************************************
          * Betterfox                                                                *
          * "Ad meliora"                                                             *
-         * version: 150                                                             *
+         * version: 154                                                             *
          * url: https://github.com/yokoffing/Betterfox                              *
         ***************************************************************************
       */
+
+      /**
+        **************************************************************************
+         * SECTION: FASTFOX                                                         *
+        ***************************************************************************
+      */
+      /**
+        GENERAL **
+      */
+      "gfx.content.skia-font-cache-size" = 20;
+      "content.notify.interval" = 100000;
+
+      /**
+        GFX **
+      */
+      "gfx.canvas.accelerated.cache-size" = 512;
+
+      /**
+        MEDIA CACHE **
+      */
+      "media.cache_readahead_limit" = 3600;
+      "media.cache_resume_threshold" = 1800;
+
+      /**
+        IMAGE CACHE **
+      */
+      "image.mem.decode_bytes_at_a_time" = 32768;
+
+      /**
+        NETWORKING **
+      */
+      "network.buffer.cache.size" = 65535;
+      "network.buffer.cache.count" = 48;
+      "network.http.max-connections" = 1800;
+      "network.http.max-persistent-connections-per-server" = 10;
+      "network.http.max-urgent-start-excessive-connections-per-host" = 5;
+      "network.http.request.max-start-delay" = 5;
+      "network.dnsCacheExpiration" = 3600;
 
       /**
         **************************************************************************
@@ -89,7 +126,6 @@ in
         SHUTDOWN & SANITIZING **
       */
       "privacy.history.custom" = true;
-      "browser.privatebrowsing.resetPBM.enabled" = true;
 
       /**
         SPECULATIVE LOADING **
@@ -138,11 +174,6 @@ in
       "network.http.referer.XOriginTrimmingPolicy" = 2;
 
       /**
-        CONTAINERS **
-      */
-      "privacy.userContext.ui.enabled" = true;
-
-      /**
         VARIOUS **
       */
       "pdfjs.enableScripting" = false;
@@ -189,12 +220,14 @@ in
       "app.shield.optoutstudies.enabled" = false;
       "app.normandy.enabled" = false;
       "app.normandy.api_url" = "";
+      "nimbus.rollouts.enabled" = false;
 
       /**
         CRASH REPORTS **
       */
       "breakpad.reportURL" = "";
       "browser.tabs.crashReporting.sendReport" = false;
+      "browser.crashReports.unsubmittedCheck.enabled" = false;
 
       /**
         **************************************************************************
@@ -205,6 +238,7 @@ in
         MOZILLA UI **
       */
       "extensions.getAddons.showPane" = false;
+      "extensions.htmlaboutaddons.recommendations.enabled" = false;
       "browser.discovery.enabled" = false;
       "browser.shell.checkDefaultBrowser" = false;
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
@@ -267,9 +301,7 @@ in
         TAB BEHAVIOR **
       */
       "browser.bookmarks.openInTabClosesMenu" = false;
-      "browser.menu.showViewImageInfo" = true;
       "findbar.highlightAll" = true;
-      "layout.word_select.eat_space_to_next_word" = false;
 
       /**
         **************************************************************************
@@ -282,6 +314,7 @@ in
       "general.smoothScroll" = true;
       "mousewheel.default.delta_multiplier_y" = 275;
       "general.smoothScroll.msdPhysics.enabled" = false;
+
       /**
         **************************************************************************
          * START: MY OVERRIDES                                                      *

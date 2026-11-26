@@ -17,8 +17,8 @@ function fish_prompt
     printf '%s' (__fish_git_prompt)
 
     echo
-    if test $GREET
-        printf "(%s) " (set_color blue)(echo $GREET)(set_color normal)
+    if test $PROMPT_PREFIX
+        printf "(%s) " (set_color blue)(echo $PROMPT_PREFIX)(set_color normal)
     end
     if test $VIRTUAL_ENV
         printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
