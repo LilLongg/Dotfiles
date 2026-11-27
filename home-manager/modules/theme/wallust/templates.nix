@@ -4,10 +4,6 @@
     recursive = true;
   };
   programs.wallust.settings.templates = {
-    cava = {
-      src = "cava";
-      dst = "${config.xdg.configHome}/cava/config";
-    };
     colors = {
       src = "colors";
       dst = "${config.xdg.cacheHome}/wal/colors";

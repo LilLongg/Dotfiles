@@ -4,16 +4,16 @@ function fish_right_prompt -d "Write out the right prompt"
 
     set -l dr_ml $CMD_DURATION
     if test $dr_ml -gt 1000
-        set -l dr_sec (echo -e "scale=0 \n $dr_ml/1000 \n quit" | bc)
-        set dr_ml (echo -e "scale=0 \n $dr_ml%1000 \n quit" | bc)
+        set -l dr_sec (math -s0 $dr_ml / 1000)
+        set dr_ml (math $dr_ml % 1000)
 
         if test $dr_sec -gt 60
-            set -l dr_min (echo -e "scale=0 \n $dr_sec/60 \n quit" | bc)
-            set dr_sec (echo -e "scale=0 \n $dr_sec%60 \n quit" | bc)
+            set -l dr_min (math -s0 $dr_sec / 60)
+            set dr_sec (math $dr_sec % 60)
 
             if test $dr_min -gt 60
-                set -l dr_hr (echo -e "scale=0 \n $dr_min/60 \n quit" | bc)
-                set dr_min (echo -e "scale=0 \n $dr_min%60 \n quit" | bc)
+                set -l dr_hr (math -s0 $dr_min / 60)
+                set dr_min (math $dr_min % 60)
                 printf '%d hr ' $dr_hr
             end
 

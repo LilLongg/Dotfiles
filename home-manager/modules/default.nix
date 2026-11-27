@@ -15,14 +15,12 @@
     ./mangohud
     ./media
     ./nix
-    ./obs-studio
     ./onlyoffice
     ./quickshell
     ./rofi
     ./services
     ./theme
     ./vesktop
-    ./vscode
     ./wlr-utils
     ./xdg
     ./yazi

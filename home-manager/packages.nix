@@ -2,16 +2,11 @@
 {
   home.packages = [
     pkgs.ani-cli
-    pkgs.audacity_3
     pkgs.awww
-    pkgs.bc
     pkgs.blueman
     pkgs.brightnessctl
-    pkgs.cava
     pkgs.cpx
     pkgs.devenv
-    pkgs.dua
-    pkgs.dysk
     pkgs.ffmpeg-full
     pkgs.gtk3
     pkgs.gtk4
